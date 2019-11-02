@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>科学上网的快速搭建</title>
-    <url>/z_post/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</url>
+    <url>/2019/11/02/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<p>1.下载个SSR，也就是我们俗称的飞机场。</p>
 <blockquote>
 <p>链接：<a href="https://pan.baidu.com/s/12qs4ydb9dVS-5v43DlXKYA" target="_blank" rel="noopener">https://pan.baidu.com/s/12qs4ydb9dVS-5v43DlXKYA</a><br>提取码：3syu </p>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <title>初学者Visual Studio 2019和Dreamwave cs6的安装与使用</title>
-    <url>/z_post/%E5%88%9D%E5%AD%A6%E8%80%85Visual%20Studio%202019%E5%92%8CDreamwave%20cs6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <url>/2019/11/02/%E5%88%9D%E5%AD%A6%E8%80%85Visual%20Studio%202019%E5%92%8CDreamwave%20cs6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>这只是一个小小的新手教程对于初学者来讲。<br>1.有条件直接下载Visual Studio2019 community（反正我不推荐2010版）</p>
 <blockquote>
 <p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/" target="_blank" rel="noopener">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
@@ -51,7 +51,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/z_post/hello-world/</url>
+    <url>/2019/11/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
