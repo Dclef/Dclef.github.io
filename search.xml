@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JAV磁力链和封面爬取</title>
+    <url>/2019/11/18/JAV/</url>
+    <content><![CDATA[<p> 博主在朋友建议下搞了这一个教程<br>接下来按我做的就行了<br><strong>第一步：下载该脚本</strong></p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA</a><br>提取码：mwfw<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br><strong>第二步：安装node.js</strong></p>
+</blockquote>
+<blockquote>
+<p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20191117234500963.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">安装时一直点下一步就行了（安装位置自己想放哪就放哪）<br><strong>第三步：安装cmder</strong></p>
+<blockquote>
+<p><a href="https://cmder.net/" target="_blank" rel="noopener">https://cmder.net/</a><br><img src="https://img-blog.csdnimg.cn/20191117234819136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装迷你版即可</p>
+</blockquote>
+<p>安装完以后在cmder查看是否有npm和node版本出现如果有说明你安装成功并进入下一步<br><img src="https://img-blog.csdnimg.cn/20191117235144275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>PS：最好讲cmder和JAV文件夹放在一起方便一些</p>
+<p><del><strong>第四步：进入JAV文件夹，在JAV文件夹安装npm依赖</strong></del> </p>
+<p>这一步可能不起作用因为我给的是压缩包0.0里面自带<br><img src="https://img-blog.csdnimg.cn/20191118000005835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>第四步：运用该脚本</strong></p>
+<blockquote>
+<p>输入node jav -h    你可以看到一下内容</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/2019111800050577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">接下来你就可以为所欲为了<br>设置我就不用说了就说一点如果要让你磁力链成功播放那就输入</p>
+<blockquote>
+<p>node jav -a </p>
+</blockquote>
+<p>搜索番号用</p>
+<blockquote>
+<p>node jav -a -s XXXX-XXXX(输入你想要的番号)</p>
+</blockquote>
+<p>如果只要一个链接就不需要-a</p>
+<p>如果你喜欢我的博客请赞赏</p>
+<p>支付宝：<img src="https://img-blog.csdnimg.cn/20191118001315819.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)微信：<img src="https://img-blog.csdnimg.cn/20191118001332251.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>科学上网的快速搭建</title>
     <url>/2019/11/02/VPN/</url>
     <content><![CDATA[<p>1.下载个SSR，也就是我们俗称的飞机场。重新压制了一遍</p>
