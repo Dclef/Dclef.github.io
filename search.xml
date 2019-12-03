@@ -34,6 +34,9 @@
 <p>如果你喜欢我的博客请赞赏</p>
 <p>支付宝：<img src="https://img-blog.csdnimg.cn/20191118001315819.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)微信：<img src="https://img-blog.csdnimg.cn/20191118001332251.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
+      <categories>
+        <category>脚本教程</category>
+      </categories>
   </entry>
   <entry>
     <title>科学上网的快速搭建</title>
@@ -49,6 +52,9 @@
 <p><img src="https://img-blog.csdnimg.cn/20191102212851682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">注册完毕以后打开节点列表，免费节点点击有在线人数的<br><img src="https://img-blog.csdnimg.cn/20191102213027988.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击链接，复制链接后用鼠标右键点击右下角小飞机<img src="https://img-blog.csdnimg.cn/20191102213701248.png" alt="在这里插入图片描述"><br>点击此项你便成功科学上网！当然代理规则改为绕过局域网和大陆，这样你打开本地的网站不会卡。如果有条件的话也可以购买SSR节点，一个月才9块。</p>
 <p><strong>android</strong><br>因为此应用不能截屏所以只能用口头描述，但我相信既然windows会了，手机上也一样会。打开你的SSR，点击右下角的<strong>加号</strong>，要么<strong>扫描二维码</strong>，要么一样<strong>从剪贴板里面导入</strong>即可，同样的代理规则改为<strong>绕过局域网和大陆</strong>，这样你便会享受墙外的乐趣。比如上油管或者某P站。</p>
 ]]></content>
+      <categories>
+        <category>小白入门</category>
+      </categories>
   </entry>
   <entry>
     <title>初学者Visual Studio 2019和Dreamwave cs6的安装与使用</title>
@@ -84,6 +90,9 @@
 <p>安装是直接set up 但唯一麻烦的是不能选择安装路径</p>
 <p>到此教程结束</p>
 ]]></content>
+      <categories>
+        <category>小白入门</category>
+      </categories>
   </entry>
   <entry>
     <title>Hello World</title>
