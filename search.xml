@@ -39,16 +39,16 @@
   <entry>
     <title>科学上网的快速搭建</title>
     <url>/2019/11/02/VPN/</url>
-    <content><![CDATA[<p>1.下载个SSR，也就是我们俗称的飞机场。重新压制了一遍</p>
+    <content><![CDATA[<p>##1.下载个SSR，也就是我们俗称的飞机场。重新压制了一遍</p>
 <blockquote>
 <p>链接：<a href="https://pan.baidu.com/s/1Fi4ZU0rnmmLuixUQGMB48A" target="_blank" rel="noopener">https://pan.baidu.com/s/1Fi4ZU0rnmmLuixUQGMB48A</a><br>提取码：4c7a<br>解压码： laomao</p>
 </blockquote>
-<p>2.安装及配置<br>windows直接解压即可，手机安装软件也即可。<br><strong>windows</strong><br>解压打开这个<br><img src="https://img-blog.csdnimg.cn/2019110221243875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">这时候打开网站注册账号</p>
+<p>##2.安装及配置<br>windows直接解压即可，手机安装软件也即可。<br><strong>windows</strong><br>解压打开这个<br><img src="https://img-blog.csdnimg.cn/2019110221243875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">这时候打开网站注册账号</p>
 <blockquote>
 <p><a href="https://yjcss.xyz/auth/register?code=Jzna" target="_blank" rel="noopener">https://yjcss.xyz/auth/register?code=Jzna</a></p>
 </blockquote>
 <p><img src="https://img-blog.csdnimg.cn/20191102212851682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">注册完毕以后打开节点列表，免费节点点击有在线人数的<br><img src="https://img-blog.csdnimg.cn/20191102213027988.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击链接，复制链接后用鼠标右键点击右下角小飞机<img src="https://img-blog.csdnimg.cn/20191102213701248.png" alt="在这里插入图片描述"><br>点击此项你便成功科学上网！当然代理规则改为绕过局域网和大陆，这样你打开本地的网站不会卡。如果有条件的话也可以购买SSR节点，一个月才9块。</p>
-<p><strong>android</strong><br>因为此应用不能截屏所以只能用口头描述，但我相信既然windows会了，手机上也一样会。打开你的SSR，点击右下角的<strong>加号</strong>，要么<strong>扫描二维码</strong>，要么一样<strong>从剪贴板里面导入</strong>即可，同样的代理规则改为<strong>绕过局域网和大陆</strong>，这样你便会享受墙外的乐趣。比如上油管或者某P站。</p>
+<p>##<strong>android</strong><br>因为此应用不能截屏所以只能用口头描述，但我相信既然windows会了，手机上也一样会。打开你的SSR，点击右下角的<strong>加号</strong>，要么<strong>扫描二维码</strong>，要么一样<strong>从剪贴板里面导入</strong>即可，同样的代理规则改为<strong>绕过局域网和大陆</strong>，这样你便会享受墙外的乐趣。比如上油管或者某P站。</p>
 ]]></content>
       <categories>
         <category>小白入门</category>
