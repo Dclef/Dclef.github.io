@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>JAV磁力链和封面爬取</title>
+    <url>/2019/11/18/JAV/</url>
+    <content><![CDATA[<p> 博主在朋友建议下搞了这一个教程<br>接下来按我做的就行了<br><strong>第一步：下载该脚本</strong></p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA</a><br>提取码：mwfw<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br><strong>第二步：安装node.js</strong></p>
+</blockquote>
+<blockquote>
+<p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20191117234500963.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">安装时一直点下一步就行了（安装位置自己想放哪就放哪）<br><strong>第三步：安装cmder</strong></p>
+<blockquote>
+<p><a href="https://cmder.net/" target="_blank" rel="noopener">https://cmder.net/</a><br><img src="https://img-blog.csdnimg.cn/20191117234819136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装迷你版即可</p>
+</blockquote>
+<p>安装完以后在cmder查看是否有npm和node版本出现如果有说明你安装成功并进入下一步<br><img src="https://img-blog.csdnimg.cn/20191117235144275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>PS：最好讲cmder和JAV文件夹放在一起方便一些</p>
+<p><del><strong>第四步：进入JAV文件夹，在JAV文件夹安装npm依赖</strong></del> </p>
+<p>这一步可能不起作用因为我给的是压缩包0.0里面自带<br><img src="https://img-blog.csdnimg.cn/20191118000005835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>第四步：运用该脚本</strong></p>
+<blockquote>
+<p>输入node jav -h    你可以看到一下内容</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/2019111800050577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">接下来你就可以为所欲为了<br>设置我就不用说了就说一点如果要让你磁力链成功播放那就输入</p>
+<blockquote>
+<p>node jav -a </p>
+</blockquote>
+<p>搜索番号用</p>
+<blockquote>
+<p>node jav -a -s XXXX-XXXX(输入你想要的番号)</p>
+</blockquote>
+<p>如果只要一个链接就不需要-a</p>
+<p>如果你喜欢我的博客请赞赏</p>
+<p>支付宝：<img src="https://img-blog.csdnimg.cn/20191118001315819.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)微信：<img src="https://img-blog.csdnimg.cn/20191118001332251.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>脚本教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>科学上网的快速搭建</title>
+    <url>/2019/11/02/VPN/</url>
+    <content><![CDATA[<p>1.下载个SSR，也就是我们俗称的飞机场。重新压制了一遍</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1Fi4ZU0rnmmLuixUQGMB48A" target="_blank" rel="noopener">https://pan.baidu.com/s/1Fi4ZU0rnmmLuixUQGMB48A</a><br>提取码：4c7a<br>解压码： laomao</p>
+</blockquote>
+<p>2.安装及配置<br>windows直接解压即可，手机安装软件也即可。<br><strong>windows</strong><br>解压打开这个<br><img src="https://img-blog.csdnimg.cn/2019110221243875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">这时候打开网站注册账号</p>
+<blockquote>
+<p><a href="https://yjcss.xyz/auth/register?code=Jzna" target="_blank" rel="noopener">https://yjcss.xyz/auth/register?code=Jzna</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20191102212851682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">注册完毕以后打开节点列表，免费节点点击有在线人数的<br><img src="https://img-blog.csdnimg.cn/20191102213027988.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击链接，复制链接后用鼠标右键点击右下角小飞机<img src="https://img-blog.csdnimg.cn/20191102213701248.png" alt="在这里插入图片描述"><br>点击此项你便成功科学上网！当然代理规则改为绕过局域网和大陆，这样你打开本地的网站不会卡。如果有条件的话也可以购买SSR节点，一个月才9块。</p>
+<p><strong>android</strong><br>因为此应用不能截屏所以只能用口头描述，但我相信既然windows会了，手机上也一样会。打开你的SSR，点击右下角的<strong>加号</strong>，要么<strong>扫描二维码</strong>，要么一样<strong>从剪贴板里面导入</strong>即可，同样的代理规则改为<strong>绕过局域网和大陆</strong>，这样你便会享受墙外的乐趣。比如上油管或者某P站。</p>
+]]></content>
+      <categories>
+        <category>小白入门</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>初学者Visual Studio 2019和Dreamwave cs6的安装与使用</title>
+    <url>/2019/11/02/vs2019%20and%20dw%20cs6/</url>
+    <content><![CDATA[<p>这只是一个小小的新手教程对于初学者来讲。</p>
+<p>1.有条件直接下载Visual Studio2019 community（反正我不推荐2010版）</p>
+<blockquote>
+<p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/" target="_blank" rel="noopener">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20191102004506133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>安装</strong><br>打开后点击继续，进入文件的提取<br><img src="https://img-blog.csdnimg.cn/20191102005108119.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="">这里选择    C++桌面开发，安装位置你可以选择除C盘以外的其他盘但注意的是安装到其他盘时，C盘也要占用2G</p>
+<p><strong>创建一个新项目</strong><br><img src="https://img-blog.csdnimg.cn/20191102005710932.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191102010014637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20191102010026368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><strong>新建源文件</strong></p>
+<p>右击右侧的源文件，没有右侧那个视图的要在上方的视图选项中打开解决方案资源管理器<br>默认的就是C++，你可以改源.cpp改为源.c<br>然后你就可以简单编写代码测试一下</p>
+<p><strong>常见特殊情况问题解决</strong><br>预编译头错误</p>
+<blockquote>
+<p>解决办法：进入项目属性页，在下图所示目录修改预编译头的设置，应用并确定<br><img src="https://img-blog.csdnimg.cn/20191102010710250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</blockquote>
+<p><strong>scanf错误</strong></p>
+<blockquote>
+<p>解决方案：scanf改为scanf_s即可</p>
+</blockquote>
+<p>2.或者下载Visual Studio2010专业版</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1MGb7IhnyRr2FYYt5QHqHFg" target="_blank" rel="noopener">https://pan.baidu.com/s/1MGb7IhnyRr2FYYt5QHqHFg</a><br>提取码：p8js<br>下载之后文件有2.5GB 解压ISO镜像文件，双击安装文件setup.exe 一键安装即可。安装完成之后，断网，在帮助-注册产品那里输入下载页面提供的秘钥<br>YCFHQ-9DWCY-DKV88-T2TMH-G7BHP </p>
+</blockquote>
+<p><strong>3.下载DW cs6版本</strong><br>安装解压我就不说了<br>但安装时会出现这个问题，忽略即可<br><img src="https://img-blog.csdnimg.cn/20191102011259873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/2019110201135616.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接下来一定要断网不然会出现注册账号页面<br>安装完以后启动程序<br><strong>破解方法：</strong></p>
+<p>打开Dreamweaver cs6破解补丁，下载完毕后压缩包中有32与64两个文件夹分别代表32位程序与64位程序的补丁，选择64位的补丁。</p>
+<p>打开Dreamweaver cs6安装文件夹，将适合自己系统的破解补丁文件夹中的文件拖入程序安装文件夹中覆盖同名文件<br><img src="https://img-blog.csdnimg.cn/20191102011717497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">进行覆盖确认后现程序不再提示需要注册激活，到此DW cs6安装破解完毕</p>
+<p><strong>4.或者下载 Dreamwave cc2019</strong><br>由于我使用的是内部版，所以根本不需要破解直接安装。</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/16WqRQTSJF6tvMjZIjT0Jsw" target="_blank" rel="noopener">https://pan.baidu.com/s/16WqRQTSJF6tvMjZIjT0Jsw</a><br>提取码：viih </p>
+</blockquote>
+<p>安装是直接set up 但唯一麻烦的是不能选择安装路径</p>
+<p>到此教程结束</p>
+]]></content>
+      <categories>
+        <category>小白入门</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/11/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
