@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="老猫的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="" />
+
+
+<meta name="description" content="引言：这只针对学过C语言但没学懂和自己的总结经验，本文只按照自己的思路，关于错误和问题一概不论。关于简单的代码一概不论，这里只单讲入门且不能理解的东西，至于前期环境安装和一些基础问题可以参考其他..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    C语言中一些问题和代码的解释 |
+    
+    老猫的博客
+</title>
+
+
+<link rel="icon" href="/favicon.png">
+
+    
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+</head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='dclef'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        老猫的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories"><i class="fa "></i>
+                                分类</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="C语言中一些问题和代码的解释">
+            
+            C语言中一些问题和代码的解释
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2019/12/20</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>引言：这只针对学过C语言但没学懂和自己的总结经验，本文只按照自己的思路，关于错误和问题一概不论。<br>关于简单的代码一概不论，这里只单讲入门且不能理解的东西，至于前期环境安装和一些基础问题可以参考其他博客和我以前的博客。</p>
+<p>首先需要明白什么是<strong>指令和头文件</strong>？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>#include是一条C预处理器指令，C编译器在编译前做的准备工作，而stdio.h是头文件，此文件包含共编译器使用的输入和输出函数，如scanf(),printf()等等。<br>没有此头文件，你前期的代码根本完成不了，那么问题来了</p>
+<p><strong>为什么不内置一个输入和输出，这样做不是更简单吗？</strong></p>
+<p>原因很简单，有些程序根本用不到输入和输出，那么不就多此一举了吗。</p>
+<p><strong>main()函数</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mian</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>此为入口文件，C程序通常情况下按main()开始执行。<br>int是返回值，但也是默认值。表明main()函数返回值是整数。<br>在现有学生阶段我们还可以用这样写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">viod <span class="title">mian</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>但是这种写法并不认可，如果你用多个编辑器写的程序用此可能会报错。<br><strong>注释</strong>过于简单不讲只讲风格</p>
+<blockquote>
+<p>  /* 这也是一条注释<br> ， 被分成两行。*/<br> //这种注释只能写一行</p>
+</blockquote>
+<p><strong>花括号</strong><br>花括号把main()函数括起来。一般而言，所有的C函数都使用花括号标记函数体的开始和结束。<strong>这是死规定，不能省略。</strong></p>
+<p><strong>声明</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j,k;</span><br></pre></td></tr></table></figure>
+
+<p>此代码声明有i,j,k三个标识符，也就一个变量、函数或其他实体的名称。int 表明i,j,k三个标识符是一个整数。<br><strong>return语句</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>有返回值的C函数要有return语句。该语句以return关键字开始，后面是待返回的值，并以分号结尾。<br><strong>getchar();</strong><br>这行代码会让程序等待击键，窗口会在用户按下一个键后才关闭。</p>
+<p>关于<strong>浮点数</strong><br>1是整数，1.00是浮点数</p>
+<p>C语言提供3个附属关键字修饰基本整数类型：short、long和unsigned。<br>应记住以下几点。<br>short 类型占用的存储空间可能比int少，short是有符号类型。</p>
+<p>long占用的存储空间可能比int多，适用于较大数值，long是有符号类型。</p>
+<p>unsigned int或unsigned只用于非负值。这种类型与有符号类型表示的范围不同。例如，16位unsigned int允许的取值范围是0～65535，而不<br>是-32768～32767。用于表示正负号的位现在用于表示另一个二进制位，所以无符号整型可以表示更大的数。</p>
+<p><strong>char类型</strong>用于储存字符，它与int 声明都是一样的，这里只讲数组。<br><strong>float</strong> 单精度浮点数，至少精确到小数点6位。<br><strong>double</strong> 双精度浮点数，至少能表示小数点10位。<br><strong>long double</strong>，更高精度，这里不讲。</p>
+<p><strong>字符串</strong></p>
+<p>C语言没有专门用于储存字符串的变量类型，字符串都被储存在char类型的数组中。数组由连续的存储单元组成，字符串中的字符被储存在相邻的存储单元中，每个单元储存一个字符。<br>注意每一个数组末尾都有字符\0，这为控字符，它表示字符串的结束，这意味着你定义<strong>储存40个字符</strong>实际上只能储存39个字符，剩下一个给空字符\0用的。</p>
+<p><strong>明示常量</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100<span class="comment">//定义N为100</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>printf函数</strong>（针对常用的）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">%c <span class="comment">//单个字符</span></span><br><span class="line">&amp;d <span class="comment">//十进制整数</span></span><br><span class="line">%f <span class="comment">//浮点数十进制数</span></span><br><span class="line">%p <span class="comment">//指针</span></span><br><span class="line">%s <span class="comment">//字符串</span></span><br></pre></td></tr></table></figure>
+<p>用法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%8d %8d %8d\n"</span>, a, b c);<span class="comment">//这样会间隔一样比较美观</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%10s%10s%10%10\n"</span>, <span class="string">"学号"</span>, <span class="string">"姓名"</span>, <span class="string">"成绩"</span>, <span class="string">"平均成绩"</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>scanf函数</strong><br>printf()函数使用变量、常量和表达式，而scanf()函数使用指向变量的指针。</p>
+<p>如果用scanf()读取基本变量类型的值，在变量名前加上一个&amp;。<br>但如果scanf()把字符串读入字符数组中，就不用&amp;。<br>如以下代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> main</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">int</span> age;  <span class="comment">//变量</span></span><br><span class="line">  <span class="keyword">char</span> id[<span class="number">30</span>];  <span class="comment">//字符数组，用于储存字符串</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"请输入你的年龄和学号\n"</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;age); <span class="comment">//这里需要使用&amp;</span></span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%s"</span>,id);<span class="comment">//字符串不需要&amp;</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d%s\n"</span>,age,id);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>常用运算符</strong><br><strong>赋值运算符：=</strong></p>
+<p>等号左侧是一个变量名，右侧是赋给该变量的值。符号=被称为赋值运算符。赋值行为从右往左进行。<br>如<code>i=i+1;</code><br>该语句的意思是：找出变量 i 的值，把该值加 1，然后把新值赋值变量i</p>
+<p> <strong>加法运算符:+</strong>(不讲)<br> <strong>减法运算符：-</strong>（不讲）<br><strong>乘法运算符：*</strong>（不讲）<br> <strong>除法运算符：/</strong>（不讲）</p>
+<p> <strong>运算符的优先级</strong><br> 对于C语言，运算符的优先级是从乘除到加减，优先级相同从左到右的顺序，当然=除外。（=是从右往左）</p>
+<p><strong>递增运算符：++</strong><br>前缀递增符:<strong>++a</strong><br>后缀递增符:<strong>a++</strong><br>不同：优先级不同，前缀递增符先递增后运算。<br>后缀递增符先运算后递增。<br>举个例子：<code>i=233*++a</code><br>a递增1，然后233乘以a，并赋值给i</p>
+<blockquote>
+<p>i=233*a++</p>
+</blockquote>
+<p>2乘以a,并将结果给i,然后a递增1</p>
+<p><strong>递减运算符：–</strong>（与递增相同）</p>
+<p><strong>循环</strong><br>C语言有3种循环：for、while、do while</p>
+<p><strong>whlie循环</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i&lt;<span class="number">3</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"烫"</span>);</span><br><span class="line">		i++;<span class="comment">//输出烫时加1</span></span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上的代码打印2个的烫</p>
+<p><strong>如何强制退出循环？</strong></p>
+<p>break;<br>goto;等语句这里不必多讲</p>
+<p><strong>for循环</strong><br>主要形式<br>for(初始值;初始值对比;初始值增加)<br>举个例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"烫"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码会输出两个烫<br><strong>do while</strong><br>至少执行循环体中内容一次<br>do<br>{<br>}while();<br>举个例子</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">  &#123;</span><br><span class="line">   i++;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"烫"</span>);</span><br><span class="line">  &#125; <span class="keyword">while</span>(i&lt;<span class="number">3</span>);</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码会出现三个烫<br>switch和break语句</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> ( 整型表达式）</span><br><span class="line">&#123;</span><br><span class="line">case1 常量<span class="number">1</span>:</span><br><span class="line">语句 </span><br><span class="line">case2 常量<span class="number">2</span>:</span><br><span class="line">语句 </span><br><span class="line"><span class="keyword">break</span>;<span class="comment">//跳出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>数组</strong><br>数组类型<br>int ID[20];//储存20个int类型整数的数组<br>char Name[20];//储存20个字符的数组<br>float mark[20];//储存20个float类型的数组<br>二维数组<br>float a[5][12];//内含5个数组元素的数组，每个数组元素内含12个float类型的元素<br>float a[5][12]; // rain是一个内含5个元素的数组<br>float a[5][12] ; // 一个内含12个float类型元素的数组</p>
+<p><strong>if语句常见错误</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a &lt; x &lt; z) <span class="comment">// 错误，没有使用逻辑运算符</span></span><br><span class="line"><span class="keyword">if</span> (ch != <span class="string">'a'</span> &amp;&amp; != <span class="string">'b'</span>) <span class="comment">// 错误，缺少完整的测试</span></span><br></pre></td></tr></table></figure>
+<p>正确的方式是用逻辑运算符连接两个关系表达式：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a &lt; x &amp;&amp; x &lt; z) <span class="comment">// 使用&amp;&amp;组合</span></span><br><span class="line"><span class="keyword">if</span> (ch != <span class="string">'q'</span> &amp;&amp; ch != <span class="string">'Q'</span>) <span class="comment">// 使用&amp;&amp;组合两个表达式</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+    </div>
+    
+    <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+            <span class="reward-type">
+                <img class="alipay" src="/img/alipay.jpg"><b>支付宝打赏</b>
+            </span>
+            
+            
+            <span class="reward-type">
+                <img class="wechat" src="/img/wepay.jpg"><b>微信打赏</b>
+            </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">
+        赞赏是不耍流氓的鼓励
+    </p>
+</div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Dclef</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+    <a href="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="next-post btn btn-default" title='hexo博客主题搭建'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            hexo博客主题搭建</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NzMxMy8yMzgxMw">
+    <script type="text/javascript">
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+    </script>
+</div>
+
+</div>
+
+                </main>
+                
+                    
+<aside class="col-md-4 sidebar">
+    
+    
+<div class="widget">
+    <h3 class="title">
+        搜索
+    </h3>
+    <div id="search-form">
+        <div id="result-mask" class="hide"></div>
+        <div class="search-area">
+            
+            <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢？">
+            <button type="button" class="search-form-submit" id="search-local">
+                站内搜索</button>
+            
+            
+        </div>
+        <div id="result-wrap" class="hide">
+            <div id="search-result"></div>
+        </div>
+        <div class="hide">
+            <template id="search-tpl">
+                <div class="item">
+                    <a href="/{path}" title="{title}">
+                        <div class="title">{title}</div>
+                        <div class="content">{content}</div>
+                    </a>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>
+
+    
+    
+<div class="widget">
+    <h3 class="title">
+        网站公告
+    </h3>
+    <div class="notification">
+        <p>
+    随便看看
+</p>
+    </div>
+</div>
+
+    
+    
+<div class="widget">
+    <h3 class="title">
+        社交
+    </h3>
+    <div class="content social">
+        
+        <a href="//https://github.com/Dclef/Dclef.github.io" rel="external nofollow" title="Github" target="_blank">
+            <i class="git fa fa-git"></i>
+        </a>
+        
+    </div>
+</div>
+
+    
+    
+<div class="widget">
+    <h3 class="title">
+        分类
+    </h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/"><i class="fa" aria-hidden="true">C语言</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E7%99%BD%E5%85%A5%E9%97%A8/"><i class="fa" aria-hidden="true">小白入门</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B/"><i class="fa" aria-hidden="true">脚本教程</i></a><span class="category-list-count">1</span></li></ul>
+</div>
+
+    
+    
+<div class="widget">
+    <h3 class="title">
+        归档
+    </h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/"><i class="fa" aria-hidden="true">2019年12月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/"><i class="fa" aria-hidden="true">2019年11月</i></a><span class="archive-list-count">4</span></li></ul>
+</div>
+
+    
+    
+    
+    
+<div class="widget">
+    <h3 class="title">
+        友链
+    </h3>
+    <div class="content friends-link">
+        
+        <a href="https://gkdgif.com" class="fa" target="_blank">
+            GKDGIF</a>
+        
+    </div>
+</div>
+
+    
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2019
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/js/app.js?rev=@@hash"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
