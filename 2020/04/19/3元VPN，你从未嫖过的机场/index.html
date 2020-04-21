@@ -1,174 +1,267 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <!--Setting-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="apple-mobile-web-app-capable" content="老猫的博客">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no,email=no,adress=no">
-    <meta name="browsermode" content="application">
-    <meta name="screen-orientation" content="portrait">
-    <meta name="theme-version" content="1.2.3">
-    <meta name="root" content="/">
-    <link rel="dns-prefetch" href="http://yoursite.com">
-    <!--SEO-->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title>3元VPN，你从未嫖过的机场 | 老猫的博客</title>
+  <meta name="description" content="个人的笔记和一些教程" />
+  <meta name="keywords" content="dclef,老猫,小白教程,入门,C,java,Python,PHP" />
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/dclef/Dclef.github.io/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/googlefont.css" media="all">
+<!--  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">-->
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/font.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/insight.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "老猫的博客dclef";
+  mashiro_option.author_name = "dclef";
+  mashiro_option.site_url = "https://dclef.github.io/";
+  mashiro_option.v_appId = "AcXrsvmCNVcPqWbExlSsvPjl-gzGzoHsz";
+  mashiro_option.v_appKey = "bFM3KX5ofIw2bgLTraJXvget";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
-<meta name="keywords" content="" />
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
 
-
-<meta name="description" content="&#x65B0;&#x673A;&#x573A;&#xFF0C;&#x6BD4;&#x4EFB;&#x4F55;&#x8001;&#x673A;&#x573A;&#x90FD;&#x4FBF;&..." />
-
-
-<meta name="robots" content="all" />
-<meta name="google" content="all" />
-<meta name="googlebot" content="all" />
-<meta name="verify" content="all" />
-    <!--Title-->
-
-<title>
-    
-    3元VPN，你从未嫖过的机场 |
-    
-    老猫的博客
-</title>
-
-
-<link rel="icon" href="/favicon.png">
-
-    
-
-<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
-<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
-<link rel="stylesheet" href="/css/style.css?rev=@@hash">
-    
-<div class="hide">
-    <script type="text/javascript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-</div>
-
-
-
-
-    
-
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/1ac3fa3ef82c93a8d46384e256342711.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/6f005cbc1865ff1b706aba57347988ab.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/512a1fded4940ba8d5f215809ff8c153.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/783bf161f47b32882f0e962fd4064de7.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/19313b0d62b27c8ba022f60fbfedd5ee.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/a5fa4f9db760f58fc48f03d66b4967f7.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/b3e8dae89b950b940dc0edd1e8cc0566.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/e9f33c2c502ab43804964ce7edd431f9.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
 </head>
-<!--[if lte IE 8]>
-<style>
-    html{ font-size: 1em }
-</style>
-<![endif]-->
-<!--[if lte IE 9]>
-<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
-<![endif]-->
-<body>
-    <header class="main-header"  style="background-image:url(
-    /img/banner.jpg)"
-     >
-    <div class="main-header-box">
-        <a class="header-avatar" href="/" title='dclef'>
-            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://dclef.github.io/" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/dclef/Dclef.github.io/img/avatar.jpg">
         </a>
-        <div class="branding">
-            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+      </div>
+      <div class="header-info">
+        <p>懒狗</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
             
-            <h2>
-                自己的坑哭都要填完
-            </h2>
+              
+                <li>
+                  <a href="http://github.com/dclef" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/img/social/github.png">
+                  </a>
+                </li>
+              
             
+              
+                <li>
+                  <a href="274880171@qq.com" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
         </div>
+      </div>
     </div>
-</header>
-    <nav class="main-navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                        <span class="sr-only"></span>
-                        <i class="fa fa-bars"></i>
-                    </span>
-                    <a class="navbar-brand" href="http://yoursite.com">
-                        老猫的博客</a>
-                </div>
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="menu">
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/"><i class="fa "></i>
-                                首页</a>
-                        </li>
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/categories"><i class="fa "></i>
-                                分类</a>
-                        </li>
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/archives/"><i class="fa "></i>
-                                时间轴</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
+  </figure>
+  
+  <div id="video-container" style="display: none;">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
     </div>
-</nav>
-    <section class="content-wrap">
-        <div class="container">
-            <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="3元VPN，你从未嫖过的机场">
-            
-            3元VPN，你从未嫖过的机场
-            
-        </h1>
-        <div class="post-meta">
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a class="category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+    <div id="video-add">
+    </div>
+    <div class="video-stu" >
+    </div>
+  </div>
+  
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
     </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-        </span>
-    </span>
-    
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">
-            2020/04/19</span>
-    </span>
-    
-    <span class="fa-wrap">
-        <i class="fa fa-eye"></i>
-        <span id="busuanzi_value_page_pv"></span>
-    </span>
-    
-    
+  </div>
 </div>
-        
-        
+
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+ 
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">老猫的博客</span>
+            <span class="shironeko">dclef</span>
+          </a>
+        </span>
+      </span>
     </div>
-    
-    <div class="post-body post-content">
-        <p>&#x65B0;&#x673A;&#x573A;&#xFF0C;&#x6BD4;&#x4EFB;&#x4F55;&#x8001;&#x673A;&#x573A;&#x90FD;&#x4FBF;&#x5B9C;&#xFF0C;&#x4F46;&#x552F;&#x4E00;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;<strong>&#x53EF;</strong>&#x80FD;<strong>&#x4F1A;&#x8DD1;&#x8DEF;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x8D2D;&#x4E70;&#x4E00;&#x4E2A;&#x6708;&#x6216;&#x4E09;&#x4E2A;&#x6708;&#x7684;&#x5212;&#x7B97;&#x3002;<br>&#x8D2D;&#x4E70;&#x5EFA;&#x8BAE;&#xFF1A;<img src="https://img-blog.csdnimg.cn/2020041900193258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E8%B5%84%E6%BA%90/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/sharejs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"> <!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">3元VPN，你从未嫖过的机场</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2020-4-19&nbsp;
+              
+              ·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读
+            
+                    
+        ·<span id="readcount"></span>次阅读
+      
+            </p>
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <p>&#x65B0;&#x673A;&#x573A;&#xFF0C;&#x6BD4;&#x4EFB;&#x4F55;&#x8001;&#x673A;&#x573A;&#x90FD;&#x4FBF;&#x5B9C;&#xFF0C;&#x4F46;&#x552F;&#x4E00;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;<strong>&#x53EF;</strong>&#x80FD;<strong>&#x4F1A;&#x8DD1;&#x8DEF;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x8D2D;&#x4E70;&#x4E00;&#x4E2A;&#x6708;&#x6216;&#x4E09;&#x4E2A;&#x6708;&#x7684;&#x5212;&#x7B97;&#x3002;<br>&#x8D2D;&#x4E70;&#x5EFA;&#x8BAE;&#xFF1A;<img src="https://img-blog.csdnimg.cn/2020041900193258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
 <p>&#x53EA;&#x8D2D;&#x4E70;&#x8005;&#x4E24;&#x6B3E;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#x5982;&#x679C;&#x89C9;&#x5F97;&#x6D41;&#x91CF;&#x4E0D;&#x591F;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x4E70;&#x8FD9;&#x4E2A;<br><img src="https://img-blog.csdnimg.cn/20200419002258991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><br>&#x6BCF;30&#x5929;&#x91CD;&#x5236;&#x6D41;&#x91CF;&#xFF0C;&#x6BD4;&#x8F83;&#x5212;&#x7B97;&#x3002;&#x5176;&#x4F59;&#x7684;&#x6D41;&#x91CF;&#x5305;<strong>&#x4E0D;&#x5EFA;&#x8BAE;&#x8D2D;&#x4E70;</strong><br>&#x5730;&#x5740;&#xFF1A;</p>
 <blockquote>
 <p><a href="https://freemycloud.xyz/auth/register?code=NStx" target="_blank" rel="noopener">https://freemycloud.xyz/auth/register?code=NStx</a></p>
@@ -178,243 +271,468 @@
 <p><a href="https://dclef.github.io/2019/11/02/VPN/" target="_blank" rel="noopener">https://dclef.github.io/2019/11/02/VPN/</a></p>
 </blockquote>
 
-    </div>
-    
-    <div class="reward" ontouchstart>
-    <div class="reward-wrap">赏
-        <div class="reward-box">
-            
-            <span class="reward-type">
-                <img class="alipay" src="/img/alipay.jpg"><b>支付宝打赏</b>
-            </span>
-            
-            
-            <span class="reward-type">
-                <img class="wechat" src="/img/wepay.jpg"><b>微信打赏</b>
-            </span>
-            
         </div>
-    </div>
-    <p class="reward-tip">
-        请杯咖啡是对我最大的鼓励
-    </p>
-</div>
-    
-    <div class="post-footer">
-        <div>
-            
-            转载声明：
-            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Dclef</a>
-            
-            
-        </div>
-        <div>
-            
-        </div>
-    </div>
-</article>
-<div class="article-nav prev-next-wrap clearfix">
-    
-    <a href="/2020/04/19/telegarm/" class="pre-post btn btn-default" title='telegarm(电报)的使用教程'>
-        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-        <span class="hidden-xs">
-            telegarm(电报)的使用教程</span>
-    </a>
-    
-    
-    <a href="/2020/03/25/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E7%BB%88%E7%AB%AFTermux%E7%89%88%E7%9A%84pyhon%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0%E9%80%9A%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/" class="next-post btn btn-default" title='利用手机终端Termux版的pyhon实现学习通自动签到'>
-        <span class="hidden-lg">下一篇</span>
-        <span class="hidden-xs">
-            利用手机终端Termux版的pyhon实现学习通自动签到</span><i class="fa fa-angle-right fa-fw"></i>
-    </a>
-    
-</div>
-
-<div id="comments">
-    
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NzMxMy8yMzgxMw">
-    <script type="text/javascript">
-    (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-    </script>
-</div>
-
-</div>
-
-                </main>
-                
-                    
-<aside class="col-md-4 sidebar">
-    
-    
-<div class="widget">
-    <h3 class="title">
-        搜索
-    </h3>
-    <div id="search-form">
-        <div id="result-mask" class="hide"></div>
-        <div class="search-area">
-            
-            <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢？">
-            <button type="button" class="search-form-submit" id="search-local">
-                站内搜索</button>
-            
-            
-        </div>
-        <div id="result-wrap" class="hide">
-            <div id="search-result"></div>
-        </div>
-        <div class="hide">
-            <template id="search-tpl">
-                <div class="item">
-                    <a href="/{path}" title="{title}">
-                        <div class="title">{title}</div>
-                        <div class="content">{content}</div>
-                    </a>
-                </div>
-            </template>
-        </div>
-    </div>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        网站公告
-    </h3>
-    <div class="notification">
-        <p>
-    兄弟萌点下右边的广告好吗？秋泥膏！
-</p>
-    </div>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        社交
-    </h3>
-    <div class="content social">
+        <!-- .entry-content -->
         
-        <a href="//https://github.com/Dclef/Dclef.github.io" rel="external nofollow" title="Github" target="_blank">
-            <i class="git fa fa-git"></i>
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/img/custom/donate/alipay.jpg"></li>
+                <li class="wechat-code"><img src="/img/custom/donate/wepay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+          
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/19/telegarm/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                telegarm(电报)的使用教程</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/03/25/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E7%BB%88%E7%AB%AFTermux%E7%89%88%E7%9A%84pyhon%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0%E9%80%9A%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                利用手机终端Termux版的pyhon实现学习通自动签到</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "AcXrsvmCNVcPqWbExlSsvPjl-gzGzoHsz",
+        appKey: "bFM3KX5ofIw2bgLTraJXvget",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 dclef<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <div class="footertext">
+            <div class="img-preload">
+                <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+                <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+            </div>
+            
+            <p>本站总访问量：<a id="allcount"></a></p>
+            <p style="color: #666666;">RUA!</p>
+            
+                <p id="momk" style="font-family: 'Ubuntu', sans-serif;color: #b9b9b9;"></p>
+            
+        </div>
+        <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+ <span style="">Theme <a href="https://github.com/xbclub/Hexo-theme-sakura" target="_blank"
+                         style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
+             class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
+             href="https://2heng.xin/" target="_blank"
+             style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a
+             href="https://www.hojun.cn/" target="_blank"
+             style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>&<a
+             href="https://42cloud.cn/" target="_blank"
+             style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">42team, Powered by Hexo</a>
+        </span>
+            </p>
+        </div>
+    </div><!-- .site-info -->
+</footer>
+
+
+<!--<script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.7/js/tocbot.min.js"></script>-->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/InsightSearch.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@1.2/js/sakura-app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/Valine.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+
+    <script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/busuanzi.pure.mini.js"></script>
+
+      
+       <script>
+  fetch('https://counts.42cloud.cn/api/counts.html')
+        .then(response => response.json())
+        .then(data => {
+              if (document.getElementById("readcount")) {
+                document.getElementById("readcount").innerHTML=data.Count;
+            }
+            if (document.getElementById("allcount")){
+                document.getElementById("allcount").innerHTML=data.Allcount;
+            }
+        })
+        .catch(err => console.error(err))
+</script>
+      
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2", "name": "Unbroken.mp4", "live": "close"},
+            "windowheight": "fixed",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    } else {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2", "name": "Unbroken.mp4", "live": "open"},
+            "windowheight": "auto",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    }
+    /* ]]> */
+
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+            if ($(".pattern-center").length > 0) { //有图的情况
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -400,
+                    scrollSmoothOffset: -85
+                });
+            } else {
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -85,
+                    scrollSmoothOffset: -85
+                });
+            }
+            var offsetTop = $('.toc').offset().top - 95;
+            window.onscroll = function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop >= offsetTop) {
+                    $('.toc').addClass('toc-fixed');
+                } else {
+                    $('.toc').removeClass('toc-fixed');
+                }
+            }
+        }
+    });
+</script>
+
+    <script type="text/javascript">
+        function NewDate(str) {
+            str = str.split('-');
+            var date = new Date();
+            date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+            date.setUTCHours(0, 0, 0, 0);
+            return date;
+        }
+
+        function momxc() {
+            var birthDay = NewDate("Mon Nov 11 2019 08:00:00 GMT+0800 (GMT+08:00)");
+            var today = new Date();
+            var timeold = today.getTime() - birthDay.getTime();
+            var sectimeold = timeold / 1000
+            var secondsold = Math.floor(sectimeold);
+            var msPerDay = 24 * 60 * 60 * 1000;
+            var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (daysold - e_daysold) * -24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (hrsold - e_hrsold) * -60;
+            var minsold = Math.floor((hrsold - e_hrsold) * -60);
+            var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+            document.getElementById("momk").innerHTML = "本站已安全运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+            setTimeout(momxc, 1000);
+        }
+
+        momxc();
+    </script>
+
+
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/dclef/Dclef.github.io/img/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">老猫的博客dclef</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/dclef" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=274880171&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
         </a>
         
-    </div>
-</div>
-
+      </li>
     
-    
-<div class="widget">
-    <h3 class="title">
-        分类
-    </h3>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/"><i class="fa" aria-hidden="true">C语言</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/"><i class="fa" aria-hidden="true">Mysql</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E7%99%BD%E5%85%A5%E9%97%A8/"><i class="fa" aria-hidden="true">小白入门</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"><i class="fa" aria-hidden="true">科学上网</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B/"><i class="fa" aria-hidden="true">脚本教程</i></a><span class="category-list-count">2</span></li></ul>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        归档
-    </h3>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/"><i class="fa" aria-hidden="true">2020年04月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/"><i class="fa" aria-hidden="true">2020年03月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/"><i class="fa" aria-hidden="true">2019年12月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/"><i class="fa" aria-hidden="true">2019年11月</i></a><span class="archive-list-count">4</span></li></ul>
-</div>
-
-    
-    
-    
-    
-<div class="widget">
-    <h3 class="title">
-        友链
-    </h3>
-    <div class="content friends-link">
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
         
-        <a href="https://gkdgif.com" class="fa" target="_blank">
-            GKDGIF</a>
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%B5%84%E6%BA%90/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
         
-        <a href="https://blog.nmslwsnd.com/" class="fa" target="_blank">
-            InitCool</a>
-        
-    </div>
-</div>
-
+      </li>
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 广告位 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2004656043129027"
-     data-ad-slot="8191399681"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    switch="true"
+
+    id="3061697493"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
 </script>
-    
-</aside>
-
-
-                
-            </div>
-        </div>
-    </section>
-    <footer class="main-footer">
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-</footer>
-<a id="back-to-top" class="icon-btn hide">
-    <i class="fa fa-chevron-up"></i>
-</a>
-    <div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="busuanzi">
-    
-    访问量:
-    <strong id="busuanzi_value_site_pv">
-        <i class="fa fa-spinner fa-spin"></i>
-    </strong>
-    &nbsp; | &nbsp;
-    访客数:
-    <strong id="busuanzi_value_site_uv">
-        <i class="fa fa-spinner fa-spin"></i>
-    </strong>
-    
-</div>
-            </div>
-            <div class="col-sm-12">
-                <span>Copyright &copy;
-                    2019
-                    
-                </span> |
-                <span>
-                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> |
-                <span>
-                    Theme by <a href="//dclef.github.io/" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<script src="/js/app.js?rev=@@hash"></script>
+  
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 </html>
