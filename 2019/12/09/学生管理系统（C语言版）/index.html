@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title>学生管理系统（C语言版） | 老猫的博客</title>
+  <meta name="description" content="个人的笔记和一些教程" />
+  <meta name="keywords" content="dclef,老猫,小白教程,入门,C,java,Python,PHP" />
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/dclef/Dclef.github.io/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/googlefont.css" media="all">
+<!--  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">-->
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/font.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/insight.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "老猫的博客";
+  mashiro_option.author_name = "";
+  mashiro_option.site_url = "https://dclef.github.io/";
+  mashiro_option.v_appId = "AcXrsvmCNVcPqWbExlSsvPjl-gzGzoHsz";
+  mashiro_option.v_appKey = "bFM3KX5ofIw2bgLTraJXvget";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/1ac3fa3ef82c93a8d46384e256342711.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/6f005cbc1865ff1b706aba57347988ab.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/512a1fded4940ba8d5f215809ff8c153.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/783bf161f47b32882f0e962fd4064de7.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/19313b0d62b27c8ba022f60fbfedd5ee.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/a5fa4f9db760f58fc48f03d66b4967f7.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/b3e8dae89b950b940dc0edd1e8cc0566.webp,https://cdn.jsdelivr.net/gh/xbclub/CDN@master/manifest/webp/e9f33c2c502ab43804964ce7edd431f9.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://dclef.github.io/" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/dclef/Dclef.github.io/img/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>懒狗</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/dclef" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  
+  <div id="video-container" style="display: none;">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu" >
+    </div>
+  </div>
+  
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+ 
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">老猫的博客</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E8%B5%84%E6%BA%90/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/sharejs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"> <!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">学生管理系统（C语言版）</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2019-12-9&nbsp;
+              
+              ·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读
+            
+                    
+            </p>
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <p>&#x5B66;&#x6821;&#x4F5C;&#x4E1A;&#xFF0C;&#x5148;&#x53D1;&#x5230;&#x535A;&#x5BA2;&#x4E0A;<br>&#x66F4;&#x65B0;&#x66F4;&#x6539;&#x5DF2;&#x77E5;&#x9519;&#x8BEF;<br>&#x518D;&#x5EA6;&#x66F4;&#x65B0;&#x6700;&#x7EC8;&#x7248;</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;  </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000 </span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="keyword">char</span> ID[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> Name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">float</span> Mark[<span class="number">3</span>];</span><br><span class="line">    <span class="keyword">float</span> Average;</span><br><span class="line">};</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">Avg</span><span class="params">(struct Student stu)</span></span>;<span class="comment">//&#x6C42;&#x5E73;&#x5747;&#x503C;</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Student_SearchByIndex</span><span class="params">(<span class="keyword">char</span> id[])</span></span>;<span class="comment">//&#x901A;&#x8FC7;&#x5B66;&#x53F7;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E0B;&#x6807;</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Student_SearchByName</span><span class="params">(<span class="keyword">char</span> name[])</span></span>;<span class="comment">//&#x901A;&#x8FC7;&#x59D3;&#x540D;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E0B;&#x6807;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_DisplaySingle</span><span class="params">(<span class="keyword">int</span> index)</span></span>;<span class="comment">//&#x663E;&#x793A;&#x5355;&#x6761;&#x5B66;&#x751F;&#x8BB0;&#x5F55;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Insert</span><span class="params">()</span></span>;<span class="comment">//&#x63D2;&#x5165;&#x5B66;&#x751F;&#x4FE1;&#x606F;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Modify</span><span class="params">()</span></span>;<span class="comment">//&#x4FEE;&#x6539;&#x5B66;&#x751F;&#x4FE1;&#x606F;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Delete</span><span class="params">()</span></span>;<span class="comment">//&#x5220;&#x9664;&#x5B66;&#x751F;&#x4FE1;&#x606F;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_SelectByName</span><span class="params">()</span></span>;<span class="comment">//&#x6309;&#x59D3;&#x540D;&#x67E5;&#x8BE2;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_SelectByID</span><span class="params">()</span></span>;<span class="comment">//&#x6309;&#x5B66;&#x53F7;&#x67E5;&#x8BE2;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_SortByAverage</span><span class="params">()</span></span>;<span class="comment">//&#x6309;&#x5E73;&#x5747;&#x503C;&#x6392;&#x5E8F;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Display</span><span class="params">()</span></span>;<span class="comment">//&#x663E;&#x793A;&#x5168;&#x90E8;&#x5B66;&#x751F;&#x4FE1;&#x606F;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">IO_ReadInfo</span><span class="params">()</span></span>;<span class="comment">//&#x5C06;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x4ECE;&#x6587;&#x4EF6;&#x8BFB;&#x51FA;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">IO_WriteInfo</span><span class="params">()</span></span>;<span class="comment">//&#x5C06;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x5199;&#x5165;&#x6587;&#x4EF6;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x58F0;&#x660E;&#x5B66;&#x751F;&#x6570;&#x7EC4;&#x53CA;&#x5B66;&#x751F;&#x6570;&#x91CF;*/</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">students</span>[<span class="title">N</span>];</span></span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x6C42;&#x5E73;&#x5747;&#x503C;*/</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">Avg</span><span class="params">(struct Student stu)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> (stu.Mark[<span class="number">0</span>] + stu.Mark[<span class="number">1</span>] + stu.Mark[<span class="number">2</span>]) / <span class="number">3</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x901A;&#x8FC7;&#x5B66;&#x53F7;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E0B;&#x6807;</span></span><br><span class="line"><span class="comment">&#x5C06;&#x5B66;&#x751F;&#x5B66;&#x53F7;&#x4E0E;&#x67E5;&#x8BE2;&#x7684;&#x5B66;&#x53F7;&#x505A;&#x6BD4;&#x8F83;&#xFF0C;</span></span><br><span class="line"><span class="comment">&#x5982;&#x679C;&#x76F8;&#x7B49;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x5B66;&#x751F;&#x7684;&#x4E0B;&#x6807; &#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x5219;&#x8FD4;&#x56DE;-1. */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Student_SearchByIndex</span><span class="params">(<span class="keyword">char</span> id[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">strcmp</span>(students[i].ID, id) == <span class="number">0</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x901A;&#x8FC7;&#x59D3;&#x540D;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E0B;&#x6807;*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Student_SearchByName</span><span class="params">(<span class="keyword">char</span> name[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">strcmp</span>(students[i].Name, name) == <span class="number">0</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x663E;&#x793A;&#x5355;&#x6761;&#x5B66;&#x751F;&#x8BB0;&#x5F55;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_DisplaySingle</span><span class="params">(<span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%10s%10s%8s%8s%8s%10s\n&quot;</span>, <span class="string">&quot;&#x5B66;&#x53F7;&quot;</span>, <span class="string">&quot;&#x59D3;&#x540D;&quot;</span>, <span class="string">&quot;&#x6210;&#x7EE9;&quot;</span>, <span class="string">&quot;&#x6210;&#x7EE9;&quot;</span>, <span class="string">&quot;&#x6210;&#x7EE9;&quot;</span>, <span class="string">&quot;&#x5E73;&#x5747;&#x6210;&#x7EE9;&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-------------------------------------------------------------\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%10s%10s%8.2f%8.2f%8.2f%10.2f\n&quot;</span>, students[index].ID, students[index].Name,</span><br><span class="line">        students[index].Mark[<span class="number">0</span>], students[index].Mark[<span class="number">1</span>], students[index].Mark[<span class="number">2</span>], students[index].Average);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x63D2;&#x5165;&#x5B66;&#x751F;&#x4FE1;&#x606F;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Insert</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x5B66;&#x53F7;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;students[num].ID);</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x59D3;&#x540D;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;students[num].Name);</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x6210;&#x7EE9;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;students[num].Mark[<span class="number">0</span>]);</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x6210;&#x7EE9;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;students[num].Mark[<span class="number">1</span>]);</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x6210;&#x7EE9;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;students[num].Mark[<span class="number">2</span>]);</span><br><span class="line">        getchar();</span><br><span class="line">        students[num].Average = Avg(students[num]);</span><br><span class="line">        num++;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x662F;&#x5426;&#x7EE7;&#x7EED;?(y/n)&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (getchar() == <span class="string">&apos;n&apos;</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x4FEE;&#x6539;&#x5B66;&#x751F;&#x4FE1;&#x606F;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Modify</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">//float Mark[0],Mark[1],Mark[2];  </span></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">char</span> id[<span class="number">20</span>];</span><br><span class="line">        <span class="keyword">int</span> index;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x5B66;&#x751F;&#x7684;&#x5B66;&#x53F7;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;id);</span><br><span class="line">        getchar();</span><br><span class="line">        index = Student_SearchByIndex(id);</span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">-1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x5B66;&#x751F;&#x4E0D;&#x5B58;&#x5728;!\n&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x4F60;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x4E3A;:\n&quot;</span>);</span><br><span class="line">            Student_DisplaySingle(index);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;-- &#x8BF7;&#x8F93;&#x5165;&#x65B0;&#x503C;--\n&quot;</span>);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x5B66;&#x53F7;:&quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;students[index].ID);</span><br><span class="line">            getchar();</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x59D3;&#x540D;:&quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;students[index].Name);</span><br><span class="line">            getchar();</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x6210;&#x7EE9;:&quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;students[index].Mark[<span class="number">0</span>]);</span><br><span class="line">            getchar();</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x6210;&#x7EE9;:&quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;students[index].Mark[<span class="number">1</span>]);</span><br><span class="line">            getchar();</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x6210;&#x7EE9;:&quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;students[index].Mark[<span class="number">2</span>]);</span><br><span class="line">            getchar();</span><br><span class="line">            students[index].Average = Avg(students[index]);</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x662F;&#x5426;&#x7EE7;&#x7EED;?(y/n)&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (getchar() == <span class="string">&apos;n&apos;</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x5220;&#x9664;&#x5B66;&#x751F;&#x4FE1;&#x606F;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Delete</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">char</span> id[<span class="number">20</span>];</span><br><span class="line">        <span class="keyword">int</span> index;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x8981;&#x5220;&#x9664;&#x7684;&#x5B66;&#x751F;&#x7684;&#x5B66;&#x53F7;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;id);</span><br><span class="line">        getchar();</span><br><span class="line">        index = Student_SearchByIndex(id);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">-1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x5B66;&#x751F;&#x4E0D;&#x5B58;&#x5728;!\n&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x4F60;&#x8981;&#x5220;&#x9664;&#x7684;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x4E3A;:\n&quot;</span>);</span><br><span class="line">            Student_DisplaySingle(index);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x662F;&#x5426;&#x771F;&#x7684;&#x8981;&#x5220;&#x9664;?(y/n)&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (getchar() == <span class="string">&apos;y&apos;</span>)</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">for</span> (i = index; i &lt; num - <span class="number">1</span>; i++)</span><br><span class="line">                {</span><br><span class="line">                    students[i] = students[i + <span class="number">1</span>];<span class="comment">//&#x628A;&#x540E;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x5411;&#x524D;&#x79FB;&#x52A8;    </span></span><br><span class="line">                }</span><br><span class="line">                num--;</span><br><span class="line">            }</span><br><span class="line">            getchar();</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x662F;&#x5426;&#x7EE7;&#x7EED;?(y/n)&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (getchar() == <span class="string">&apos;n&apos;</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x6309;&#x5B66;&#x53F7;&#x67E5;&#x8BE2;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_SelectByID</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">char</span> ID[<span class="number">20</span>];</span><br><span class="line">        <span class="keyword">int</span> index;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5B66;&#x751F;&#x7684;&#x5B66;&#x53F7;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;ID);</span><br><span class="line"></span><br><span class="line">        index = Student_SearchByIndex(ID); <span class="comment">//&#x8C03;&#x7528;&#x67E5;&#x8BE2;&#x51FD;&#x6570; </span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">-1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x5B66;&#x751F;&#x4E0D;&#x5B58;&#x5728;!\n&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x4F60;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x4E3A;:\n&quot;</span>);</span><br><span class="line">            Student_DisplaySingle(index);    <span class="comment">//&#x8C03;&#x7528;&#x663E;&#x793A;&#x5355;&#x6761;&#x8BB0;&#x5F55;&#x51FD;&#x6570;</span></span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x662F;&#x5426;&#x7EE7;&#x7EED;?(y/n)&quot;</span>);</span><br><span class="line">        fflush(<span class="built_in">stdin</span>);</span><br><span class="line">        <span class="keyword">if</span> (getchar() == <span class="string">&apos;n&apos;</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x6309;&#x59D3;&#x540D;&#x67E5;&#x8BE2;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_SelectByName</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">        <span class="keyword">int</span> index;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5B66;&#x751F;&#x7684;&#x59D3;&#x540D;:&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;name);</span><br><span class="line">        getchar();</span><br><span class="line">        index = Student_SearchByName(name);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">-1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x5B66;&#x751F;&#x4E0D;&#x5B58;&#x5728;!\n&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x4F60;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x4E3A;:\n&quot;</span>);</span><br><span class="line">            Student_DisplaySingle(index);</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x662F;&#x5426;&#x7EE7;&#x7EED;?(y/n)&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (getchar() == <span class="string">&apos;n&apos;</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x6309;&#x5E73;&#x5747;&#x503C;&#x6392;&#x5E8F;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_SortByAverage</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">tmp</span>;</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; num - i; j++)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (students[j - <span class="number">1</span>].Average &lt; students[j].Average)</span><br><span class="line">            {</span><br><span class="line">                tmp = students[j - <span class="number">1</span>];</span><br><span class="line">                students[j - <span class="number">1</span>] = students[j];</span><br><span class="line">                students[j] = tmp;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x663E;&#x793A;&#x5168;&#x90E8;&#x5B66;&#x751F;&#x4FE1;&#x606F;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student_Display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%10s%10s%8s%8s%8s%10s\n&quot;</span>, <span class="string">&quot;&#x5B66;&#x53F7;&quot;</span>, <span class="string">&quot;&#x59D3;&#x540D;&quot;</span>, <span class="string">&quot;&#x6210;&#x7EE9;&quot;</span>, <span class="string">&quot;&#x6210;&#x7EE9;&quot;</span>, <span class="string">&quot;&#x6210;&#x7EE9;&quot;</span>, <span class="string">&quot;&#x5E73;&#x5747;&#x6210;&#x7EE9;&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-------------------------------------------------------------\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%10s%10s%8.2f%8.2f%8.2f%10.2f\n&quot;</span>, students[i].ID, students[i].Name,</span><br><span class="line">            students[i].Mark[<span class="number">0</span>], students[i].Mark[<span class="number">1</span>], students[i].Mark[<span class="number">2</span>], students[i].Average);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x5C06;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x4ECE;&#x6587;&#x4EF6;&#x8BFB;&#x51FA;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">IO_ReadInfo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    FILE* fp;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">if</span> ((fp = fopen(<span class="string">&quot;Database.txt&quot;</span>, <span class="string">&quot;rb&quot;</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x4E0D;&#x80FD;&#x6253;&#x5F00;&#x6587;&#x4EF6;!\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span> (fread(&amp;num, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), <span class="number">1</span>, fp) != <span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        num = <span class="number">-1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        {</span><br><span class="line">            fread(&amp;students[i], <span class="keyword">sizeof</span>(struct Student), <span class="number">1</span>, fp);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    fclose(fp);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*&#x5C06;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x5199;&#x5165;&#x6587;&#x4EF6;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">IO_WriteInfo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    FILE* fp;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">if</span> ((fp = fopen(<span class="string">&quot;Database.txt&quot;</span>, <span class="string">&quot;wb&quot;</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x4E0D;&#x80FD;&#x6253;&#x5F00;&#x6587;&#x4EF6;!\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span> (fwrite(&amp;num, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), <span class="number">1</span>, fp) != <span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x9519;&#x8BEF;!\n&quot;</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (fwrite(&amp;students[i], <span class="keyword">sizeof</span>(struct Student), <span class="number">1</span>, fp) != <span class="number">1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x9519;&#x8BEF;!\n&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    fclose(fp);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> choice;</span><br><span class="line">    IO_ReadInfo(); <span class="comment">//&#x8C03;&#x7528;&#x8BFB;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x51FD;&#x6570;</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="comment">/*&#x4E3B;&#x83DC;&#x5355;*/</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n**********************&#x6B22;&#x8FCE;&#x4F7F;&#x7528;&#x5B66;&#x751F;&#x6210;&#x7EE9;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;********************\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot; \n1.&#x589E;&#x52A0;&#x5B66;&#x751F;&#x8BB0;&#x5F55;\t2.&#x67E5;&#x770B;&#x5B66;&#x751F;&#x8BB0;&#x5F55;\t3.&#x4FEE;&#x6539;&#x5B66;&#x751F;&#x8BB0;&#x5F55;\t4.&#x5220;&#x9664;&#x5B66;&#x751F;&#x8BB0;&#x5F55;\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot; \n5.&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x8BB0;&#x5F55;\t6.&#x6309;&#x5E73;&#x5747;&#x6210;&#x7EE9;&#x6392;&#x5E8F;\t\t7. &#x9000;&#x51FA;\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n******************************************************************\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&#x8BF7;&#x9009;&#x62E9;(1-7):&quot;</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;choice);</span><br><span class="line">        fflush(<span class="built_in">stdin</span>);</span><br><span class="line">        <span class="keyword">switch</span> (choice)</span><br><span class="line">        {</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            Student_Insert();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            Student_Display();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            Student_Modify();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            Student_Delete();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            Student_SelectByID();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">            Student_SortByAverage();</span><br><span class="line">            Student_Display();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        IO_WriteInfo();</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        <!-- .entry-content -->
+        
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/img/donate/alipay.jpg"></li>
+                <li class="wechat-code"><img src="/img/donate/wepay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+          
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                hexo博客主题搭建</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/11/18/JAV/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                JAV磁力链和封面爬取</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "AcXrsvmCNVcPqWbExlSsvPjl-gzGzoHsz",
+        appKey: "bFM3KX5ofIw2bgLTraJXvget",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 老猫的博客<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <div class="footertext">
+            <div class="img-preload">
+                <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+                <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+            </div>
+            
+            <p>本站总访问量：<a id="allcount"></a></p>
+            <p style="color: #666666;">¿</p>
+            
+        </div>
+        <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+ <span style="">Theme <a href="https://github.com/xbclub/Hexo-theme-sakura" target="_blank"
+                         style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
+             class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
+             href="https://2heng.xin/" target="_blank"
+             style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a
+             href="https://www.hojun.cn/" target="_blank"
+             style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>&<a
+             href="https://42cloud.cn/" target="_blank"
+             style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">42team, Powered by Hexo</a>
+        </span>
+            </p>
+        </div>
+    </div><!-- .site-info -->
+</footer>
+
+
+<!--<script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.7/js/tocbot.min.js"></script>-->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/InsightSearch.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@1.2/js/sakura-app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/Valine.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+
+    <script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/busuanzi.pure.mini.js"></script>
+
+      
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2", "name": "Unbroken.mp4", "live": "close"},
+            "windowheight": "fixed",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    } else {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2", "name": "Unbroken.mp4", "live": "open"},
+            "windowheight": "auto",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    }
+    /* ]]> */
+
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+            if ($(".pattern-center").length > 0) { //有图的情况
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -400,
+                    scrollSmoothOffset: -85
+                });
+            } else {
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -85,
+                    scrollSmoothOffset: -85
+                });
+            }
+            var offsetTop = $('.toc').offset().top - 95;
+            window.onscroll = function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop >= offsetTop) {
+                    $('.toc').addClass('toc-fixed');
+                } else {
+                    $('.toc').removeClass('toc-fixed');
+                }
+            }
+        }
+    });
+</script>
+
+
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/dclef/Dclef.github.io/img/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">老猫的博客</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/xbclub" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=525255289&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%B5%84%E6%BA%90/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    switch="true"
+
+    id="3061697493"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
