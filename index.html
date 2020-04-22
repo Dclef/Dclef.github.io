@@ -255,7 +255,7 @@
     <div class="the-feature square from_left_and_right">
       <a href="/2019/11/18/JAV/" target="_blank">
         <div class="img">
-          <img src="/img/startdash/sakura.md.png">
+          <img src="https://www.valuecoders.com/blog/wp-content/uploads/2018/05/featured.jpg">
         </div>
         <div class="info">
           <h3>磁力爬取</h3>
@@ -396,7 +396,7 @@
 
   <div class="post-thumb">
     <a href="/2020/03/04/%E5%85%B3%E4%BA%8EMySQL%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88PHPstudy%E7%89%88%EF%BC%89/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="https://img-blog.csdnimg.cn/20200422121505305.png">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-php-software-develop-command-language-512.png">
     </a>
   </div>
   <div class="post-content-wrap">
@@ -474,7 +474,7 @@
 
   <div class="post-thumb">
     <a href="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="http://oi.0w0.io/2017/06/12/hexo%E6%8F%92%E5%85%A5Youtube%E8%A7%86%E9%A2%91/hexo.png">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="https://tse2-mm.cn.bing.net/th/id/OIP.j7Bw19HA9uWHkX0nf_JlkQHaEK?pid=Api&amp;rs=1">
     </a>
   </div>
   <div class="post-content-wrap">
@@ -728,13 +728,15 @@
             <p>本站总访问量：<a id="allcount"></a></p>
             <p style="color: #666666;">¿</p>
             
+                <p id="momk" style="font-family: 'Ubuntu', sans-serif;color: #b9b9b9;"></p>
+            
         </div>
         <div class="footer-device">
             <p style="font-family: 'Ubuntu', sans-serif;">
  <span style="">Theme <a href="https://github.com/Dclef/Dclef.github.io" target="_blank"
                          style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
-             class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
-             href="https://2heng.xin/" target="_blank"
+             class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> <a
+             href="https://hexo.io/zh-cn/index.html" target="_blank"
              style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">, Powered by Hexo</a>
         </span>
             </p>
@@ -843,6 +845,36 @@
         }
     });
 </script>
+
+    <script type="text/javascript">
+        function NewDate(str) {
+            str = str.split('-');
+            var date = new Date();
+            date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+            date.setUTCHours(0, 0, 0, 0);
+            return date;
+        }
+
+        function momxc() {
+            var birthDay = NewDate("Fri Nov 01 2019 08:00:00 GMT+0800 (GMT+08:00)");
+            var today = new Date();
+            var timeold = today.getTime() - birthDay.getTime();
+            var sectimeold = timeold / 1000
+            var secondsold = Math.floor(sectimeold);
+            var msPerDay = 24 * 60 * 60 * 1000;
+            var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (daysold - e_daysold) * -24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (hrsold - e_hrsold) * -60;
+            var minsold = Math.floor((hrsold - e_hrsold) * -60);
+            var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+            document.getElementById("momk").innerHTML = "本站已安全运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+            setTimeout(momxc, 1000);
+        }
+
+        momxc();
+    </script>
 
 
 

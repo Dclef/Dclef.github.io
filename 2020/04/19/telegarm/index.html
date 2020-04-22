@@ -410,13 +410,15 @@
             <p>本站总访问量：<a id="allcount"></a></p>
             <p style="color: #666666;">¿</p>
             
+                <p id="momk" style="font-family: 'Ubuntu', sans-serif;color: #b9b9b9;"></p>
+            
         </div>
         <div class="footer-device">
             <p style="font-family: 'Ubuntu', sans-serif;">
  <span style="">Theme <a href="https://github.com/Dclef/Dclef.github.io" target="_blank"
                          style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
-             class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
-             href="https://2heng.xin/" target="_blank"
+             class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> <a
+             href="https://hexo.io/zh-cn/index.html" target="_blank"
              style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">, Powered by Hexo</a>
         </span>
             </p>
@@ -525,6 +527,36 @@
         }
     });
 </script>
+
+    <script type="text/javascript">
+        function NewDate(str) {
+            str = str.split('-');
+            var date = new Date();
+            date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+            date.setUTCHours(0, 0, 0, 0);
+            return date;
+        }
+
+        function momxc() {
+            var birthDay = NewDate("Fri Nov 01 2019 08:00:00 GMT+0800 (GMT+08:00)");
+            var today = new Date();
+            var timeold = today.getTime() - birthDay.getTime();
+            var sectimeold = timeold / 1000
+            var secondsold = Math.floor(sectimeold);
+            var msPerDay = 24 * 60 * 60 * 1000;
+            var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (daysold - e_daysold) * -24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (hrsold - e_hrsold) * -60;
+            var minsold = Math.floor((hrsold - e_hrsold) * -60);
+            var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+            document.getElementById("momk").innerHTML = "本站已安全运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+            setTimeout(momxc, 1000);
+        }
+
+        momxc();
+    </script>
 
 
 
