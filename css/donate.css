@@ -35,7 +35,7 @@
   height: 70px;
   line-height: 70px;
   color: #fff;
-  background: #ffd886 url(/images/donate/like.svg) no-repeat center 10px;
+  background: #ffd886 url(/img/donate/like.svg) no-repeat center 10px;
   background-size: 20px;
   border-radius: 35px;
   text-align: center;
@@ -85,10 +85,10 @@
   display: block;
 }
 #donateBox #PayPal {
-  background-image: url(/images/donate/paypal.svg);
+  background-image: url(/img/donate/paypal.svg);
 }
 #donateBox>#BTC {
-  background-image: url(/images/donate/bitcoin.svg);
+  background-image: url(/img/donate/bitcoin.svg);
   line-height: 28px;
 }
 #donateBox>#BTC:hover {
@@ -99,10 +99,10 @@
   cursor: pointer;
 }
 #donateBox #AliPay {
-  background-image: url(/images/donate/alipay.svg);
+  background-image: url(/img/donate/alipay.svg);
 }
 #donateBox #WeChat {
-  background-image: url(/images/donate/wechat.svg);
+  background-image: url(/img/donate/wechat.svg);
 }
 #QRBox {
   position: relative;
@@ -147,7 +147,7 @@
   height: 24px;
   top: -12px;
   left: -10px;
-  background: no-repeat center center url(/images/donate/github.svg);
+  background: no-repeat center center url(/img/donate/github.svg);
   background-size: contain;
   opacity: 0.3;
   transform: rotatez(15deg );
