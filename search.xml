@@ -18,17 +18,10 @@
       </categories>
   </entry>
   <entry>
-    <title>3元VPN，你从未嫖过的机场</title>
-    <url>/2020/04/19/3%E5%85%83VPN%EF%BC%8C%E4%BD%A0%E4%BB%8E%E6%9C%AA%E5%AB%96%E8%BF%87%E7%9A%84%E6%9C%BA%E5%9C%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>新机场，比任何老机场都便宜，但唯一要注意的点<strong>可</strong>能<strong>会跑路</strong>，所以一般建议购买一个月或三个月的划算。<br>购买建议：<img src="https://img-blog.csdnimg.cn/2020041900193258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>只购买者两款就足够了如果觉得流量不够的话可以买这个<br><img src="https://img-blog.csdnimg.cn/20200419002258991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>每30天重制流量，比较划算。其余的流量包<strong>不建议购买</strong><br>地址：</p>
-<blockquote>
-<p><a href="https://freemycloud.xyz/auth/register?code=NStx" target="_blank" rel="noopener">https://freemycloud.xyz/auth/register?code=NStx</a></p>
-</blockquote>
-<p>VPN上网搭建教程可以看之前的教程</p>
-<blockquote>
-<p><a href="https://dclef.github.io/2019/11/02/VPN/" target="_blank" rel="noopener">https://dclef.github.io/2019/11/02/VPN/</a></p>
-</blockquote>
+    <title>一张图告诉你SSR,V2-ray和VPN,游戏加速器的区别</title>
+    <url>/2020/04/19/%E4%B8%80%E5%BC%A0%E5%9B%BE%E5%91%8A%E8%AF%89%E4%BD%A0SSR,V2-ray%E5%92%8CVPN,%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>对于有梯子的朋友，在对外服游戏进行加速的时候，通常比不过游戏加速器（UU，雷神等），这是为什么呢？<br>看到下图我觉得大部分应该懂了，<br><img src="https://img-blog.csdnimg.cn/20200807181415111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>补充：所谓的游戏加速器其实是VPN套壳的应用，VPN可以代理你几乎所有的流量，而SSR,V2-ray只在会会话层，只能代理像steam，游览器这种高级应用。而且IP查询依然可以查询到本地的地址。</p>
 ]]></content>
       <categories>
         <category>科学上网</category>
