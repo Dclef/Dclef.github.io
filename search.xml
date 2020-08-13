@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>IDM+会员直链 以达到破解百度云限速的教程'</title>
+    <url>/2020/08/13/IDM+%E4%BC%9A%E5%91%98%E7%9B%B4%E9%93%BE%20%E4%BB%A5%E8%BE%BE%E5%88%B0%E7%A0%B4%E8%A7%A3%E7%99%BE%E5%BA%A6%E4%BA%91%E9%99%90%E9%80%9F%E7%9A%84%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>其实吧目前最流行的是 油猴脚本+IDM下载百度云文件以达到破解限速的效果，但这还是有缺点，就是不是会员的直链，而是普通用户的直链，在达到一定流量的时候照样给你限速，所以利用会员直链变可以达到规避这种限速的方法，但最终还是逃不过会员限速。（会员有每天的请求量，达到一定数量变会限速或者进入黑名单变成黑号）。</p>
+<p>   PC端方法：<br>    <strong>步骤一</strong>：进入页面  随便找个单文件的下载链接（不能是文件夹）</p>
+<p><img src="https://img-blog.csdnimg.cn/20200813183910934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><strong>步骤二</strong>：进入文件列表点击进入下载页面<img src="https://img-blog.csdnimg.cn/20200813184334489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><strong>步骤三：</strong>使用IDM（下载链接放在了最下面自己去下载）<img src="https://img-blog.csdnimg.cn/20200813184534520.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200813184556709.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>修改UA为<strong>LogStatistic</strong>或者<strong>netdisk;P2SP;2.2.60.26</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200813184808815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200813184921793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>这样做的好处是规避了游览器使用IDM插件下载的麻烦，理论上任何游览器都能使用这种方法。</p>
+<p>  安卓端：<br>      <strong>步骤一</strong>：请下载via游览器（对500KB那个游览器）<br>     <strong>步骤二</strong>：修改UA 在设置→通用→游览器标识选择自定义 输入<strong>LogStatistic</strong>在重复PC端步骤（直接点击下载）即可下载（速度可能会逊色IDM）<br>     安卓的IDM暂时没找到UA，所以无法使用。</p>
+<p>IDM电脑端：<a href="https://dclef.lanzous.com/ixd46flbx8d" target="_blank" rel="noopener">https://dclef.lanzous.com/ixd46flbx8d</a></p>
+]]></content>
+      <categories>
+        <category>百度云</category>
+      </categories>
+  </entry>
+  <entry>
     <title>外网APP镜像下载</title>
     <url>/2020/04/30/VPNAPP/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
