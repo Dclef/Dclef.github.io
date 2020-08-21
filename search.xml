@@ -22,18 +22,6 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
-    <title>telegarm(电报)的使用教程</title>
-    <url>/2020/04/19/telegarm/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>相信这个教程还是有很多的，所以我就简要说明如何使用。<br>1.下载电报<br><a href="https://www.telegramcn.net/apps" target="_blank" rel="noopener">https://www.telegramcn.net/apps</a><br>由于是中文版所以可以直接跳过配置中文<br>2.注册<br>注意：一定要<strong>+86</strong>才能注册成功，切记。邮箱最好用GMAIL（如果没有GMAIL就直接用QQ邮箱）。如果注册错误了或者所注册的手机号提示错误，那么可以给官方发送一封邮件，给你的手机号重新赋予权限。我当初就遇到了这个问题，发了一封邮件后，很快就回复了。在手机端注册成功后，如果继续登录PC端，需要重新输入手机号，接收到验证码后，输入后就可以开车了。<br>3.使用<br>关于使用这点我相信有了中文我觉得是个国人都可以使用了，对此我就不用讲了。</p>
-<p>配合3元VPN使用更爽<br>地址：<a href="https://freemycloud.xyz/auth/register?code=NStx" target="_blank" rel="noopener">https://freemycloud.xyz/auth/register?code=NStx</a></p>
-<p>科学上网搭建教程：<a href="https://dclef.github.io/2019/11/02/VPN/" target="_blank" rel="noopener">https://dclef.github.io/2019/11/02/VPN/</a></p>
-<p>3元VPN购买建议：</p>
-]]></content>
-      <categories>
-        <category>科学上网</category>
-      </categories>
-  </entry>
-  <entry>
     <title>一张图告诉你SSR,V2-ray和VPN,游戏加速器的区别</title>
     <url>/2020/04/19/%E4%B8%80%E5%BC%A0%E5%9B%BE%E5%91%8A%E8%AF%89%E4%BD%A0SSR,V2-ray%E5%92%8CVPN,%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>对于有梯子的朋友，在对外服游戏进行加速的时候，通常比不过游戏加速器（UU，雷神等），这是为什么呢？<br>看到下图我觉得大部分应该懂了，<br><img src="https://img-blog.csdnimg.cn/20200807181415111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -1314,6 +1302,7 @@ int main()
 <p>同样的代理规则改为<strong>绕过局域网和大陆</strong><br><img src="https://img-blog.csdnimg.cn/2020041320435923.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>这样你便会享受墙外的乐趣和减少墙流量的使用。比如上油管或者某P站和电报。</p>
 <p><strong>于2020/4/13再次更新</strong></p>
+<p>免责声明：本站只提供教程，不提供任何的翻墙服务！</p>
 ]]></content>
       <categories>
         <category>小白入门</category>
