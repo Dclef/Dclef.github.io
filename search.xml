@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>解决IDEA激活配置汉化问题</title>
+    <url>/2020/09/10/IDEA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记IEDA遇到的坑<br><strong>1.</strong>激活IEDA<br>在官网下载<a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IDEA</a><br>下载注意：必须下2019.3版本的IDEA<br><img src="https://img-blog.csdnimg.cn/20200910164426509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>下载完以后以试用期（Evaluate for free）进入IEDA<br>下载jetbrains-agent.zip</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw" target="_blank" rel="noopener">https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw</a>  提取码：uuop</p>
+</blockquote>
+<p><strong>解压</strong>jetbrains-agent.zip进入lib<br>将 <strong>jetbrains-agent.jar</strong> 拖进IDE窗口，点 “Restart” 按钮重启IDE。<br>在弹出的<strong>JetbrainsAgent Helper</strong>对话框中，选择激活方式，点击安装按钮。<br>如果你是无外网环境，在对话框中勾选：<strong>我无法访问外网</strong><br><strong>重启</strong>IDEA。<br>证书将于2089年过期，所以不用担心证书过期的问题。<br>2.汉化IDEA（自行需要）</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1Ebd1jWJRzug9LQ3Kyxedrg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Ebd1jWJRzug9LQ3Kyxedrg</a><br>提取码：20dj</p>
+</blockquote>
+<p>只需要拖进IDEA中的<strong>lib</strong>即可，重启IDEA你便可以看见汉化页面了。</p>
+<p>3.配置IDEA<br>下载<a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html" target="_blank" rel="noopener">jdk1.8</a><br><img src="https://img-blog.csdnimg.cn/20200409151732407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>配置JAVA环境基于可能有小白简易的说一下<br>打开你的配置环境变量<br>添加<br><strong>新增</strong>变量名：JAVA_HOME<br><strong>新增</strong>变量值：C:\Program Files (x86)\Java\jdk1.8.0_91        // 根据自己的实际路径配置<br><strong>寻找</strong>变量名：Path<br><strong>添加</strong>变量值：%JAVA_HOME%\bin;<br>              %JAVA_HOME%\jre\bin;<br><img src="https://img-blog.csdnimg.cn/20200409152004465.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200409152020563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在CMD中运行JAVA和JAVAC如果运行成功则配置完成。<br>打开IDEA，找到项目结构，配置SDK，如果那你是默认路径则自动配置</p>
+<p><img src="https://img-blog.csdnimg.cn/2020040915234393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自此IDEA配置完成</p>
+]]></content>
+      <categories>
+        <category>小白入门</category>
+      </categories>
+  </entry>
+  <entry>
     <title>IDM+会员直链 以达到破解百度云限速的教程'</title>
     <url>/2020/08/13/IDM+BaiduWp/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>其实吧目前最流行的是 油猴脚本+IDM下载百度云文件以达到破解限速的效果，但这还是有缺点，就是不是会员的直链，而是普通用户的直链，在达到一定流量的时候照样给你限速，所以利用会员直链变可以达到规避这种限速的方法，但最终还是逃不过会员限速。（会员有每天的请求量，达到一定数量变会限速或者进入黑名单变成黑号）。</p>
