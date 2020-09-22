@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>解决PHPstrom激活配置汉化问题</title>
+    <url>/2020/09/22/PHPstrom/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>老规矩<br><strong>1.</strong>激活phpstrom<br>在官网下载<a href="https://www.jetbrains.com/phpstorm/download/other.html/" target="_blank" rel="noopener">phpstrom</a><br>下载注意：必须下2019.3版本的phpstrom<br><img src="https://img-blog.csdnimg.cn/20200922135901270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>下载完以后以试用期（Evaluate for free）进入phpstrom<br>下载jetbrains-agent.zip</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw" target="_blank" rel="noopener">https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw</a><br>提取码：uuop</p>
+</blockquote>
+<p><strong>解压</strong>jetbrains-agent.zip进入lib<br>将 <strong>jetbrains-agent.jar</strong> 拖进IDE窗口，点 “Restart” 按钮重启IDE。<br>在弹出的<strong>JetbrainsAgent Helper</strong>对话框中，选择激活方式，点击安装按钮。<br>如果你是无外网环境，在对话框中勾选：<strong>我无法访问外网</strong><br><strong>重启</strong>phpstrom<br>证书将于2089年过期，所以不用担心证书过期的问题。<br>2.汉化phpstrom（自行需要）</p>
+<blockquote>
+<p>链接: <a href="https://pan.baidu.com/s/1X41P6xtIoswPI76LzW4K5w" target="_blank" rel="noopener">https://pan.baidu.com/s/1X41P6xtIoswPI76LzW4K5w</a><br>提取码: fvr1 </p>
+</blockquote>
+<p>只需要拖进IDEA中的<strong>lib</strong>即可，重启IDEA你便可以看见汉化页面了。</p>
+<p>3.配置phpstrom<br>在语言里面找到php配置你的php即可<br><img src="https://img-blog.csdnimg.cn/20200922140702644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>自此IDEA配置完成</p>
+]]></content>
+      <categories>
+        <category>小白入门</category>
+      </categories>
+  </entry>
+  <entry>
     <title>解决IDEA激活配置汉化问题</title>
     <url>/2020/09/10/IDEA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记IEDA遇到的坑<br><strong>1.</strong>激活IEDA<br>在官网下载<a href="https://www.jetbrains.com/idea/download/other.html" target="_blank" rel="noopener">IDEA</a><br>下载注意：必须下2019.3版本的IDEA<br><img src="https://img-blog.csdnimg.cn/20200910164426509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
