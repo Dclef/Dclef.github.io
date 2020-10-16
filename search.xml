@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一个无广告的漫画阅读器</title>
+    <url>/2020/10/16/%E4%B8%80%E4%B8%AA%E6%97%A0%E5%B9%BF%E5%91%8A%E7%9A%84%E6%BC%AB%E7%94%BB%E9%98%85%E8%AF%BB%E5%99%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><del>不会吧，不会吧，不会还有人用哔咔和大妈之家吧？</del> 笑</p>
+<p>博主给大家推荐个开源的漫画阅读器项目<br><a href="https://github.com/inorichi/tachiyomi" target="_blank" rel="noopener">Tachiyomi</a></p>
+<p>这个漫画阅读器本身没有书源，但是它最重要的一点是支持插件，想必大家都懂了吧？（nhentai ,e-hentai等等……），最重要的一点是<br><strong>没有广告！</strong>就只是个单纯的漫画阅读器，并且支持多个书源！<br>目前我就只用这三个插件（<strong>不需要梯子</strong>）<br><img src="https://img-blog.csdnimg.cn/2020101614200317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201016142207770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201016142249650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="这样"><br>目前用的最舒服的就是这款。下载链接我放在下面，请自行食用。</p>
+<p>蓝奏云：<a href="https://dclef.lanzoui.com/b0b90g3mh" target="_blank" rel="noopener">https://dclef.lanzoui.com/b0b90g3mh</a><br>密码:a8v5</p>
+]]></content>
+      <categories>
+        <category>资源分享</category>
+      </categories>
+  </entry>
+  <entry>
     <title>解决PHPstrom激活配置汉化问题</title>
     <url>/2020/09/22/PHPstrom/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>老规矩<br><strong>1.</strong>激活phpstrom<br>在官网下载<a href="https://www.jetbrains.com/phpstorm/download/other.html/" target="_blank" rel="noopener">phpstrom</a><br>下载注意：必须下2019.3版本的phpstrom<br><img src="https://img-blog.csdnimg.cn/20200922135901270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>下载完以后以试用期（Evaluate for free）进入phpstrom<br>下载jetbrains-agent.zip</p>
