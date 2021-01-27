@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta name="google-site-verification" content="tTVER7UFbbz9zsWlt9DpfLGsrcmWjvDfXGpENaoHz7o" />
   
-  <title>利用手机终端Termux版的pyhon实现学习通自动签到 | 老猫的博客</title>
+  <title>archive_a: 2021 | 老猫的博客</title>
   <meta name="description" content="个人的笔记和一些教程" />
   <meta name="keywords" content="dclef,老猫,小白教程,入门,C,java,Python,PHP,老瓜皮" />
   
@@ -234,175 +234,357 @@
 <meta name="google-site-verification" content="tTVER7UFbbz9zsWlt9DpfLGsrcmWjvDfXGpENaoHz7o" />
 </header>
 
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/sharejs.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.6/css/tocbot.css">
-<div class="pattern-center-blank"></div>
-
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/Termux.png" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-      </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      利用手机终端Termux版的pyhon实现学习通自动签到</h1>
-      <p class="entry-census">
-        <span>
-          <a href="">
-            <img src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/favicon.jpg">
-          </a>
-        </span>
-        <span>
-          <a href=""></a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2020-3-25
-        
-          ·<span id="busuanzi_value_page_pv"></span>次阅读
-      
-      
-      </p>
-    </header>
-  </div>
-
+      <div class="blank" style="padding-top: 75px;">
+</div>
 <div id="content" class="site-content">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"> <!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <p>嘛这玩意我就不发到github上了，毕竟有点拉闸。<br>食用方法：<br>1.下载Termux</p>
-<blockquote>
-<p>复制这段内容后打开百度网盘手机App，操作更方便哦<br>链接:<a href="https://pan.baidu.com/s/1VFtwEyzXSO83j-4IpsUstQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1VFtwEyzXSO83j-4IpsUstQ</a> 提取码:1hhd</p>
-</blockquote>
-<p>2.进入Termux<br>先来波换成清华大学镜像源<br>先复制粘贴以下代码</p>
-<pre><code class="termux">sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#39; $PREFIX/etc/apt/sources.list
-sed -i &#39;s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@&#39; $PREFIX/etc/apt/sources.list.d/game.list
-sed -i &#39;s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@&#39; $PREFIX/etc/apt/sources.list.d/science.list</code></pre>
-<p>之后更新源</p>
-<pre><code class="python">apt update &amp;&amp; apt upgrade</code></pre>
-<p>像这样<br><img src="https://img-blog.csdnimg.cn/20200325221717847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.允许外部储存</p>
-<pre><code class="termux">
-termux-setup-storage</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200325222315928.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4.安装pyhton</p>
-<pre><code class="termux">pkg install python</code></pre>
-<p>安装完python像这样<br><img src="https://img-blog.csdnimg.cn/20200325222459702.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5.使用镜像下载requests库</p>
-<pre><code class="python">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple requests</code></pre>
-<p><strong>注意</strong>:python如果没有安装好那么pip就无法使用<br><img src="https://img-blog.csdnimg.cn/20200325223504955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果你出现这样其实可以不用管但以放万一也可以更新一下</p>
-<pre><code class="python">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip</code></pre>
-<p>更新完像这样<br><img src="https://img-blog.csdnimg.cn/20200325223631837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>6.检查外部环境<br>首先呢先在你的内部储存中中找到download，啥？你不知道内部储存吗，一般来讲是这种<img src="https://img-blog.csdnimg.cn/20200325224150680.png" alt="在这里插入图片描述"><br>找到了话用termux检查<br><img src="https://img-blog.csdnimg.cn/20200325224323647.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>请一步一步输入以下指令</strong></p>
-<pre><code class="termux">ls
-cd storage
-cd downloads
-ls</code></pre>
-<p>.<img src="https://img-blog.csdnimg.cn/2020032522435170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>7.使用自动签到脚本（<strong>重头戏</strong>）<br>下载签到脚本</p>
-<blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1ypZ9FDx8rmkDnb9bnLsVsg" target="_blank" rel="noopener">https://pan.baidu.com/s/1ypZ9FDx8rmkDnb9bnLsVsg</a>  提取码：ogpz</p>
-</blockquote>
-<p>我猜你们手机可能没有文本编译器，那么就下个ES文件游览器<br><img src="https://img-blog.csdnimg.cn/20200325230245617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入你的账号和密码<br><img src="https://img-blog.csdnimg.cn/20200325230444444.png" alt="在这里插入图片描述"><br>修改好以后就可以在用termux使用脚本了，为了方便建议重命名为1.py<br>输入</p>
-<pre><code class="python">python 1.py</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/202003252310251.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>获取成功！之后你就可以梦中网课了0.0<br><strong>困境</strong>：目前为<strong>测试版</strong>，支持理论上的所有签到，但可能会出现一些小BUG。也有可能请求次数多了会照成学习通把你拉黑。之后可能会添加定时任务，每天定时启动脚本。</p>
-
-        </div>
-        <!-- .entry-content -->
-        
-        <div class="single-reward">
-          <div class="reward-open">赏
-            <div class="reward-main">
-              <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/alipay.jpg"></li>
-                <li class="wechat-code"><img src="/img/donate/wepay.jpg"></li>
-              </ul>
+  <div id="main">
+    <header class="page-header">
+      <h1 class="cat-title">
+      归档</h1>
+      <span class="cat-des">
+        <p>
+        Archives</p>
+      </span>
+    </header>
+    <div id="main-part">
+      <article class="art">
+        <div class="art-main">
+          <div class="art-content">
+            <div id="archives">
+              <p style="text-align:right;">
+                [<span id="al_expand_collapse" style="cursor: s-resize;">
+                全部展开/收缩</span>
+              ]</p>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2021年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      01月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2021/01/27/6%E7%9B%98/">
+                          <span style="color:#0bf;">
+                          27日22:28:37</span>
+                          6盘(清真云)一个可以离线下载百度云盘和磁力的云盘
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2020年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      10月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2020/10/16/%E4%B8%80%E4%B8%AA%E6%97%A0%E5%B9%BF%E5%91%8A%E7%9A%84%E6%BC%AB%E7%94%BB%E9%98%85%E8%AF%BB%E5%99%A8/">
+                          <span style="color:#0bf;">
+                          16日14:33:14</span>
+                          一个无广告的漫画阅读器
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      09月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2020/09/22/PHPstrom/">
+                          <span style="color:#0bf;">
+                          22日14:10:57</span>
+                          解决PHPstrom激活配置汉化问题
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/09/10/IDEA/">
+                          <span style="color:#0bf;">
+                          10日16:45:07</span>
+                          解决IDEA激活配置汉化问题
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      08月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2020/08/13/IDM+BaiduWp/">
+                          <span style="color:#0bf;">
+                          13日19:07:32</span>
+                          IDM+会员直链 以达到破解百度云限速的教程&#39;
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      04月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2020/04/30/VPNAPP/">
+                          <span style="color:#0bf;">
+                          30日22:59:17</span>
+                          外网APP镜像下载
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/19/%E4%B8%80%E5%BC%A0%E5%9B%BE%E5%91%8A%E8%AF%89%E4%BD%A0SSR,V2-ray%E5%92%8CVPN,%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                          <span style="color:#0bf;">
+                          19日00:31:23</span>
+                          一张图告诉你SSR,V2-ray和VPN,游戏加速器的区别
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      03月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2020/03/25/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E7%BB%88%E7%AB%AFTermux%E7%89%88%E7%9A%84pyhon%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0%E9%80%9A%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/">
+                          <span style="color:#0bf;">
+                          25日23:20:14</span>
+                          利用手机终端Termux版的pyhon实现学习通自动签到
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/04/%E5%85%B3%E4%BA%8EMySQL%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88PHPstudy%E7%89%88%EF%BC%89/">
+                          <span style="color:#0bf;">
+                          04日21:13:46</span>
+                          关于MySQL的配置（PHPstudy版）
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2019年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      12月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2019/12/20/C%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E8%A7%A3%E9%87%8A/">
+                          <span style="color:#0bf;">
+                          20日15:27:56</span>
+                          C语言中一些问题和代码的解释
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                          <span style="color:#0bf;">
+                          10日18:41:21</span>
+                          hexo博客主题搭建
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/09/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">
+                          <span style="color:#0bf;">
+                          09日20:00:50</span>
+                          学生管理系统（C语言版）
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      11月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2019/11/18/JAV/">
+                          <span style="color:#0bf;">
+                          18日00:16:03</span>
+                          JAV磁力链和封面爬取
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/02/VPN/">
+                          <span style="color:#0bf;">
+                          02日21:46:16</span>
+                          科学上网的快速搭建
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/02/vs2019%20and%20dw%20cs6/">
+                          <span style="color:#0bf;">
+                          02日01:25:21</span>
+                          初学者Visual Studio 2019和Dreamwave cs6的安装与使用
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/01/hello-world/">
+                          <span style="color:#0bf;">
+                          01日00:00:00</span>
+                          Hello World
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
             </div>
           </div>
         </div>
-          
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
       </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2020/04/19/%E4%B8%80%E5%BC%A0%E5%9B%BE%E5%91%8A%E8%AF%89%E4%BD%A0SSR,V2-ray%E5%92%8CVPN,%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/VPN.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/VPN.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                一张图告诉你SSR,V2-ray和VPN,游戏加速器的区别</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/2020/03/04/%E5%85%B3%E4%BA%8EMySQL%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88PHPstudy%E7%89%88%EF%BC%89/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/xbclub/imageCDN//upload/20200306164050.gif" data-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/PHP.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/PHP.png">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                关于MySQL的配置（PHPstudy版）</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
-      
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "AcXrsvmCNVcPqWbExlSsvPjl-gzGzoHsz",
-        appKey: "bFM3KX5ofIw2bgLTraJXvget",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="" itemprop="url" rel="author"></a>
-            </h3>
-          </div>
-        </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i></p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+    </div>
+  </div>
 </div>
-
 
     </div>    
     <div class="ins-search">
