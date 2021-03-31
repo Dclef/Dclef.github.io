@@ -62,7 +62,7 @@
   </style>
   <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
   </style>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
@@ -75,7 +75,7 @@
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
-        <a href="https://dclef.github.io/" target="_blank" rel="noopener">
+        <a target="_blank" rel="noopener" href="https://dclef.github.io/">
           <img src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/favico.jpg">
         </a>
       </div>
@@ -222,6 +222,13 @@
                         </a>
                       </li>
                     
+                      <li>
+                        <a href="/about/1">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
                   </ul>
                 
               </li>
@@ -262,6 +269,8 @@
           ·<span id="busuanzi_value_page_pv"></span>次阅读
       
       
+        ·<span id="readcount"></span>次阅读
+      
       </p>
     </header>
   </div>
@@ -280,12 +289,12 @@
 #include&lt;stdlib.h&gt;
 #define N 1000 
 struct Student
-{
+&#123;
     char ID[20];
     char Name[20];
     float Mark[3];
     float Average;
-};
+&#125;;
 float Avg(struct Student stu);//求平均值
 int Student_SearchByIndex(char id[]);//通过学号返回数组下标
 int Student_SearchByName(char name[]);//通过姓名返回数组下标
@@ -309,59 +318,59 @@ int num = 0;
 
 /*求平均值*/
 float Avg(struct Student stu)
-{
+&#123;
     return (stu.Mark[0] + stu.Mark[1] + stu.Mark[2]) / 3;
-}
+&#125;
 
 /*通过学号返回数组下标
 将学生学号与查询的学号做比较，
 如果相等则返回该学生的下标 ，找不到则返回-1. */
 int Student_SearchByIndex(char id[])
-{
+&#123;
     int i;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         if (strcmp(students[i].ID, id) == 0)
-        {
+        &#123;
             return i;
-        }
-    }
+        &#125;
+    &#125;
     return -1;
-}
+&#125;
 
 
 
 /*通过姓名返回数组下标*/
 int Student_SearchByName(char name[])
-{
+&#123;
     int i;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         if (strcmp(students[i].Name, name) == 0)
-        {
+        &#123;
             return i;
-        }
-    }
+        &#125;
+    &#125;
     return -1;
-}
+&#125;
 
 
 
 /*显示单条学生记录*/
 void Student_DisplaySingle(int index)
-{
+&#123;
     printf(&quot;%10s%10s%8s%8s%8s%10s\n&quot;, &quot;学号&quot;, &quot;姓名&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;平均成绩&quot;);
     printf(&quot;-------------------------------------------------------------\n&quot;);
     printf(&quot;%10s%10s%8.2f%8.2f%8.2f%10.2f\n&quot;, students[index].ID, students[index].Name,
         students[index].Mark[0], students[index].Mark[1], students[index].Mark[2], students[index].Average);
 
-}
+&#125;
 
 /*插入学生信息*/
 void Student_Insert()
-{
+&#123;
     while (1)
-    {
+    &#123;
         printf(&quot;请输入学号:&quot;);
         scanf(&quot;%s&quot;, &amp;students[num].ID);
         getchar();
@@ -381,20 +390,20 @@ void Student_Insert()
         num++;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 
 
 /*修改学生信息*/
 void Student_Modify()
-{
+&#123;
     //float Mark[0],Mark[1],Mark[2];  
     while (1)
-    {
+    &#123;
         char id[20];
         int index;
         printf(&quot;请输入要修改的学生的学号:&quot;);
@@ -402,11 +411,11 @@ void Student_Modify()
         getchar();
         index = Student_SearchByIndex(id);
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要修改的学生信息为:\n&quot;);
             Student_DisplaySingle(index);
             printf(&quot;-- 请输入新值--\n&quot;);
@@ -426,21 +435,21 @@ void Student_Modify()
             scanf(&quot;%f&quot;, &amp;students[index].Mark[2]);
             getchar();
             students[index].Average = Avg(students[index]);
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 /*删除学生信息*/
 void Student_Delete()
-{
+&#123;
     int i;
     while (1)
-    {
+    &#123;
         char id[20];
         int index;
         printf(&quot;请输入要删除的学生的学号:&quot;);
@@ -449,37 +458,37 @@ void Student_Delete()
         index = Student_SearchByIndex(id);
 
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要删除的学生信息为:\n&quot;);
             Student_DisplaySingle(index);
             printf(&quot;是否真的要删除?(y/n)&quot;);
             if (getchar() == &#39;y&#39;)
-            {
+            &#123;
                 for (i = index; i &lt; num - 1; i++)
-                {
+                &#123;
                     students[i] = students[i + 1];//把后边的对象都向前移动    
-                }
+                &#125;
                 num--;
-            }
+            &#125;
             getchar();
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 /*按学号查询*/
 void Student_SelectByID()
-{
+&#123;
     while (1)
-    {
+    &#123;
         char ID[20];
         int index;
         printf(&quot;请输入要查询的学生的学号:&quot;);
@@ -488,28 +497,28 @@ void Student_SelectByID()
         index = Student_SearchByIndex(ID); //调用查询函数 
 
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要查询的学生信息为:\n&quot;);
             Student_DisplaySingle(index);    //调用显示单条记录函数
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         fflush(stdin);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 /*按姓名查询*/
 void Student_SelectByName()
-{
+&#123;
     while (1)
-    {
+    &#123;
         char name[20];
         int index;
         printf(&quot;请输入要查询的学生的姓名:&quot;);
@@ -518,110 +527,110 @@ void Student_SelectByName()
         index = Student_SearchByName(name);
 
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要查询的学生信息为:\n&quot;);
             Student_DisplaySingle(index);
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 
 /*按平均值排序*/
 void Student_SortByAverage()
-{
+&#123;
     int i, j;
     struct Student tmp;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         for (j = 1; j &lt; num - i; j++)
-        {
+        &#123;
             if (students[j - 1].Average &lt; students[j].Average)
-            {
+            &#123;
                 tmp = students[j - 1];
                 students[j - 1] = students[j];
                 students[j] = tmp;
-            }
-        }
-    }
-}
+            &#125;
+        &#125;
+    &#125;
+&#125;
 
 /*显示全部学生信息*/
 void Student_Display()
-{
+&#123;
     int i;
     printf(&quot;%10s%10s%8s%8s%8s%10s\n&quot;, &quot;学号&quot;, &quot;姓名&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;平均成绩&quot;);
     printf(&quot;-------------------------------------------------------------\n&quot;);
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         printf(&quot;%10s%10s%8.2f%8.2f%8.2f%10.2f\n&quot;, students[i].ID, students[i].Name,
             students[i].Mark[0], students[i].Mark[1], students[i].Mark[2], students[i].Average);
-    }
-}
+    &#125;
+&#125;
 
 /*将学生信息从文件读出*/
 void IO_ReadInfo()
-{
+&#123;
     FILE* fp;
     int i;
     if ((fp = fopen(&quot;Database.txt&quot;, &quot;rb&quot;)) == NULL)
-    {
+    &#123;
         printf(&quot;不能打开文件!\n&quot;);
         return;
-    }
+    &#125;
     if (fread(&amp;num, sizeof(int), 1, fp) != 1)
-    {
+    &#123;
         num = -1;
-    }
+    &#125;
     else
-    {
+    &#123;
         for (i = 0; i &lt; num; i++)
-        {
+        &#123;
             fread(&amp;students[i], sizeof(struct Student), 1, fp);
-        }
-    }
+        &#125;
+    &#125;
     fclose(fp);
-}
+&#125;
 
 /*将学生信息写入文件*/
 void IO_WriteInfo()
-{
+&#123;
     FILE* fp;
     int i;
     if ((fp = fopen(&quot;Database.txt&quot;, &quot;wb&quot;)) == NULL)
-    {
+    &#123;
         printf(&quot;不能打开文件!\n&quot;);
         return;
-    }
+    &#125;
     if (fwrite(&amp;num, sizeof(int), 1, fp) != 1)
-    {
+    &#123;
         printf(&quot;写入文件错误!\n&quot;);
-    }
+    &#125;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         if (fwrite(&amp;students[i], sizeof(struct Student), 1, fp) != 1)
-        {
+        &#123;
             printf(&quot;写入文件错误!\n&quot;);
-        }
-    }
+        &#125;
+    &#125;
     fclose(fp);
-}
+&#125;
 
 
 int main()
-{
+&#123;
     int choice;
     IO_ReadInfo(); //调用读学生信息函数
     while (1)
-    {
+    &#123;
         /*主菜单*/
         printf(&quot;\n**********************欢迎使用学生成绩管理系统********************\n&quot;);
         printf(&quot; \n1.增加学生记录\t2.查看学生记录\t3.修改学生记录\t4.删除学生记录\n&quot;);
@@ -631,7 +640,7 @@ int main()
         scanf(&quot;%d&quot;, &amp;choice);
         fflush(stdin);
         switch (choice)
-        {
+        &#123;
         case 1:
             Student_Insert();
             break;
@@ -654,11 +663,11 @@ int main()
         case 7:
             exit(0);
             break;
-        }
+        &#125;
         IO_WriteInfo();
-    }
+    &#125;
     return 0;
-}
+&#125;
 </code></pre>
 
         </div>
@@ -804,6 +813,8 @@ int main()
                 <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
             </div>
             
+                <p id="chakhsu"></p>
+            
             <p>本站总访问量：<a id="allcount"></a></p>
             <p style="color: #666666;">¿</p>
             
@@ -845,6 +856,20 @@ int main()
 
     <script src="https://cdn.jsdelivr.net/gh/xbclub/staticCDN@0.8/js/busuanzi.pure.mini.js"></script>
 
+      
+       <script>
+  fetch('https://counts.42cloud.cn/api/counts.html')
+        .then(response => response.json())
+        .then(data => {
+              if (document.getElementById("readcount")) {
+                document.getElementById("readcount").innerHTML=data.Count;
+            }
+            if (document.getElementById("allcount")){
+                document.getElementById("allcount").innerHTML=data.Allcount;
+            }
+        })
+        .catch(err => console.error(err))
+</script>
       
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
 <script type="text/javascript">
@@ -915,6 +940,105 @@ int main()
 </script>
 
 
+
+    <script type="text/javascript">
+        fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+                chakhsu(document.getElementById("chakhsu"), data.hitokoto);
+            })
+            .catch(err => console.error(err));
+
+
+        // 文字循环处理 两个参数，第一个是需要显示在哪个标签内append 以id为选择器，第二个参数是 要处理的文字
+        function chakhsu(r, text) {
+            function t() {
+                return b[Math.floor(Math.random() * b.length)];
+            }
+
+            function e() {
+                return String.fromCharCode(94 * Math.random() + 33);
+            }
+
+            function n(r) {
+                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                    var l = document.createElement("span");
+                    (l.textContent = e()), (l.style.color = t()), n.appendChild(l);
+                }
+                return n;
+            }
+
+            function i() {
+                var t = o[c.skillI];
+                c.step
+                    ? c.step--
+                    : ((c.step = g),
+                        c.prefixP < l.length
+                            ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++)
+                            : "forward" === c.direction
+                            ? c.skillP < t.length
+                                ? ((c.text += t[c.skillP]), c.skillP++)
+                                : c.delay
+                                    ? c.delay--
+                                    : ((c.direction = "backward"), (c.delay = a))
+                            : c.skillP > 0
+                                ? ((c.text = c.text.slice(0, -1)), c.skillP--)
+                                : ((c.skillI = (c.skillI + 1) % o.length),
+                                    (c.direction = "forward"))),
+                    (r.textContent = c.text),
+                    r.appendChild(
+                        n(
+                            c.prefixP < l.length
+                                ? Math.min(s, s + c.prefixP)
+                                : Math.min(s, t.length - c.skillP)
+                        )
+                    ),
+                    setTimeout(i, d);
+            }
+
+            /*以下内容自定义修改*/
+            var l = "",
+                o = [text].map(function (r) {
+                    return r + "";
+                }),
+                a = 3,
+                g = 1,
+                s = 5,
+                d = 75,
+                b = [
+                    "rgb(110,64,170)",
+                    "rgb(150,61,179)",
+                    "rgb(191,60,175)",
+                    "rgb(228,65,157)",
+                    "rgb(254,75,131)",
+                    "rgb(255,94,99)",
+                    "rgb(255,120,71)",
+                    "rgb(251,150,51)",
+                    "rgb(226,183,47)",
+                    "rgb(198,214,60)",
+                    "rgb(175,240,91)",
+                    "rgb(127,246,88)",
+                    "rgb(82,246,103)",
+                    "rgb(48,239,130)",
+                    "rgb(29,223,163)",
+                    "rgb(26,199,194)",
+                    "rgb(35,171,216)",
+                    "rgb(54,140,225)",
+                    "rgb(76,110,219)",
+                    "rgb(96,84,200)"
+                ],
+                c = {
+                    text: "",
+                    prefixP: -s,
+                    skillI: 0,
+                    skillP: 0,
+                    direction: "forward",
+                    delay: a,
+                    step: g
+                };
+            i();
+        }
+    </script>
 
     <div class="openNav no-select" style="height: 50px;">
       <div class="iconflat no-select" style="width: 50px; height: 50px;">
@@ -1007,6 +1131,13 @@ int main()
                 </a>
               </li>
             
+              <li>
+                <a href="/about/1">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
           </ul>
         
       </li>
@@ -1083,5 +1214,5 @@ int main()
   });
 </script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.6},"log":false});</script></body>
 </html>

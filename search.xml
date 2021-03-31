@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>解决IDEA专业版激活问题（JB全家桶都可用 限19.3.4）</title>
+    <url>/2021/03/31/IDEA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记IEDA遇到的坑<br><strong>1.</strong>激活IEDA<br>在官网下载<a href="https://www.jetbrains.com/idea/download/other.html">IDEA</a><br>下载注意：必须下2019.3版本的IDEA<br><img src="https://img-blog.csdnimg.cn/20200910164426509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>下载完以后以试用期（Evaluate for free）进入IEDA<br>下载jetbrains-agent.zip</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw">https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw</a>  提取码：uuop</p>
+</blockquote>
+<p><strong>解压</strong>jetbrains-agent.zip进入lib<br>将 <strong>jetbrains-agent.jar</strong> 拖进IDE窗口，点 “Restart” 按钮重启IDE。<br>在弹出的<strong>JetbrainsAgent Helper</strong>对话框中，选择激活方式，点击安装按钮。<br>如果你是无外网环境，在对话框中勾选：<strong>我无法访问外网</strong><br><strong>重启</strong>IDEA。<br>证书将于2089年过期，所以不用担心证书过期的问题。<br>2.汉化IDEA（自行需要）</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1Ebd1jWJRzug9LQ3Kyxedrg">https://pan.baidu.com/s/1Ebd1jWJRzug9LQ3Kyxedrg</a><br>提取码：20dj</p>
+</blockquote>
+<p>只需要拖进IDEA中的<strong>lib</strong>即可，重启IDEA你便可以看见汉化页面了。</p>
+<p>3.配置IDEA</p>
+<blockquote>
+<p>下载jdk8<br>链接：<a href="https://pan.baidu.com/s/18wqjmJ2nvXIMjfLQe3m9Zg">https://pan.baidu.com/s/18wqjmJ2nvXIMjfLQe3m9Zg</a><br>提取码：3thr</p>
+</blockquote>
+<p>配置JAVA环境基于可能有小白简易的说一下<br>打开你的配置环境变量<br>添加<br><strong>新增</strong>变量名：JAVA_HOME<br><strong>新增</strong>变量值：C:\Program Files (x86)\Java\jdk1.8.0_91        // 根据自己的实际路径配置<br><strong>寻找</strong>变量名：Path<br><strong>添加</strong>变量值：%JAVA_HOME%\bin;<br>              %JAVA_HOME%\jre\bin;<br><img src="https://img-blog.csdnimg.cn/20200409152004465.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200409152020563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在CMD中运行JAVA和JAVAC如果运行成功则配置完成。<br>打开IDEA，找到项目结构，配置SDK，如果那你是默认路径则自动配置</p>
+<p><img src="https://img-blog.csdnimg.cn/2020040915234393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自此IDEA配置完成</p>
+]]></content>
+      <categories>
+        <category>神隐</category>
+      </categories>
+  </entry>
+  <entry>
     <title>6盘(清真云)一个可以离线下载百度云盘和磁力的云盘</title>
     <url>/2021/01/27/6%E7%9B%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>博主在摸鱼写代码的时候无意间发现的这个云盘，通过简单的了解发现这玩意居然可以下载百度云链接和磁力链接，但网站开头把我吓的<img src="https://img-blog.csdnimg.cn/20210127214010364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt=""><br>于是乎抱着国内用户不能用的状态找了个国外手机号注册了一下，然后开始下载，这里使用的是第三方的6盘小白羊版，博主并不推荐使用网页版<br><img src="https://img-blog.csdnimg.cn/2021012722021394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210127220225702.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210127220316751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>啪的一下很快啊，速度还行<br><img src="https://img-blog.csdnimg.cn/20210127222114250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>算了一下排队是百度云是代下载的顶多十分钟就可以了，但磁力说不准<br><img src="https://img-blog.csdnimg.cn/20210127220354268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210127220406337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里博主等了十几分钟左右才离线好，如果你要离线磁力的话建议在低峰期时候离线会比较快。总的来说这是一个代替百度云下载和低配版115的网盘，<strong>10块钱一个月</strong>很便宜，讲真如果不是之前<strong>被免费用户搞了</strong>现在还是免费的（滑稽）<img src="https://img-blog.csdnimg.cn/20210127221451364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210127221457242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>6盘官网：<a href="https://2dland.cn/" target="_blank" rel="noopener">https://2dland.cn/</a><br>6盘小白羊版（推荐）：<a href="https://wws.lanzous.com/b01npsg8h" target="_blank" rel="noopener">https://wws.lanzous.com/b01npsg8h</a><br>国外号码接收平台：<a href="https://yunduanxin.net/" target="_blank" rel="noopener">https://yunduanxin.net</a></p>
+<p>6盘官网：<a href="https://2dland.cn/">https://2dland.cn/</a><br>6盘小白羊版（推荐）：<a href="https://wws.lanzous.com/b01npsg8h">https://wws.lanzous.com/b01npsg8h</a><br>国外号码接收平台：<a href="https://yunduanxin.net/">https://yunduanxin.net</a></p>
 <p><strong>话已至此，不必多说，懂的都懂。</strong></p>
 ]]></content>
       <categories>
@@ -16,59 +40,16 @@
     <title>一个无广告的漫画阅读器</title>
     <url>/2020/10/16/%E4%B8%80%E4%B8%AA%E6%97%A0%E5%B9%BF%E5%91%8A%E7%9A%84%E6%BC%AB%E7%94%BB%E9%98%85%E8%AF%BB%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><del>不会吧，不会吧，不会还有人用哔咔和大妈之家吧？</del> 笑</p>
-<p>博主给大家推荐个开源的漫画阅读器项目<br><a href="https://github.com/inorichi/tachiyomi" target="_blank" rel="noopener">Tachiyomi</a></p>
+<p>博主给大家推荐个开源的漫画阅读器项目<br><a href="https://github.com/inorichi/tachiyomi">Tachiyomi</a></p>
 <p>这个漫画阅读器本身没有书源，但是它最重要的一点是支持插件，想必大家都懂了吧？（nhentai ,e-hentai等等……），最重要的一点是<br><strong>没有广告！</strong>就只是个单纯的漫画阅读器，并且支持多个书源！<br>目前我就只用这三个插件（<strong>不需要梯子</strong>）<br><img src="https://img-blog.csdnimg.cn/2020101614200317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201016142207770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201016142249650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="这样"><br>目前用的最舒服的就是这款。下载链接我放在下面，请自行食用。</p>
-<p>蓝奏云：<a href="https://dclef.lanzoui.com/b0b90g3mh" target="_blank" rel="noopener">https://dclef.lanzoui.com/b0b90g3mh</a><br>密码:a8v5</p>
+<p>蓝奏云：<a href="https://dclef.lanzoui.com/b0b90g3mh">https://dclef.lanzoui.com/b0b90g3mh</a><br>密码:a8v5</p>
 ]]></content>
       <categories>
         <category>小白入门</category>
       </categories>
   </entry>
   <entry>
-    <title>解决PHPstrom激活配置汉化问题</title>
-    <url>/2020/09/22/PHPstrom/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>老规矩<br><strong>1.</strong>激活phpstrom<br>在官网下载<a href="https://www.jetbrains.com/phpstorm/download/other.html/" target="_blank" rel="noopener">phpstrom</a><br>下载注意：必须下2019.3版本的phpstrom<br><img src="https://img-blog.csdnimg.cn/20200922135901270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>下载完以后以试用期（Evaluate for free）进入phpstrom<br>下载jetbrains-agent.zip</p>
-<blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw" target="_blank" rel="noopener">https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw</a><br>提取码：uuop</p>
-</blockquote>
-<p><strong>解压</strong>jetbrains-agent.zip进入lib<br>将 <strong>jetbrains-agent.jar</strong> 拖进IDE窗口，点 “Restart” 按钮重启IDE。<br>在弹出的<strong>JetbrainsAgent Helper</strong>对话框中，选择激活方式，点击安装按钮。<br>如果你是无外网环境，在对话框中勾选：<strong>我无法访问外网</strong><br><strong>重启</strong>phpstrom<br>证书将于2089年过期，所以不用担心证书过期的问题。<br>2.汉化phpstrom（自行需要）</p>
-<blockquote>
-<p>链接: <a href="https://pan.baidu.com/s/1X41P6xtIoswPI76LzW4K5w" target="_blank" rel="noopener">https://pan.baidu.com/s/1X41P6xtIoswPI76LzW4K5w</a><br>提取码: fvr1 </p>
-</blockquote>
-<p>只需要拖进IDEA中的<strong>lib</strong>即可，重启IDEA你便可以看见汉化页面了。</p>
-<p>3.配置phpstrom<br>在语言里面找到php配置你的php即可<br><img src="https://img-blog.csdnimg.cn/20200922140702644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>自此phpstrom配置完成</p>
-]]></content>
-      <categories>
-        <category>小白入门</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解决IDEA激活配置汉化问题</title>
-    <url>/2020/09/10/IDEA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记IEDA遇到的坑<br><strong>1.</strong>激活IEDA<br>在官网下载<a href="https://www.jetbrains.com/idea/download/other.html" target="_blank" rel="noopener">IDEA</a><br>下载注意：必须下2019.3版本的IDEA<br><img src="https://img-blog.csdnimg.cn/20200910164426509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>下载完以后以试用期（Evaluate for free）进入IEDA<br>下载jetbrains-agent.zip</p>
-<blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw" target="_blank" rel="noopener">https://pan.baidu.com/s/19VaGrdCRAX4tv40t4qWnLw</a>  提取码：uuop</p>
-</blockquote>
-<p><strong>解压</strong>jetbrains-agent.zip进入lib<br>将 <strong>jetbrains-agent.jar</strong> 拖进IDE窗口，点 “Restart” 按钮重启IDE。<br>在弹出的<strong>JetbrainsAgent Helper</strong>对话框中，选择激活方式，点击安装按钮。<br>如果你是无外网环境，在对话框中勾选：<strong>我无法访问外网</strong><br><strong>重启</strong>IDEA。<br>证书将于2089年过期，所以不用担心证书过期的问题。<br>2.汉化IDEA（自行需要）</p>
-<blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1Ebd1jWJRzug9LQ3Kyxedrg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Ebd1jWJRzug9LQ3Kyxedrg</a><br>提取码：20dj</p>
-</blockquote>
-<p>只需要拖进IDEA中的<strong>lib</strong>即可，重启IDEA你便可以看见汉化页面了。</p>
-<p>3.配置IDEA</p>
-<blockquote>
-<p>下载jdk8<br>链接：<a href="https://pan.baidu.com/s/18wqjmJ2nvXIMjfLQe3m9Zg" target="_blank" rel="noopener">https://pan.baidu.com/s/18wqjmJ2nvXIMjfLQe3m9Zg</a><br>提取码：3thr</p>
-</blockquote>
-<p>配置JAVA环境基于可能有小白简易的说一下<br>打开你的配置环境变量<br>添加<br><strong>新增</strong>变量名：JAVA_HOME<br><strong>新增</strong>变量值：C:\Program Files (x86)\Java\jdk1.8.0_91        // 根据自己的实际路径配置<br><strong>寻找</strong>变量名：Path<br><strong>添加</strong>变量值：%JAVA_HOME%\bin;<br>              %JAVA_HOME%\jre\bin;<br><img src="https://img-blog.csdnimg.cn/20200409152004465.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200409152020563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在CMD中运行JAVA和JAVAC如果运行成功则配置完成。<br>打开IDEA，找到项目结构，配置SDK，如果那你是默认路径则自动配置</p>
-<p><img src="https://img-blog.csdnimg.cn/2020040915234393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自此IDEA配置完成</p>
-]]></content>
-      <categories>
-        <category>小白入门</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>IDM+会员直链 以达到破解百度云限速的教程'</title>
+    <title>IDM+会员直链 以达到破解百度云限速的教程&#39;</title>
     <url>/2020/08/13/IDM+BaiduWp/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>其实吧目前最流行的是 油猴脚本+IDM下载百度云文件以达到破解限速的效果，但这还是有缺点，就是不是会员的直链，而是普通用户的直链，在达到一定流量的时候照样给你限速，所以利用会员直链变可以达到规避这种限速的方法，但最终还是逃不过会员限速。（会员有每天的请求量，达到一定数量变会限速或者进入黑名单变成黑号）。</p>
 <p>   PC端方法：<br>    <strong>步骤一</strong>：进入页面  随便找个文件的下载链接（<del>不能是文件夹</del>  ）<strong>目前已经支持文件夹</strong></p>
@@ -81,7 +62,7 @@
 <p><img src="https://img-blog.csdnimg.cn/20200822002442954.png#pic_center" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/20200822002519818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200822002938615.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200822003001796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/20200822003018713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200822003032448.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200822003159372.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200822003223352.png#pic_center" alt="在这里插入图片描述"></p>
-<p>IDM电脑端：<a href="https://dclef.lanzous.com/ixd46flbx8d" target="_blank" rel="noopener">https://dclef.lanzous.com/ixd46flbx8d</a><br>IDM+手机端：<a href="https://dclef.lanzous.com/i9F25fwsfoj" target="_blank" rel="noopener">https://dclef.lanzous.com/i9F25fwsfoj</a></p>
+<p>IDM电脑端：<a href="https://dclef.lanzous.com/ixd46flbx8d">https://dclef.lanzous.com/ixd46flbx8d</a><br>IDM+手机端：<a href="https://dclef.lanzous.com/i9F25fwsfoj">https://dclef.lanzous.com/i9F25fwsfoj</a></p>
 <p><strong>免责声明：本站只提供教程，不提供百度云文件下载服务！</strong></p>
 ]]></content>
       <categories>
@@ -111,7 +92,7 @@
     <url>/2020/03/25/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E7%BB%88%E7%AB%AFTermux%E7%89%88%E7%9A%84pyhon%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0%E9%80%9A%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>嘛这玩意我就不发到github上了，毕竟有点拉闸。<br>食用方法：<br>1.下载Termux</p>
 <blockquote>
-<p>复制这段内容后打开百度网盘手机App，操作更方便哦<br>链接:<a href="https://pan.baidu.com/s/1VFtwEyzXSO83j-4IpsUstQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1VFtwEyzXSO83j-4IpsUstQ</a> 提取码:1hhd</p>
+<p>复制这段内容后打开百度网盘手机App，操作更方便哦<br>链接:<a href="https://pan.baidu.com/s/1VFtwEyzXSO83j-4IpsUstQ">https://pan.baidu.com/s/1VFtwEyzXSO83j-4IpsUstQ</a> 提取码:1hhd</p>
 </blockquote>
 <p>2.进入Termux<br>先来波换成清华大学镜像源<br>先复制粘贴以下代码</p>
 <pre><code class="termux">sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#39; $PREFIX/etc/apt/sources.list
@@ -135,7 +116,7 @@ cd downloads
 ls</code></pre>
 <p>.<img src="https://img-blog.csdnimg.cn/2020032522435170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>7.使用自动签到脚本（<strong>重头戏</strong>）<br>下载签到脚本</p>
 <blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1ypZ9FDx8rmkDnb9bnLsVsg" target="_blank" rel="noopener">https://pan.baidu.com/s/1ypZ9FDx8rmkDnb9bnLsVsg</a>  提取码：ogpz</p>
+<p>链接：<a href="https://pan.baidu.com/s/1ypZ9FDx8rmkDnb9bnLsVsg">https://pan.baidu.com/s/1ypZ9FDx8rmkDnb9bnLsVsg</a>  提取码：ogpz</p>
 </blockquote>
 <p>我猜你们手机可能没有文本编译器，那么就下个ES文件游览器<br><img src="https://img-blog.csdnimg.cn/20200325230245617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入你的账号和密码<br><img src="https://img-blog.csdnimg.cn/20200325230444444.png" alt="在这里插入图片描述"><br>修改好以后就可以在用termux使用脚本了，为了方便建议重命名为1.py<br>输入</p>
 <pre><code class="python">python 1.py</code></pre>
@@ -148,7 +129,7 @@ ls</code></pre>
   <entry>
     <title>关于MySQL的配置（PHPstudy版）</title>
     <url>/2020/03/04/%E5%85%B3%E4%BA%8EMySQL%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88PHPstudy%E7%89%88%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于大多数安装完mysql不能用的同学，下列一套方案可以解决你们的问题<br><strong>第一步：下载<a href="https://www.xp.cn/" target="_blank" rel="noopener">phpstudy</a></strong><br>安装完phpstudy后查看路径<br><strong>第二步配置mysql：</strong><br>打开环境变量<img src="https://img-blog.csdnimg.cn/20200304204316501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200304204323911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200304204331686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)本人phpstudy的配置路径<img src="https://img-blog.csdnimg.cn/20200304204339423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="本人phpstudy的配置路径">)以防万一添加<code>%MYSQL_HOME%\bin</code><img src="https://img-blog.csdnimg.cn/20200304204346227.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>新建个系统变量</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于大多数安装完mysql不能用的同学，下列一套方案可以解决你们的问题<br><strong>第一步：下载<a href="https://www.xp.cn/">phpstudy</a></strong><br>安装完phpstudy后查看路径<br><strong>第二步配置mysql：</strong><br>打开环境变量<img src="https://img-blog.csdnimg.cn/20200304204316501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200304204323911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200304204331686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)本人phpstudy的配置路径<img src="https://img-blog.csdnimg.cn/20200304204339423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="本人phpstudy的配置路径">)以防万一添加<code>%MYSQL_HOME%\bin</code><img src="https://img-blog.csdnimg.cn/20200304204346227.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>新建个系统变量</p>
 <p><img src="https://img-blog.csdnimg.cn/20200304204352787.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如图所示<br><img src="https://img-blog.csdnimg.cn/20200304204405918.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样你mysql的环境就配置好了<br><strong>第三步进入MYSQL</strong><br>打开phpstudy 启动mysql<br><img src="https://img-blog.csdnimg.cn/20200304205145287.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开数据库修改你的密码（用户因人而异）<br><img src="https://img-blog.csdnimg.cn/2020030420544312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>配置完以后在开始菜单输入CMD以<strong>管理员方式运行</strong><br><img src="https://img-blog.csdnimg.cn/20200304205611879.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入<code>mysql -u root -p</code>在输入之前修改的密码就成功登录MYSQL了<img src="https://img-blog.csdnimg.cn/20200304205815868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>常用MYSQL的命令</p>
 <pre><code class="c">查看当前所有的数据库：    
 show  databases；
@@ -247,7 +228,7 @@ printf(&quot;%10s%10s%10%10\n&quot;, &quot;学号&quot;, &quot;姓名&quot;, &qu
 <p>如果用scanf()读取基本变量类型的值，在变量名前加上一个&amp;。<br>但如果scanf()把字符串读入字符数组中，就不用&amp;。<br>如以下代码</p>
 <pre><code class="c">#include&lt;stdio.h&gt;
 int main
-{
+&#123;
   int age;  //变量
   char id[30];  //字符数组，用于储存字符串
   printf(&quot;请输入你的年龄和学号\n&quot;);
@@ -255,7 +236,7 @@ int main
   scanf(&quot;%s&quot;,id);//字符串不需要&amp;
   printf(&quot;%d%s\n&quot;,age,id);
   return 0;
- }
+ &#125;
 </code></pre>
 <p><strong>常用运算符</strong><br><strong>赋值运算符：=</strong></p>
 <p>等号左侧是一个变量名，右侧是赋给该变量的值。符号=被称为赋值运算符。赋值行为从右往左进行。<br>如<code>i=i+1;</code><br>该语句的意思是：找出变量 i 的值，把该值加 1，然后把新值赋值变量i</p>
@@ -271,17 +252,17 @@ int main
 <p><strong>whlie循环</strong></p>
 <pre><code class="c">#include&lt;stdio.h&gt;
 int main()
-{
+&#123;
     int i;
     i = 1;
     while (i&lt;3)
-    {
+    &#123;
         printf(&quot;烫&quot;);
         i++;//输出烫时加1
-    }
+    &#125;
 
     return 0;
-}
+&#125;
 </code></pre>
 <p>以上的代码打印2个的烫</p>
 <p><strong>如何强制退出循环？</strong></p>
@@ -289,35 +270,35 @@ int main()
 <p><strong>for循环</strong><br>主要形式<br>for(初始值;初始值对比;初始值增加)<br>举个例子：</p>
 <pre><code class="c">#include&lt;stdio.h&gt;
 int main()
-{
+&#123;
     int i;
     for (i = 1; i &lt; 3; i++)
-    {
+    &#123;
         printf(&quot;烫&quot;);
         return 0;
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
 <p>以上代码会输出两个烫<br><strong>do while</strong><br>至少执行循环体中内容一次<br>do<br>{<br>}while();<br>举个例子</p>
 <pre><code class="c">#include&lt;stdio.h&gt;
 int main()
-{
+&#123;
   int i;
   do
-  {
+  &#123;
    i++;
    printf(&quot;烫&quot;);
-  } while(i&lt;3);
+  &#125; while(i&lt;3);
  return 0;
- }</code></pre>
+ &#125;</code></pre>
 <p>以上代码会出现三个烫<br>switch和break语句</p>
 <pre><code class="c">switch ( 整型表达式）
-{
+&#123;
 case1 常量1:
 语句 
 case2 常量2:
 语句 
 break;//跳出
-}</code></pre>
+&#125;</code></pre>
 <p><strong>数组</strong><br>数组类型<br>int ID[20];//储存20个int类型整数的数组<br>char Name[20];//储存20个字符的数组<br>float mark[20];//储存20个float类型的数组<br>二维数组<br>float a[5][12];//内含5个数组元素的数组，每个数组元素内含12个float类型的元素<br>float a[5][12]; // rain是一个内含5个元素的数组<br>float a[5][12] ; // 一个内含12个float类型元素的数组</p>
 <p><strong>if语句常见错误</strong></p>
 <pre><code class="c">if (a &lt; x &lt; z) // 错误，没有使用逻辑运算符
@@ -339,7 +320,7 @@ if (ch != &#39;q&#39; &amp;&amp; ch != &#39;Q&#39;) // 使用&amp;&amp;组合两
 <p><strong>修改主题</strong><br>在config.yml找到themes，这里可直接使用ctrl+shift+f快速查找<br>找到themses时，lanspeas修改为<strong>next</strong><br>然后在blog文件夹右键gitbash输入</p>
 <pre><code class="yaml">&gt; hexo clean
 &gt; hexo g -d </code></pre>
-<p>然后你就可以在你的入<a href="http://yourname.github.io看到你的新主题了" target="_blank" rel="noopener">http://yourname.github.io看到你的新主题了</a></p>
+<p>然后你就可以在你的入<a href="http://yourname.github.io看到你的新主题了">http://yourname.github.io看到你的新主题了</a></p>
 <p>注意事项<br>主题里也有个config.yml你需要修改<br>站点config.yml</p>
 <pre><code class="yaml">&gt; title: 老猫的博客 #网站标题
 subtitle: #网站副标题
@@ -778,8 +759,8 @@ timezone: #网站时区。Hex 默认使用您电脑时区。</code></pre>
 &gt;         per_page: 10
 &gt;       labels:
 &gt;         input_placeholder: Search for Posts
-&gt;         hits_empty: &quot;We didn&#39;t find any results for the search: ${query}&quot;
-&gt;         hits_stats: &quot;${hits} results found in ${time} ms&quot;
+&gt;         hits_empty: &quot;We didn&#39;t find any results for the search: $&#123;query&#125;&quot;
+&gt;         hits_stats: &quot;$&#123;hits&#125; results found in $&#123;time&#125; ms&quot;
 &gt;     # Local search
 &gt;     # Dependencies: https://github.com/flashlab/hexo-generator-search
 &gt;     local_search:
@@ -793,8 +774,8 @@ timezone: #网站时区。Hex 默认使用您电脑时区。</code></pre>
 &gt;     # 标签设置
 &gt;     # ---------------------------------------------------------------
 &gt;     # 对外链采用BASE64进行加密解密
-&gt;     # 用法: {% exturl text url "title" %}
-&gt;     # 别名: {% extlink text url "title" %}
+&gt;     # 用法: &#123;% exturl text url "title" %&#125;
+&gt;     # 别名: &#123;% extlink text url "title" %&#125;
 &gt;     exturl: false    # 是否对外链进行加密解密
 &gt;     # Note tag (bs-callout).
 &gt;     note:
@@ -915,7 +896,7 @@ timezone: #网站时区。Hex 默认使用您电脑时区。</code></pre>
 &gt;     version: 5.1.4</code></pre>
 ]]></content>
       <categories>
-        <category>小白入门</category>
+        <category>神隐</category>
       </categories>
   </entry>
   <entry>
@@ -927,12 +908,12 @@ timezone: #网站时区。Hex 默认使用您电脑时区。</code></pre>
 #include&lt;stdlib.h&gt;
 #define N 1000 
 struct Student
-{
+&#123;
     char ID[20];
     char Name[20];
     float Mark[3];
     float Average;
-};
+&#125;;
 float Avg(struct Student stu);//求平均值
 int Student_SearchByIndex(char id[]);//通过学号返回数组下标
 int Student_SearchByName(char name[]);//通过姓名返回数组下标
@@ -956,59 +937,59 @@ int num = 0;
 
 /*求平均值*/
 float Avg(struct Student stu)
-{
+&#123;
     return (stu.Mark[0] + stu.Mark[1] + stu.Mark[2]) / 3;
-}
+&#125;
 
 /*通过学号返回数组下标
 将学生学号与查询的学号做比较，
 如果相等则返回该学生的下标 ，找不到则返回-1. */
 int Student_SearchByIndex(char id[])
-{
+&#123;
     int i;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         if (strcmp(students[i].ID, id) == 0)
-        {
+        &#123;
             return i;
-        }
-    }
+        &#125;
+    &#125;
     return -1;
-}
+&#125;
 
 
 
 /*通过姓名返回数组下标*/
 int Student_SearchByName(char name[])
-{
+&#123;
     int i;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         if (strcmp(students[i].Name, name) == 0)
-        {
+        &#123;
             return i;
-        }
-    }
+        &#125;
+    &#125;
     return -1;
-}
+&#125;
 
 
 
 /*显示单条学生记录*/
 void Student_DisplaySingle(int index)
-{
+&#123;
     printf(&quot;%10s%10s%8s%8s%8s%10s\n&quot;, &quot;学号&quot;, &quot;姓名&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;平均成绩&quot;);
     printf(&quot;-------------------------------------------------------------\n&quot;);
     printf(&quot;%10s%10s%8.2f%8.2f%8.2f%10.2f\n&quot;, students[index].ID, students[index].Name,
         students[index].Mark[0], students[index].Mark[1], students[index].Mark[2], students[index].Average);
 
-}
+&#125;
 
 /*插入学生信息*/
 void Student_Insert()
-{
+&#123;
     while (1)
-    {
+    &#123;
         printf(&quot;请输入学号:&quot;);
         scanf(&quot;%s&quot;, &amp;students[num].ID);
         getchar();
@@ -1028,20 +1009,20 @@ void Student_Insert()
         num++;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 
 
 /*修改学生信息*/
 void Student_Modify()
-{
+&#123;
     //float Mark[0],Mark[1],Mark[2];  
     while (1)
-    {
+    &#123;
         char id[20];
         int index;
         printf(&quot;请输入要修改的学生的学号:&quot;);
@@ -1049,11 +1030,11 @@ void Student_Modify()
         getchar();
         index = Student_SearchByIndex(id);
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要修改的学生信息为:\n&quot;);
             Student_DisplaySingle(index);
             printf(&quot;-- 请输入新值--\n&quot;);
@@ -1073,21 +1054,21 @@ void Student_Modify()
             scanf(&quot;%f&quot;, &amp;students[index].Mark[2]);
             getchar();
             students[index].Average = Avg(students[index]);
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 /*删除学生信息*/
 void Student_Delete()
-{
+&#123;
     int i;
     while (1)
-    {
+    &#123;
         char id[20];
         int index;
         printf(&quot;请输入要删除的学生的学号:&quot;);
@@ -1096,37 +1077,37 @@ void Student_Delete()
         index = Student_SearchByIndex(id);
 
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要删除的学生信息为:\n&quot;);
             Student_DisplaySingle(index);
             printf(&quot;是否真的要删除?(y/n)&quot;);
             if (getchar() == &#39;y&#39;)
-            {
+            &#123;
                 for (i = index; i &lt; num - 1; i++)
-                {
+                &#123;
                     students[i] = students[i + 1];//把后边的对象都向前移动    
-                }
+                &#125;
                 num--;
-            }
+            &#125;
             getchar();
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 /*按学号查询*/
 void Student_SelectByID()
-{
+&#123;
     while (1)
-    {
+    &#123;
         char ID[20];
         int index;
         printf(&quot;请输入要查询的学生的学号:&quot;);
@@ -1135,28 +1116,28 @@ void Student_SelectByID()
         index = Student_SearchByIndex(ID); //调用查询函数 
 
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要查询的学生信息为:\n&quot;);
             Student_DisplaySingle(index);    //调用显示单条记录函数
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         fflush(stdin);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 /*按姓名查询*/
 void Student_SelectByName()
-{
+&#123;
     while (1)
-    {
+    &#123;
         char name[20];
         int index;
         printf(&quot;请输入要查询的学生的姓名:&quot;);
@@ -1165,110 +1146,110 @@ void Student_SelectByName()
         index = Student_SearchByName(name);
 
         if (index == -1)
-        {
+        &#123;
             printf(&quot;学生不存在!\n&quot;);
-        }
+        &#125;
         else
-        {
+        &#123;
             printf(&quot;你要查询的学生信息为:\n&quot;);
             Student_DisplaySingle(index);
-        }
+        &#125;
         printf(&quot;是否继续?(y/n)&quot;);
         if (getchar() == &#39;n&#39;)
-        {
+        &#123;
             break;
-        }
-    }
-}
+        &#125;
+    &#125;
+&#125;
 
 
 /*按平均值排序*/
 void Student_SortByAverage()
-{
+&#123;
     int i, j;
     struct Student tmp;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         for (j = 1; j &lt; num - i; j++)
-        {
+        &#123;
             if (students[j - 1].Average &lt; students[j].Average)
-            {
+            &#123;
                 tmp = students[j - 1];
                 students[j - 1] = students[j];
                 students[j] = tmp;
-            }
-        }
-    }
-}
+            &#125;
+        &#125;
+    &#125;
+&#125;
 
 /*显示全部学生信息*/
 void Student_Display()
-{
+&#123;
     int i;
     printf(&quot;%10s%10s%8s%8s%8s%10s\n&quot;, &quot;学号&quot;, &quot;姓名&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;成绩&quot;, &quot;平均成绩&quot;);
     printf(&quot;-------------------------------------------------------------\n&quot;);
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         printf(&quot;%10s%10s%8.2f%8.2f%8.2f%10.2f\n&quot;, students[i].ID, students[i].Name,
             students[i].Mark[0], students[i].Mark[1], students[i].Mark[2], students[i].Average);
-    }
-}
+    &#125;
+&#125;
 
 /*将学生信息从文件读出*/
 void IO_ReadInfo()
-{
+&#123;
     FILE* fp;
     int i;
     if ((fp = fopen(&quot;Database.txt&quot;, &quot;rb&quot;)) == NULL)
-    {
+    &#123;
         printf(&quot;不能打开文件!\n&quot;);
         return;
-    }
+    &#125;
     if (fread(&amp;num, sizeof(int), 1, fp) != 1)
-    {
+    &#123;
         num = -1;
-    }
+    &#125;
     else
-    {
+    &#123;
         for (i = 0; i &lt; num; i++)
-        {
+        &#123;
             fread(&amp;students[i], sizeof(struct Student), 1, fp);
-        }
-    }
+        &#125;
+    &#125;
     fclose(fp);
-}
+&#125;
 
 /*将学生信息写入文件*/
 void IO_WriteInfo()
-{
+&#123;
     FILE* fp;
     int i;
     if ((fp = fopen(&quot;Database.txt&quot;, &quot;wb&quot;)) == NULL)
-    {
+    &#123;
         printf(&quot;不能打开文件!\n&quot;);
         return;
-    }
+    &#125;
     if (fwrite(&amp;num, sizeof(int), 1, fp) != 1)
-    {
+    &#123;
         printf(&quot;写入文件错误!\n&quot;);
-    }
+    &#125;
     for (i = 0; i &lt; num; i++)
-    {
+    &#123;
         if (fwrite(&amp;students[i], sizeof(struct Student), 1, fp) != 1)
-        {
+        &#123;
             printf(&quot;写入文件错误!\n&quot;);
-        }
-    }
+        &#125;
+    &#125;
     fclose(fp);
-}
+&#125;
 
 
 int main()
-{
+&#123;
     int choice;
     IO_ReadInfo(); //调用读学生信息函数
     while (1)
-    {
+    &#123;
         /*主菜单*/
         printf(&quot;\n**********************欢迎使用学生成绩管理系统********************\n&quot;);
         printf(&quot; \n1.增加学生记录\t2.查看学生记录\t3.修改学生记录\t4.删除学生记录\n&quot;);
@@ -1278,7 +1259,7 @@ int main()
         scanf(&quot;%d&quot;, &amp;choice);
         fflush(stdin);
         switch (choice)
-        {
+        &#123;
         case 1:
             Student_Insert();
             break;
@@ -1301,11 +1282,11 @@ int main()
         case 7:
             exit(0);
             break;
-        }
+        &#125;
         IO_WriteInfo();
-    }
+    &#125;
     return 0;
-}
+&#125;
 </code></pre>
 ]]></content>
       <categories>
@@ -1317,14 +1298,14 @@ int main()
     <url>/2019/11/18/JAV/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p> 博主在朋友建议下搞了这一个教程<br>接下来按我做的就行了<br><strong>第一步：下载该脚本</strong></p>
 <blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA</a><br>提取码：mwfw<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br><strong>第二步：安装node.js</strong></p>
+<p>链接：<a href="https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA">https://pan.baidu.com/s/1tKn9P0r0vw4dU0GkRIIafA</a><br>提取码：mwfw<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br><strong>第二步：安装node.js</strong></p>
 </blockquote>
 <blockquote>
-<p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
+<p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
 </blockquote>
 <p><img src="https://img-blog.csdnimg.cn/20191117234500963.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">安装时一直点下一步就行了（安装位置自己想放哪就放哪）<br><strong>第三步：安装cmder</strong></p>
 <blockquote>
-<p><a href="https://cmder.net/" target="_blank" rel="noopener">https://cmder.net/</a><br><img src="https://img-blog.csdnimg.cn/20191117234819136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装迷你版即可</p>
+<p><a href="https://cmder.net/">https://cmder.net/</a><br><img src="https://img-blog.csdnimg.cn/20191117234819136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装迷你版即可</p>
 </blockquote>
 <p>安装完以后在cmder查看是否有npm和node版本出现如果有说明你安装成功并进入下一步<br><img src="https://img-blog.csdnimg.cn/20191117235144275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>PS：最好讲cmder和JAV文件夹放在一起方便一些</p>
@@ -1355,11 +1336,11 @@ int main()
 <p><strong>简单来讲</strong>墙是一道在你们中间的大闸门，你对着 google 叫 google，你问什么是VPN，闸门听见了，说 wtf 你还敢叫 google，就把闸门关了，你的信息就传不到 google 那里了，于是因为 google 完全听不到你的声音，自然也就不能告诉你：VPN是什么。</p>
 <p>1.下载个SSR，也就是我们俗称的飞机场。</p>
 <blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/12qs4ydb9dVS-5v43DlXKYA" target="_blank" rel="noopener">https://pan.baidu.com/s/12qs4ydb9dVS-5v43DlXKYA</a><br>提取码：3syu </p>
+<p>链接：<a href="https://pan.baidu.com/s/12qs4ydb9dVS-5v43DlXKYA">https://pan.baidu.com/s/12qs4ydb9dVS-5v43DlXKYA</a><br>提取码：3syu </p>
 </blockquote>
 <p>2.安装及配置<br>windows直接解压即可，手机安装软件也即可。<br><strong>windows</strong><br>解压打开这个<br><img src="https://img-blog.csdnimg.cn/2019110221243875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">这时候打开网站注册账号</p>
 <blockquote>
-<p><a href="https://www.clashcloud.net/#/auth/register?code=wU4f" target="_blank" rel="noopener">https://www.clashcloud.net/#/auth/register?code=wU4f</a></p>
+<p><a href="https://www.clashcloud.net/#/auth/register?code=wU4f">https://www.clashcloud.net/#/auth/register?code=wU4f</a></p>
 </blockquote>
 <p><img src="https://img-blog.csdnimg.cn/20191102212851682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)注册完毕以后点击购买套餐<img src="https://img-blog.csdnimg.cn/20200413201302848.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>购买完毕后打开用户中心<br><img src="https://img-blog.csdnimg.cn/20200413201840374.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -1389,7 +1370,7 @@ int main()
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这只是一个小小的新手教程对于初学者来讲。</p>
 <p>1.有条件直接下载Visual Studio2019 community（反正我不推荐2010版）</p>
 <blockquote>
-<p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/" target="_blank" rel="noopener">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+<p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
 </blockquote>
 <p><img src="https://img-blog.csdnimg.cn/20191102004506133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>安装</strong><br>打开后点击继续，进入文件的提取<br><img src="https://img-blog.csdnimg.cn/20191102005108119.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="">这里选择    C++桌面开发，安装位置你可以选择除C盘以外的其他盘但注意的是安装到其他盘时，C盘也要占用2G</p>
@@ -1405,14 +1386,14 @@ int main()
 </blockquote>
 <p>2.或者下载Visual Studio2010专业版</p>
 <blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1MGb7IhnyRr2FYYt5QHqHFg" target="_blank" rel="noopener">https://pan.baidu.com/s/1MGb7IhnyRr2FYYt5QHqHFg</a><br>提取码：p8js<br>下载之后文件有2.5GB 解压ISO镜像文件，双击安装文件setup.exe 一键安装即可。安装完成之后，断网，在帮助-注册产品那里输入下载页面提供的秘钥<br>YCFHQ-9DWCY-DKV88-T2TMH-G7BHP </p>
+<p>链接：<a href="https://pan.baidu.com/s/1MGb7IhnyRr2FYYt5QHqHFg">https://pan.baidu.com/s/1MGb7IhnyRr2FYYt5QHqHFg</a><br>提取码：p8js<br>下载之后文件有2.5GB 解压ISO镜像文件，双击安装文件setup.exe 一键安装即可。安装完成之后，断网，在帮助-注册产品那里输入下载页面提供的秘钥<br>YCFHQ-9DWCY-DKV88-T2TMH-G7BHP </p>
 </blockquote>
 <p><strong>3.下载DW cs6版本</strong><br>安装解压我就不说了<br>但安装时会出现这个问题，忽略即可<br><img src="https://img-blog.csdnimg.cn/20191102011259873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/2019110201135616.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接下来一定要断网不然会出现注册账号页面<br>安装完以后启动程序<br><strong>破解方法：</strong></p>
 <p>打开Dreamweaver cs6破解补丁，下载完毕后压缩包中有32与64两个文件夹分别代表32位程序与64位程序的补丁，选择64位的补丁。</p>
 <p>打开Dreamweaver cs6安装文件夹，将适合自己系统的破解补丁文件夹中的文件拖入程序安装文件夹中覆盖同名文件<br><img src="https://img-blog.csdnimg.cn/20191102011717497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RyY2xlZg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">进行覆盖确认后现程序不再提示需要注册激活，到此DW cs6安装破解完毕</p>
 <p><strong>4.或者下载 Dreamwave cc2019</strong><br>由于我使用的是内部版，所以根本不需要破解直接安装。</p>
 <blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/16WqRQTSJF6tvMjZIjT0Jsw" target="_blank" rel="noopener">https://pan.baidu.com/s/16WqRQTSJF6tvMjZIjT0Jsw</a><br>提取码：viih </p>
+<p>链接：<a href="https://pan.baidu.com/s/16WqRQTSJF6tvMjZIjT0Jsw">https://pan.baidu.com/s/16WqRQTSJF6tvMjZIjT0Jsw</a><br>提取码：viih </p>
 </blockquote>
 <p>安装是直接set up 但唯一麻烦的是不能选择安装路径</p>
 <p>到此教程结束</p>
@@ -1424,15 +1405,15 @@ int main()
   <entry>
     <title>Hello World</title>
     <url>/2019/11/01/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="TEXT">$ hexo new &quot;My New Post&quot;</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="TEXT">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="TEXT">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="TEXT">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
 </search>
