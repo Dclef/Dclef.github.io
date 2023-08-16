@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>八字纳音合婚</title>
+        <meta content="八字;合婚;纳音;甲子;中华玄门"  name=keywords>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body {font-family: 宋体;}
+            a:link{text-decoration: none; color: dodgerblue;}
+            a:visited{text-decoration: none; color: dodgerblue; }
+            a:hover{text-decoration: none; color: Fuchsia; }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 600px;
+                max-width: 800px;
+            }
+        </style>        
+    </head>
+    <body>
+        <div id="header">
+            <center>
+            <table><tr><td align="center">
+            <h3>
+                <a href="https://dclef.icu/xuanxue" target="_blank">在线排盘</a>
+                ・ <a href="index.htm" target="_blank">排盘首页</a>
+                ・ <a href="hehun.htm">公历排合婚</a>
+                ・ <a href="hehunnl.htm" style="color: red;">农历排合婚</a>
+            </h3>
+            </td></tr></table>
+            </center>
+        </div>
+        
+        <center> <!-- 排盘页面整个是一张表格 -->
+        <table><tr><td align="center">
+        <div id="AllText">
+                 
+        <div id="selectparas">
+            <form>
+            男方出生时间：农历
+            <select id="nanYear" onchange="OnNanYearChanged();"> 
+            <option value=2000>2000庚辰</option>
+            </select> 年
+            <select id="nanMonth" onchange="OnNanMonthChanged();">
+                <option value=0>正</option> <!--农历月份用序号，从0开始 -->
+            </select> 月
+            <select id="nanDay">
+                <option value=0>初一</option> <!--农历日子用序号，从0开始 -->
+            </select> 日
+            <select id="nanHour"> <!--农历的子时从前一天 23 点开始算-->
+                <option value=-1>前23</option>
+                <option value=0 selected="selected">0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+                <option value=13>13</option>  
+                <option value=14>14</option>  
+                <option value=15>15</option>  
+                <option value=16>16</option>  
+                <option value=17>17</option>  
+                <option value=18>18</option>  
+                <option value=19>19</option>  
+                <option value=20>20</option>  
+                <option value=21>21</option>  
+                <option value=22>22</option>  
+            </select> 时
+             <select id="nanMinute">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30>30</option>
+                <option value=31>31</option>
+                <option value=32>32</option>
+                <option value=33>33</option>
+                <option value=34>34</option>
+                <option value=35>35</option>
+                <option value=36>36</option>
+                <option value=37>37</option>
+                <option value=38>38</option>
+                <option value=39>39</option>
+                <option value=40>40</option>
+                <option value=41>41</option>
+                <option value=42>42</option>
+                <option value=43>43</option>
+                <option value=44>44</option>
+                <option value=45>45</option>
+                <option value=46>46</option>
+                <option value=47>47</option>
+                <option value=48>48</option>
+                <option value=49>49</option>
+                <option value=50>50</option>
+                <option value=51>51</option>
+                <option value=52>52</option>
+                <option value=53>53</option>
+                <option value=54>54</option>
+                <option value=55>55</option>
+                <option value=56>56</option>
+                <option value=57>57</option>
+                <option value=58>58</option>
+                <option value=59>59</option>
+            </select>分
+            <br><br>
+            女方出生时间：农历 
+            <select id="nvYear" onchange="OnNvYearChanged();"> 
+            <option value=2000>2000庚辰</option>
+            </select> 年
+            <select id="nvMonth" onchange="OnNvMonthChanged();">
+                <option value=0>正</option><!--农历的月、日都是序号，从0开始--> 
+            </select> 月
+            <select id="nvDay">
+                <option value=0>初一</option>
+            </select> 日
+            <select id="nvHour">
+                <option value=-1>前23</option> <!--农历的子时从前一天 23 点开始算-->
+                <option value=0 selected="selected">0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+                <option value=13>13</option>  
+                <option value=14>14</option>  
+                <option value=15>15</option>  
+                <option value=16>16</option>  
+                <option value=17>17</option>  
+                <option value=18>18</option>  
+                <option value=19>19</option>  
+                <option value=20>20</option>  
+                <option value=21>21</option>  
+                <option value=22>22</option>
+            </select> 时
+             <select id="nvMinute">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30>30</option>
+                <option value=31>31</option>
+                <option value=32>32</option>
+                <option value=33>33</option>
+                <option value=34>34</option>
+                <option value=35>35</option>
+                <option value=36>36</option>
+                <option value=37>37</option>
+                <option value=38>38</option>
+                <option value=39>39</option>
+                <option value=40>40</option>
+                <option value=41>41</option>
+                <option value=42>42</option>
+                <option value=43>43</option>
+                <option value=44>44</option>
+                <option value=45>45</option>
+                <option value=46>46</option>
+                <option value=47>47</option>
+                <option value=48>48</option>
+                <option value=49>49</option>
+                <option value=50>50</option>
+                <option value=51>51</option>
+                <option value=52>52</option>
+                <option value=53>53</option>
+                <option value=54>54</option>
+                <option value=55>55</option>
+                <option value=56>56</option>
+                <option value=57>57</option>
+                <option value=58>58</option>
+                <option value=59>59</option>
+            </select>分
+            <br><br>
+            运势匹配图：
+            <select id="sDrawPic" style="width: 60pt;">
+                <option value=0 > 不绘制 </option>  
+                <option value=1 selected="selected"> 绘制 </option>  
+            </select>（需要最新版浏览器）
+            <br><br>
+            <input type="button" id="btnPaiPan" onclick="CalcHeHunPanPai();" 
+                   value="&emsp;纳音合婚&emsp;"
+                   style="font-size: large;" ><br>
+            </form>
+        </div>
+        
+        <br>
+        
+        <div id="paipantext" align="left" style="line-height: 18pt;">
+        排盘说明：
+        <ul>
+        <li>合婚程序仅供娱乐，切勿执着分数，无论分数高低都有可能结婚，缘分自有定数，各尽本心。</li>
+        <li>农历，即阴历、古历，以每年的春节正月初一为农历新年第一天。请按上面填写男女双方出生时间，然后进行排盘。
+            <b>注意出生的小时和分钟一定要非常准确，否则排盘结果可能出错。</b></li>
+        <li>请按照年、月、日、时顺序选择出生时间，程序动态生成农历的月份、日子，如果月份列表没显示闰月说明当年没有农历闰月。</li>
+        <li>农历一天的时间范围是从前一天 23:00 到当天 22:59 ，请按农历规则选择日子、小时和分钟。 </li>        
+        <li>如需使用真太阳时，请在
+            <a href="bazinl.htm" target="new">农历排八字</a>
+            页面先进行真太阳时的排盘，然后将真太阳时间进行
+            <a href="hehun.htm" target="new2">公历排合婚</a>
+            。</li>
+        <li><span style="color: blue; ">手机访问请使用搜狗浏览器、UC浏览器、绿茶浏览器或最新的Chrome浏览器访问本页面排盘，这几款浏览器默认使用等宽字体适合显示排盘。
+            手机上如果网页显示不完整请缩小页面。</span><br>
+            电脑访问建议在最新的 Chrome、Firefox、Safari 或 IE9 以上浏览器访问本页面进行排盘。</li>
+        <li>请注意本页面纳音古法合婚是汉族传承的，对少数民族可能不适用。</li>
+        </ul>
+        </div>
+        <br>
+        
+        </div><!--//上面是排盘HTML文本，下面是绘图区域-->
+        <div align="left">
+        <canvas id="syCanvas" width="10" height="10"></canvas>
+        </div>
+        <div id="YunShiHeHunShuoMing" align="left" style="font-size: small;">  </div>
+        
+        </td></tr></table>
+        </center>
+        <!--//上面是绘图预留，下面是脚本-->
+        <!--js1S-->
+        <script src=tools.js></script><!--工具函数-->
+        <script src=eph0.js></script> <!--天文常数等-->
+        <script src=ephB.js></script> <!--恒星计算(如果不须要恒星,删除此行)-->
+        <script src=eph.js></script>  <!--星历模块-->
+        <script src=JW.js></script>   <!--全国城市经纬数据库及皇帝纪年数据库-->
+        <script src=lunar.js></script><!--日历物件-->        
+        <script src=bazidata.js></script><!--八字数据-->
+        <script src=hehundata.js></script><!--合婚数据-->
+        <script src=hehunnl.js></script><!--合婚脚本-->
+        <!--js1E-->
+        <script>
+             //初始化加载
+            InitNLYears();
+            InitNLDays();
+          
+        </script><!--加载脚本--> 
+    </body>
+</html>

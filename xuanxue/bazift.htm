@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>八字反推时间</title>
+        <meta content="八字;反推;纳音;甲子;中华玄门"  name=keywords>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body {font-family: 宋体;}
+            a:link{text-decoration: none; color: dodgerblue;}
+            a:visited{text-decoration: none; color: dodgerblue; }
+            a:hover{text-decoration: none; color: Fuchsia; }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 600px;
+                max-width: 800px;
+            }
+        </style>        
+    </head>
+    <body>
+        <div id="header">
+            <center>
+            <table><tr><td align="center">
+            <h3>
+                <a href="https://dclef.icu/xuanxue" target="_blank">在线排盘</a>
+                · <a href="index.htm" target="_blank">排盘首页</a>
+                · <a href="bazi.htm">公历排八字</a>
+                · <a href="bazinl.htm">农历排八字</a>
+                · <a href="bazift.htm" style="color: red;">八字反推</a>
+            </h3>
+            </td></tr></table>
+            </center>
+        </div>
+        
+        <center> <!-- 排盘页面整个是一张表格 -->
+        <table><tr><td align="center">
+        <div id="AllText">
+                 
+        <div id="selectparas">
+            <form>
+            反推时间段：
+            <select id="sFTStartYear">
+            <option value=1924>1924年立春到1984年立春</option>
+            <option value=1984>1984年立春到2044年立春</option>
+            <option value=2044>2044年立春到2104年立春</option>
+            <option value=2104>2104年立春到2164年立春</option>
+            </select><br><br>
+            四柱八字：
+            <select id="sJZYear" onchange="OnJZYearChanged();">
+            <option value=0>甲子</option><!--年的数值用甲子数序号-->
+            </select> 年
+            <select id="sIxMonth">
+                <option value=0>丙寅</option><!--月柱用月序号，0到11.12个月-->
+            </select> 月
+            <select id="sJZDay" onchange="OnJZDayChanged();">
+                <option value=0>甲子</option> <!--日子用的是甲子数序号-->
+            </select> 日
+            <select id="sIxHour">
+                <option value=0>甲子</option> <!--时辰是0到11，共12个时辰--> 
+            </select> 时
+            <br><br>
+             命主性别：<select id="sGender">
+                <option value="女"> 女 </option>
+                <option value="男" selected="selected"> 男 </option>
+            </select>&emsp;            
+             排盘模式：
+            <select id="sUseJZGaoJi" style="width: 80pt;">
+                <option value=0 selected="selected"> 普通排盘 </option>  
+                <option value=1> 甲子高级排盘 </option>  
+            </select>
+            <br><br>
+            流年运势图：
+            <select id="sDrawPic" style="width: 60pt;">
+                <option value=0 > 不绘制 </option>  
+                <option value=1 selected="selected"> 绘制 </option>  
+            </select>（需要最新版浏览器）
+            <br><br>
+            <input type="button" id="btnPaiPan" onclick="CalcFanTuiPanPai();" 
+                   value="&emsp;八字反推&emsp;"
+                   style="font-size: large;" ><br>
+            </form>
+        </div>
+        
+        <br>
+        
+        <div id="paipantext" align="left" style="line-height: 18pt;">
+        排盘说明：
+        <ul>
+        <li>请选择反推的时间段和四柱八字，然后进行八字反推。注意指定时间段内不一定会出现该八字，如果查找不到，请重新选择反推时间段。</li>
+        <li>如果反推的八字正好在节气当天，节气时刻前后会有月柱变化，可能导致反推排盘的八字月柱有偏差。</li>
+        <li><span style="color: blue; ">手机访问请使用搜狗浏览器、UC浏览器、绿茶浏览器或最新的Chrome浏览器访问本页面排盘，这几款浏览器默认使用等宽字体适合显示排盘。
+            手机上如果网页显示不完整请缩小页面。</span><br>
+            电脑访问建议在最新的 Chrome、Firefox、Safari 或 IE9 以上浏览器访问本页面进行排盘。</li>
+        <li>附注：排盘结果有三种年首，公历以元旦1月1号为年首，农历以春节正月初一为年首，八字年柱以立春为年首。
+            黄帝纪年的年首同农历春节。
+        </li>
+        </ul>
+        </div>  
+        <br>
+        
+        </div><!--//上面是排盘HTML文本，下面是绘图区域-->
+        <div align="left">
+        <canvas id="syCanvas" width="10" height="10"></canvas>
+        </div>
+        
+        </td></tr></table>
+        </center>
+        <!--//上面是绘图预留，下面是脚本-->
+        <!--js1S-->
+        <script src=tools.js></script><!--工具函数-->
+        <script src=eph0.js></script> <!--天文常数等-->
+        <script src=ephB.js></script> <!--恒星计算(如果不须要恒星,删除此行)-->
+        <script src=eph.js></script>  <!--星历模块-->
+        <script src=JW.js></script>   <!--全国城市经纬数据库及皇帝纪年数据库-->
+        <script src=lunar.js></script><!--日历物件-->        
+        <script src=bazidata.js></script><!--八字数据-->
+        <script src=bazift.js></script><!--八字反推脚本-->
+        <!--js1E-->
+        <script>
+             //初始化加载
+            InitJZYears();    //加载年份
+            InitJZDays();     //加载日子
+        
+        </script><!--加载脚本-->       
+    </body>
+</html>

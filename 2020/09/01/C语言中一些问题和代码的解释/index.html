@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>C语言中一些问题和代码的解释 | 老猫的博客</title><meta name="keywords" content="java,go,教程,小白"><meta name="author" content="老猫"><meta name="copyright" content="老猫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="引言：这只针对学过C语言但没学懂和自己的总结经验，本文只按照自己的思路，关于错误和问题一概不论。关于简单的代码一概不论，这里只单讲入门且不能理解的东西，至于前期环境安装和一些基础问题可以参考其他博客和我以前的博客。 首先需要明白什么是指令和头文件？ 1#include&lt;stdio.h&gt; #include是一条C预处理器指令，C编译器在编译前做的准备工作，而stdio.h是头文件，此文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言中一些问题和代码的解释">
+<meta property="og:url" content="https://dclef.icu/2020/09/01/C%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E8%A7%A3%E9%87%8A/index.html">
+<meta property="og:site_name" content="老猫的博客">
+<meta property="og:description" content="引言：这只针对学过C语言但没学懂和自己的总结经验，本文只按照自己的思路，关于错误和问题一概不论。关于简单的代码一概不论，这里只单讲入门且不能理解的东西，至于前期环境安装和一些基础问题可以参考其他博客和我以前的博客。 首先需要明白什么是指令和头文件？ 1#include&lt;stdio.h&gt; #include是一条C预处理器指令，C编译器在编译前做的准备工作，而stdio.h是头文件，此文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/C%E8%AF%AD%E8%A8%80.jpg">
+<meta property="article:published_time" content="2020-09-01T01:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-22T15:32:07.797Z">
+<meta property="article:author" content="老猫">
+<meta property="article:tag" content="java,go,教程,小白">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/C%E8%AF%AD%E8%A8%80.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/dclef/CDN/img/favicon.jpg"><link rel="canonical" href="https://dclef.icu/2020/09/01/C%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E8%A7%A3%E9%87%8A/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 老猫","link":"链接: ","source":"来源: 老猫的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C语言中一些问题和代码的解释',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-09-22 23:32:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="老猫的博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/dclef/CDN/img/favicon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">老猫的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">C语言中一些问题和代码的解释</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-01T01:00:00.000Z" title="发表于 2020-09-01 09:00:00">2020-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-22T15:32:07.797Z" title="更新于 2022-09-22 23:32:07">2022-09-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C语言中一些问题和代码的解释"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><p>引言：这只针对学过C语言但没学懂和自己的总结经验，本文只按照自己的思路，关于错误和问题一概不论。<br>关于简单的代码一概不论，这里只单讲入门且不能理解的东西，至于前期环境安装和一些基础问题可以参考其他博客和我以前的博客。</p>
+<p>首先需要明白什么是<strong>指令和头文件</strong>？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>#include是一条C预处理器指令，C编译器在编译前做的准备工作，而stdio.h是头文件，此文件包含共编译器使用的输入和输出函数，如scanf(),printf()等等。<br>没有此头文件，你前期的代码根本完成不了，那么问题来了</p>
+<p><strong>为什么不内置一个输入和输出，这样做不是更简单吗？</strong></p>
+<p>原因很简单，有些程序根本用不到输入和输出，那么不就多此一举了吗。</p>
+<p><strong>main()函数</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">mian</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+<p>此为入口文件，C程序通常情况下按main()开始执行。<br>int是返回值，但也是默认值。表明main()函数返回值是整数。<br>在现有学生阶段我们还可以用这样写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">viod <span class="title function_">mian</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+<p>但是这种写法并不认可，如果你用多个编辑器写的程序用此可能会报错。<br><strong>注释</strong>过于简单不讲只讲风格</p>
+<blockquote>
+<p>  &#x2F;* 这也是一条注释<br> ， 被分成两行。*&#x2F;<br> &#x2F;&#x2F;这种注释只能写一行</p>
+</blockquote>
+<p><strong>花括号</strong><br>花括号把main()函数括起来。一般而言，所有的C函数都使用花括号标记函数体的开始和结束。<strong>这是死规定，不能省略。</strong></p>
+<p><strong>声明</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i,j,k;</span><br></pre></td></tr></table></figure>
+
+<p>此代码声明有i,j,k三个标识符，也就一个变量、函数或其他实体的名称。int 表明i,j,k三个标识符是一个整数。<br><strong>return语句</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>有返回值的C函数要有return语句。该语句以return关键字开始，后面是待返回的值，并以分号结尾。<br><strong>getchar();</strong><br>这行代码会让程序等待击键，窗口会在用户按下一个键后才关闭。</p>
+<p>关于<strong>浮点数</strong><br>1是整数，1.00是浮点数</p>
+<p>C语言提供3个附属关键字修饰基本整数类型：short、long和unsigned。<br>应记住以下几点。<br>short 类型占用的存储空间可能比int少，short是有符号类型。</p>
+<p>long占用的存储空间可能比int多，适用于较大数值，long是有符号类型。</p>
+<p>unsigned int或unsigned只用于非负值。这种类型与有符号类型表示的范围不同。例如，16位unsigned int允许的取值范围是0～65535，而不<br>是-32768～32767。用于表示正负号的位现在用于表示另一个二进制位，所以无符号整型可以表示更大的数。</p>
+<p><strong>char类型</strong>用于储存字符，它与int 声明都是一样的，这里只讲数组。<br><strong>float</strong> 单精度浮点数，至少精确到小数点6位。<br><strong>double</strong> 双精度浮点数，至少能表示小数点10位。<br><strong>long double</strong>，更高精度，这里不讲。</p>
+<p><strong>字符串</strong></p>
+<p>C语言没有专门用于储存字符串的变量类型，字符串都被储存在char类型的数组中。数组由连续的存储单元组成，字符串中的字符被储存在相邻的存储单元中，每个单元储存一个字符。<br>注意每一个数组末尾都有字符\0，这为控字符，它表示字符串的结束，这意味着你定义<strong>储存40个字符</strong>实际上只能储存39个字符，剩下一个给空字符\0用的。</p>
+<p><strong>明示常量</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> N 100<span class="comment">//定义N为100</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>printf函数</strong>（针对常用的）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">%c <span class="comment">//单个字符</span></span><br><span class="line">&amp;d <span class="comment">//十进制整数</span></span><br><span class="line">%f <span class="comment">//浮点数十进制数</span></span><br><span class="line">%p <span class="comment">//指针</span></span><br><span class="line">%s <span class="comment">//字符串</span></span><br></pre></td></tr></table></figure>
+<p>用法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%8d %8d %8d\n&quot;</span>, a, b c);<span class="comment">//这样会间隔一样比较美观</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%10s%10s%10%10\n&quot;</span>, <span class="string">&quot;学号&quot;</span>, <span class="string">&quot;姓名&quot;</span>, <span class="string">&quot;成绩&quot;</span>, <span class="string">&quot;平均成绩&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>scanf函数</strong><br>printf()函数使用变量、常量和表达式，而scanf()函数使用指向变量的指针。</p>
+<p>如果用scanf()读取基本变量类型的值，在变量名前加上一个&amp;。<br>但如果scanf()把字符串读入字符数组中，就不用&amp;。<br>如以下代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> main</span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> age;  <span class="comment">//变量</span></span><br><span class="line">  <span class="type">char</span> id[<span class="number">30</span>];  <span class="comment">//字符数组，用于储存字符串</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;请输入你的年龄和学号\n&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;age); <span class="comment">//这里需要使用&amp;</span></span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,id);<span class="comment">//字符串不需要&amp;</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%d%s\n&quot;</span>,age,id);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p><strong>常用运算符</strong><br><strong>赋值运算符：&#x3D;</strong></p>
+<p>等号左侧是一个变量名，右侧是赋给该变量的值。符号&#x3D;被称为赋值运算符。赋值行为从右往左进行。<br>如<code>i=i+1;</code><br>该语句的意思是：找出变量 i 的值，把该值加 1，然后把新值赋值变量i</p>
+<p> <strong>加法运算符:+</strong>(不讲)<br> **减法运算符：-*<em>（不讲）<br><strong>乘法运算符：</strong></em>（不讲）<br> **除法运算符：&#x2F;**（不讲）</p>
+<p> <strong>运算符的优先级</strong><br> 对于C语言，运算符的优先级是从乘除到加减，优先级相同从左到右的顺序，当然&#x3D;除外。（&#x3D;是从右往左）</p>
+<p><strong>递增运算符：++</strong><br>前缀递增符:<strong>++a</strong><br>后缀递增符:<strong>a++</strong><br>不同：优先级不同，前缀递增符先递增后运算。<br>后缀递增符先运算后递增。<br>举个例子：<code>i=233*++a</code><br>a递增1，然后233乘以a，并赋值给i</p>
+<blockquote>
+<p>i&#x3D;233*a++</p>
+</blockquote>
+<p>2乘以a,并将结果给i,然后a递增1</p>
+<p>**递减运算符：–**（与递增相同）</p>
+<p><strong>循环</strong><br>C语言有3种循环：for、while、do while</p>
+<p><strong>whlie循环</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i&lt;<span class="number">3</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;烫&quot;</span>);</span><br><span class="line">		i++;<span class="comment">//输出烫时加1</span></span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>以上的代码打印2个的烫</p>
+<p><strong>如何强制退出循环？</strong></p>
+<p>break;<br>goto;等语句这里不必多讲</p>
+<p><strong>for循环</strong><br>主要形式<br>for(初始值;初始值对比;初始值增加)<br>举个例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;烫&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码会输出两个烫<br><strong>do while</strong><br>至少执行循环体中内容一次<br>do<br>{<br>}while();<br>举个例子</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i;</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">  &#123;</span><br><span class="line">   i++;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;烫&quot;</span>);</span><br><span class="line">  &#125; <span class="keyword">while</span>(i&lt;<span class="number">3</span>);</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码会出现三个烫<br>switch和break语句</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> ( 整型表达式）</span><br><span class="line">&#123;</span><br><span class="line">case1 常量<span class="number">1</span>:</span><br><span class="line">语句 </span><br><span class="line">case2 常量<span class="number">2</span>:</span><br><span class="line">语句 </span><br><span class="line"><span class="keyword">break</span>;<span class="comment">//跳出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>数组</strong><br>数组类型<br>int ID[20];&#x2F;&#x2F;储存20个int类型整数的数组<br>char Name[20];&#x2F;&#x2F;储存20个字符的数组<br>float mark[20];&#x2F;&#x2F;储存20个float类型的数组<br>二维数组<br>float a[5][12];&#x2F;&#x2F;内含5个数组元素的数组，每个数组元素内含12个float类型的元素<br>float a[5][12]; &#x2F;&#x2F; rain是一个内含5个元素的数组<br>float a[5][12] ; &#x2F;&#x2F; 一个内含12个float类型元素的数组</p>
+<p><strong>if语句常见错误</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a &lt; x &lt; z) <span class="comment">// 错误，没有使用逻辑运算符</span></span><br><span class="line"><span class="keyword">if</span> (ch != <span class="string">&#x27;a&#x27;</span> &amp;&amp; != <span class="string">&#x27;b&#x27;</span>) <span class="comment">// 错误，缺少完整的测试</span></span><br></pre></td></tr></table></figure>
+<p>正确的方式是用逻辑运算符连接两个关系表达式：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a &lt; x &amp;&amp; x &lt; z) <span class="comment">// 使用&amp;&amp;组合</span></span><br><span class="line"><span class="keyword">if</span> (ch != <span class="string">&#x27;q&#x27;</span> &amp;&amp; ch != <span class="string">&#x27;Q&#x27;</span>) <span class="comment">// 使用&amp;&amp;组合两个表达式</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://dclef.icu">老猫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dclef.icu/2020/09/01/C%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E8%A7%A3%E9%87%8A/">https://dclef.icu/2020/09/01/C语言中一些问题和代码的解释/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dclef.icu" target="_blank">老猫的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/C语言.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/dclef/CDN/img/wepay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/dclef/CDN/img/wepay.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/dclef/CDN/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/dclef/CDN/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/20/JAV/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/node.js.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JAV磁力链和封面爬取</div></div></a></div><div class="next-post pull-right"><a href="/2019/12/11/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/C语言.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">学生管理系统（C语言版）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Livere</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzMxOC8zMzc4Mg=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/dclef/CDN/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">老猫</div><div class="author-info__description">小白教程</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dclef"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/dclef" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:drclef233@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://dclef.icu/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">兄弟们就看看嗷！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/24/%E5%9C%A8butterfly%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0rss%E8%AE%A2%E9%98%85/" title="在butterfly主题中添加rss订阅"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/HEXO.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在butterfly主题中添加rss订阅"/></a><div class="content"><a class="title" href="/2022/09/24/%E5%9C%A8butterfly%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0rss%E8%AE%A2%E9%98%85/" title="在butterfly主题中添加rss订阅">在butterfly主题中添加rss订阅</a><time datetime="2022-09-24T04:48:08.009Z" title="发表于 2022-09-24 12:48:08">2022-09-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6go(%E4%B8%80)/" title="从零开始学go（一）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/dclef/CDN/go/go-logo.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始学go（一）"/></a><div class="content"><a class="title" href="/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6go(%E4%B8%80)/" title="从零开始学go（一）">从零开始学go（一）</a><time datetime="2022-09-22T13:00:00.000Z" title="发表于 2022-09-22 21:00:00">2022-09-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/Spring-SpringMVC/" title="Spring和SpringMVC的常用注解"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/2021822.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring和SpringMVC的常用注解"/></a><div class="content"><a class="title" href="/2022/01/21/Spring-SpringMVC/" title="Spring和SpringMVC的常用注解">Spring和SpringMVC的常用注解</a><time datetime="2022-01-21T01:00:00.000Z" title="发表于 2022-01-21 09:00:00">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/11/OSI%E6%A8%A1%E5%9E%8B/" title="OSI模型"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/VPN.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OSI模型"/></a><div class="content"><a class="title" href="/2021/12/11/OSI%E6%A8%A1%E5%9E%8B/" title="OSI模型">OSI模型</a><time datetime="2021-12-11T01:00:00.000Z" title="发表于 2021-12-11 09:00:00">2021-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/11/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6springboot(%E4%B8%80)/" title="从零开始学springboot（一）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Dclef/CDN/img/2021822.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始学springboot（一）"/></a><div class="content"><a class="title" href="/2021/12/11/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6springboot(%E4%B8%80)/" title="从零开始学springboot（一）">从零开始学springboot（一）</a><time datetime="2021-12-11T01:00:00.000Z" title="发表于 2021-12-11 09:00:00">2021-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By 老猫</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'AcXrsvmCNVcPqWbExlSsvPjl-gzGzoHsz# leancloud application app id',
+      appKey: 'bFM3KX5ofIw2bgLTraJXvget# leancloud application app key',
+      avatar: 'monsterid',
+      serverURLs: 'https://acxrsvmc.lc-cn-n1-shared.com# This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Valine' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(d, w, c) {
+    w.ChatraID = 'JjJmRRwzoQ5ktTyD7';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (false) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

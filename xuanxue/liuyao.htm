@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>六爻排盘页面</title>
+        <meta content="六爻;八卦;算卦;占卜;中华玄门"  name=keywords>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body {font-family: 宋体;}
+            a:link{text-decoration: none; color: dodgerblue;}
+            a:visited{text-decoration: none; color: dodgerblue; }
+            a:hover{text-decoration: none; color: Fuchsia; }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 600px;
+                max-width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <center>
+            <table><tr><td align="center">
+            <h3>
+                <a href="https://dclef.icu/xuanxue" target="_blank">在线排盘</a>
+                ・ <a href="index.htm" target="_blank">排盘首页</a>
+                ・ <a href="liuyao.htm" style="color: red;">手工摇卦</a>
+                ・ <a href="liuyaosj.htm">时间起卦</a>
+                ・ <a href="liuyaosz.htm">数字起卦</a>
+                ・ <a href="liuyaohz.htm">汉字起卦</a>
+            </h3>
+            </td></tr></table>
+            </center>
+        </div>
+        
+        <center> <!-- 排盘页面整个是一张表格 -->
+        <table><tr><td align="center">
+        <div id="AllText">
+                 
+        <div id="selectparas">
+            <form>
+            <input id="rdTimeGG" type="radio" name="rdTime" value="0" checked="checked" onchange="OnGLNLChanged();">
+            起卦公历时间：
+            <select id="sGGYear" onchange="OnGGYearChanged();"> 
+            <option value=2000>2000</option>
+            </select> 年
+            <select id="sGGMonth" onchange="OnGGMonthChanged();">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12 selected="selected">12</option>
+            </select> 月
+            <select id="sGGDay">
+                <option value=12>12</option>
+            </select> 日
+            <select id="sGGHour">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+                <option value=13>13</option>  
+                <option value=14>14</option>  
+                <option value=15>15</option>  
+                <option value=16>16</option>  
+                <option value=17>17</option>  
+                <option value=18>18</option>  
+                <option value=19>19</option>  
+                <option value=20>20</option>  
+                <option value=21>21</option>  
+                <option value=22>22</option>  
+                <option value=23>23</option>  
+            </select> 时
+             <select id="sGGMinute">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30 selected="selected">30</option>
+                <option value=31>31</option>
+                <option value=32>32</option>
+                <option value=33>33</option>
+                <option value=34>34</option>
+                <option value=35>35</option>
+                <option value=36>36</option>
+                <option value=37>37</option>
+                <option value=38>38</option>
+                <option value=39>39</option>
+                <option value=40>40</option>
+                <option value=41>41</option>
+                <option value=42>42</option>
+                <option value=43>43</option>
+                <option value=44>44</option>
+                <option value=45>45</option>
+                <option value=46>46</option>
+                <option value=47>47</option>
+                <option value=48>48</option>
+                <option value=49>49</option>
+                <option value=50>50</option>
+                <option value=51>51</option>
+                <option value=52>52</option>
+                <option value=53>53</option>
+                <option value=54>54</option>
+                <option value=55>55</option>
+                <option value=56>56</option>
+                <option value=57>57</option>
+                <option value=58>58</option>
+                <option value=59>59</option>
+            </select>分&emsp;&emsp;&emsp;&emsp;
+            <br>
+            <input id="rdTimeNN"  type="radio" name="rdTime" value="1"  onchange="OnGLNLChanged();">
+            起卦农历时间：
+            <select id="sNNYear" onchange="OnNNYearChanged();" disabled> <!--农历年份变化自动更新月份-->
+            <option value=2000>2000庚辰</option>
+            </select> 年
+            <select id="sNNMonth" onchange="OnNNMonthChanged();" disabled><!--农历月份变化自动更新日子-->
+                <option value=0>十一</option><!--农历的月、日都是序号，从0开始-->
+            </select> 月
+            <select id="sNNDay" disabled>
+                <option value=0>十七</option>
+            </select> 日
+            <select id="sNNHour" disabled>
+                <option value=-1>前23</option> <!--农历的子时从前一天 23 点开始算-->
+                <option value=0 selected="selected">0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+                <option value=13>13</option>  
+                <option value=14>14</option>  
+                <option value=15>15</option>  
+                <option value=16>16</option>  
+                <option value=17>17</option>  
+                <option value=18>18</option>  
+                <option value=19>19</option>  
+                <option value=20>20</option>  
+                <option value=21>21</option>  
+                <option value=22>22</option>         
+            </select> 时
+            <select id="sNNMinute" disabled>
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30 selected="selected">30</option>
+                <option value=31>31</option>
+                <option value=32>32</option>
+                <option value=33>33</option>
+                <option value=34>34</option>
+                <option value=35>35</option>
+                <option value=36>36</option>
+                <option value=37>37</option>
+                <option value=38>38</option>
+                <option value=39>39</option>
+                <option value=40>40</option>
+                <option value=41>41</option>
+                <option value=42>42</option>
+                <option value=43>43</option>
+                <option value=44>44</option>
+                <option value=45>45</option>
+                <option value=46>46</option>
+                <option value=47>47</option>
+                <option value=48>48</option>
+                <option value=49>49</option>
+                <option value=50>50</option>
+                <option value=51>51</option>
+                <option value=52>52</option>
+                <option value=53>53</option>
+                <option value=54>54</option>
+                <option value=55>55</option>
+                <option value=56>56</option>
+                <option value=57>57</option>
+                <option value=58>58</option>
+                <option value=59>59</option>
+            </select>分
+            <br><br>
+            起卦占事：<input type="text" id="tZhanShi" size="42" value="一件事情"/><br><br>
+            卦主性别：<select id="sGender">
+                <option value="女"> 女 </option>
+                <option value="男" selected="selected"> 男 </option>       
+            </select>&emsp;
+            出生年份：<select id="sShengNian">
+                <option value=2000> 2000庚辰 </option>
+            </select>&emsp;
+            <br>
+            <br><!-- 少阴0，少阳1，老阴2，老阳3  -->
+            第一次&emsp;<select id="sLY1">
+                <option value=2>零背三字（老阴 Ⅹ）</option>
+                <option value=1 selected="selected">一背二字（少阳 Ⅰ）</option>
+                <option value=0>二背一字（少阴 Ⅱ）</option>
+                <option value=3>三背零字（老阳 ��）</option>
+            </select><br>
+            第二次&emsp;<select id="sLY2">
+                <option value=2>零背三字（老阴 Ⅹ）</option>
+                <option value=1 selected="selected">一背二字（少阳 Ⅰ）</option>
+                <option value=0>二背一字（少阴 Ⅱ）</option>
+                <option value=3>三背零字（老阳 ��）</option>
+            </select><br>
+            第三次&emsp;<select id="sLY3">
+                <option value=2>零背三字（老阴 Ⅹ）</option>
+                <option value=1 selected="selected">一背二字（少阳 Ⅰ）</option>
+                <option value=0>二背一字（少阴 Ⅱ）</option>
+                <option value=3>三背零字（老阳 ��）</option>
+            </select><br><br>
+            第四次&emsp;<select id="sLY4">
+                <option value=2>零背三字（老阴 Ⅹ）</option>
+                <option value=1 selected="selected">一背二字（少阳 Ⅰ）</option>
+                <option value=0>二背一字（少阴 Ⅱ）</option>
+                <option value=3>三背零字（老阳 ��）</option>
+            </select><br>
+            第五次&emsp;<select id="sLY5">
+                <option value=2>零背三字（老阴 Ⅹ）</option>
+                <option value=1 selected="selected">一背二字（少阳 Ⅰ）</option>
+                <option value=0>二背一字（少阴 Ⅱ）</option>
+                <option value=3>三背零字（老阳 ��）</option>
+            </select><br>
+            第六次&emsp;<select id="sLY6">
+                <option value=2>零背三字（老阴 Ⅹ）</option>
+                <option value=1 selected="selected">一背二字（少阳 Ⅰ）</option>
+                <option value=0>二背一字（少阴 Ⅱ）</option>
+                <option value=3>三背零字（老阳 ��）</option>
+            </select><br>
+           <br>
+            <input type="button" id="btnPaiPan" onclick="CalcLiuYaoPanPai();" 
+                   value="&emsp;六爻排盘&emsp;"
+                   style="font-size: large;" ><br>
+            </form>
+        </div>
+        
+        <br>
+        
+        <div id="paipantext" align="left" style="line-height: 18pt;">
+        排盘说明：
+        <ul>
+            <li><span style="color: red"><b>注意可占与不可占的事情：</b></span><br>
+            1. 六爻只能测与本人相关的东西，不能测国家大事或明星绯闻。<br>
+            2. 无事不占，有事少占。<br>
+            3. 手动起卦别懒。<br>
+            4. 选择类无法占，比如既喜欢A，又喜欢B，到底应该和谁好，这类选择建议看合婚。
+        </li>
+        <li><b>注意不可起卦的时刻：</b><br>
+            1. 单数整点附近不可起卦，如 9:00、23:00，因为时辰或日子会变，这类时辰之交不可起卦。<br>
+            2. 二十四节气时刻附近不可起卦，因为月份会变，比如2018年立春是公历2月4号 05:28 ，这种节气时刻附近不能起卦。
+        </li>
+        <li><b>手工摇卦方法：</b><br>
+            取硬币三枚，有面值数字的为字，花朵或国徽为背，在准备掷时，记下起卦时间（通常用公历）和所占事情、自己性别、生年；
+            集中意念到所占事情上约一分钟，然后将三枚硬币投掷到桌子或其他平面上，记录字和背的个数，然后捡起三枚硬币再掷，以此类推，总共掷六次，掷完按照上面排盘。
+        排好盘之后，将卦发到在线排盘求测即可。</li>
+        <li>如需测流年卦，请在“起卦占事”里填写有效年份（通常占本年或下一年）的 4 位数字，比如 2017，其他起卦步骤同上。</li>        
+        <li><span style="color: blue; ">手机访问请使用搜狗浏览器、UC浏览器、绿茶浏览器或最新的Chrome浏览器访问本页面排盘，这几款浏览器默认使用等宽字体适合显示排盘。
+            手机上如果网页显示不完整请缩小页面。</span><br>
+            电脑访问建议在最新的 Chrome、Firefox、Safari 或 IE9 以上浏览器访问本页面进行排盘。</li>
+        </ul>
+        </div>
+        <br>
+        
+        </div><!--//上面是HTML文本，下面是脚本-->
+        
+        </td></tr></table>
+        </center>
+        <!--js1S-->
+        <script src=tools.js></script><!--工具函数-->
+        <script src=eph0.js></script> <!--天文常数等-->
+        <script src=ephB.js></script> <!--恒星计算(如果不须要恒星,删除此行)-->
+        <script src=eph.js></script>  <!--星历模块-->
+        <script src=JW.js></script>   <!--全国城市经纬数据库及皇帝纪年数据库-->
+        <script src=lunar.js></script><!--日历物件-->   
+        <script src=bazidata.js></script><!--八字排盘数据-->
+        <script src=liuyaodata.js></script><!--六爻数据-->
+        <script src=liuyao.js></script><!--六爻脚本-->
+        <!--js1E-->
+        <script>
+            //初始化加载
+            //出生年份
+            InitChuShengNianFen();
+            //
+            InitGGYears();    //加载公历年份
+            InitGGDays();     //加载公历日子
+            InitNNYears();    //加载农历年份
+            InitNNDays();     //加载农历日子
+           
+            //填充当前时间
+            FillCurTime();       
+        </script><!--加载脚本-->
+    </body>
+</html>

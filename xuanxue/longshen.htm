@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>龙神决排盘页面</title>
+        <meta content="龙神决;建文帝;算卦;占卜;中华玄门"  name=keywords>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body {font-family: 宋体;}
+            a:link{text-decoration: none; color: dodgerblue;}
+            a:visited{text-decoration: none; color: dodgerblue; }
+            a:hover{text-decoration: none; color: Fuchsia; }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <table width="94%" style="min-width: 500px;"><tr><td align="center">                 
+            <h3><a href="https://dclef.icu/xuanxue" target="_blank">在线排盘</a>
+                ・ <a href="index.htm" target="_blank">排盘首页</a>
+                ・ <a href="longshen.htm" style="color: red;">手工起决</a>
+                ・ <a href="longshenzx.htm">在线起决</a></h3>
+            </td></tr></table>
+
+        </div>
+        
+        <!-- 排盘页面整个是一张表格 -->
+        <center>      
+            <table width="94%" border="0px" style="min-width: 500px;"> 
+            <tr><!-- 头三张牌 -->
+                <td align="center" colspan="1"><img src="longshen/back.png" alt="第一张" id="pic0" width="138" height="220" /><br>
+                    第一张：<select id="sLSJ0" onchange="OnCardSelectionChange(this, 0);" ><option value=0> 太一 </option></select>
+                </td>
+                <td align="center"><img src="longshen/back.png" alt="第二张" id="pic1" width="138" height="220" /><br>
+                    第二张：<select id="sLSJ1" onchange="OnCardSelectionChange(this, 1);" ><option value=0> 太一 </option></select>
+                </td>
+                <td align="center"><img src="longshen/back.png" alt="第三张" id="pic2" width="138" height="220" /><br>
+                    第三张：<select id="sLSJ2" onchange="OnCardSelectionChange(this, 2);" ><option value=0> 太一 </option></select>
+                </td>
+            </tr>
+            <tr><!-- 中间三张牌 -->
+                <td align="center"  colspan="1"><img src="longshen/back.png" alt="第四张" id="pic3" width="138" height="220" /><br>
+                    第四张：<select id="sLSJ3" onchange="OnCardSelectionChange(this, 3);" ><option value=0> 太一 </option></select>
+                </td>
+                <td align="center"><img src="longshen/back.png" alt="第五张" id="pic4" width="138" height="220" /><br>
+                    第五张：<select id="sLSJ4" onchange="OnCardSelectionChange(this, 4);" ><option value=0> 太一 </option></select>
+                </td>
+                <td align="center"><img src="longshen/back.png" alt="第六张" id="pic5" width="138" height="220" /><br>
+                    第六张：<select id="sLSJ5" onchange="OnCardSelectionChange(this, 5);" ><option value=0> 太一 </option></select>
+                </td>
+            </tr>
+            <tr><!-- 最后一张牌 -->
+                 <td align="center" colspan="3"><img src="longshen/back.png" alt="第七张" id="pic6" width="138" height="220" /><br>
+                    第七张：<select id="sLSJ6" onchange="OnCardSelectionChange(this, 6);" ><option value=0> 太一 </option></select>
+                 </td>
+            </tr>
+            <tr> <!-- 排盘按钮和说明 -->
+                <td align="center"  colspan="3">                   
+        
+        
+        <div id="AllText">
+    
+        <div id="selectparas"><br>
+            <form>
+            起决时间：公历
+            <select id="sGGYear" onchange="OnGGYearChanged();"> 
+            <option value=2000>2000</option>
+            </select> 年
+            <select id="sGGMonth" onchange="OnGGMonthChanged();">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12 selected="selected">12</option>
+            </select> 月
+            <select id="sGGDay">
+                <option value=12>12</option>
+            </select> 日
+            <select id="sGGHour">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+                <option value=13>13</option>  
+                <option value=14>14</option>  
+                <option value=15>15</option>  
+                <option value=16>16</option>  
+                <option value=17>17</option>  
+                <option value=18>18</option>  
+                <option value=19>19</option>  
+                <option value=20>20</option>  
+                <option value=21>21</option>  
+                <option value=22>22</option>  
+                <option value=23>23</option>  
+            </select> 时
+             <select id="sGGMinute">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30 selected="selected">30</option>
+                <option value=31>31</option>
+                <option value=32>32</option>
+                <option value=33>33</option>
+                <option value=34>34</option>
+                <option value=35>35</option>
+                <option value=36>36</option>
+                <option value=37>37</option>
+                <option value=38>38</option>
+                <option value=39>39</option>
+                <option value=40>40</option>
+                <option value=41>41</option>
+                <option value=42>42</option>
+                <option value=43>43</option>
+                <option value=44>44</option>
+                <option value=45>45</option>
+                <option value=46>46</option>
+                <option value=47>47</option>
+                <option value=48>48</option>
+                <option value=49>49</option>
+                <option value=50>50</option>
+                <option value=51>51</option>
+                <option value=52>52</option>
+                <option value=53>53</option>
+                <option value=54>54</option>
+                <option value=55>55</option>
+                <option value=56>56</option>
+                <option value=57>57</option>
+                <option value=58>58</option>
+                <option value=59>59</option>
+            </select>分 
+            <br><br>
+            起决占事：<input type="text" id="tZhanShi" size="42" value="一件事情"/><br><br>
+            决主性别：<select id="sGender">
+                <option value="女"> 女 </option>
+                <option value="男" selected="selected"> 男 </option>       
+            </select>&emsp;
+            出生年份：<select id="sShengNian" >
+                <option value=2000> 2000庚辰 </option>
+            </select> 
+            <br>
+            
+           <br>
+            <input type="button" id="btnPaiPan" onclick="CalcLongShenPanPai();" 
+                   value="&emsp;龙神决排盘&emsp;"
+                   style="font-size: large;" ><br>
+            </form>
+        </div>
+        
+        <br>
+
+        <div id="paipantext" style="line-height: 18pt; " align="left">
+        排盘说明：
+        <ul>
+
+        <li><b>手工起龙神决的方法：</b><br>
+        ①制作龙神决纸牌：取49张纸片或卡牌，纸牌字面分别写上龙神决的49个决名：（背面啥都不写，纸牌用于盲抽）<br>
+太一, 太明, 太伤, 太劫, 太复, 太原, 太丁,<br>
+太泽, 太于, 太相, 太专, 太兴, 太天, 太胜,<br>
+太式, 太量, 太旺, 太正, 太幻, 太查, 太中,<br>
+太传, 太冥, 太遂, 太文, 太随, 太问, 太更,<br>
+太容, 太实, 太帝, 太新, 太间, 太语, 太令,<br>
+太仓, 太归, 太开, 太阳, 太没, 太吾, 太行,<br>
+太各, 太先, 太回, 太位, 太平, 太吉, 太灵 <br>
+        ②准备抽纸牌时，先记下起决时间和所占事情、自己性别、生年，然后洗牌，将49张牌顺序打乱，洗牌时不能看牌面；<br>
+        ③在看不到纸牌字面的情况下，从49张纸牌中依次抽取7张各不相同的牌，
+        <span style="color: red; font-weight: bold">抽牌时记下抽取的纸牌顺序和决名；</span>
+        <br>
+        ④填写信息到上面页面并依次选择抽取的纸牌决名，决名必须按抽取顺序排，然后进行龙神决排盘，排盘后复制龙神决排盘文本或将整个页面截图，发到在线排盘求测即可。</li>      
+        
+        <li>龙神决来历：明朝朱棣篡位之后，建文帝出逃，隐居在东海之滨，以养鸽子为乐。
+            经历人生大起大落之后，建文帝苦思天地万物演化之理，创立龙神决，用于预测事情的发展演化过程。
+            建文帝认为鸟类比人类纯洁，所以养鸟雀抽取龙神决的纸牌，预测事情准确率更高。
+        </li>
+        <li><span style="color: blue; ">手机访问请使用UC浏览器、搜狗浏览器、绿茶浏览器或最新的Chrome浏览器访问本页面排盘，这几款浏览器默认使用等宽字体适合显示排盘。
+            手机上如果网页显示不完整请缩小页面。</span><br>
+            电脑访问建议在最新的 Chrome、Firefox、Safari 或 IE9 以上浏览器访问本页面进行排盘。</li>
+        </ul>
+        </div>
+        <br>
+        
+        </div><!--//上面是排盘说明-->       
+        
+        </td><!--//最后一行表格-->
+            </tr>
+        </table>
+    </center>
+        <!--js1S-->
+        <script src=longshen.js></script><!--龙神决排盘脚本-->
+        <!--js1E-->
+        <script>
+            //初始化加载
+            //出生年份
+            InitChuShengNianFen();
+            //
+            InitGGYears();    //加载公历年份
+            InitGGDays();     //加载公历日子
+           
+            //填充当前时间
+            FillCurTime();   
+            
+            //初始化卡牌
+            InitSels();
+            
+        </script><!--加载脚本-->
+    </body>
+</html>

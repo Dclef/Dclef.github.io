@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>龟藏排盘页面</title>
+        <meta content="龟藏;归藏;中华玄门"  name=keywords>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body {font-family: 宋体;}
+            a:link{text-decoration: none; color: dodgerblue;}
+            a:visited{text-decoration: none; color: dodgerblue; }
+            a:hover{text-decoration: none; color: Fuchsia; }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 420px;
+                max-width: 800px;
+            }
+        </style>        
+    </head>
+    <body>
+        <div id="header">
+            <center>
+            <table><tr><td align="center">
+            <h3>
+                <a href="https://dclef.icu/xuanxue" target="_blank">在线排盘</a>
+                · <a href="index.htm" target="_blank">排盘首页</a>
+                · <a href="gui.htm" target="_blank" style="color: red;">龟藏排盘</a>   
+            </h3>
+            </td></tr></table>
+            </center> 
+        </div>
+        <!-- 排盘页面整个是一张表格 -->
+        <center>
+        <table><tr><td align="center">
+        <div id="AllText">
+               
+        <div id="selectparas">
+            <form>
+            起卦时间：公历 
+            <select id="sYear" onchange="OnGLYearChanged();"> 
+            <option value=2000>2000</option>
+            </select> 年
+            <select id="sMonth" onchange="OnGLMonthChanged();">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+            </select> 月
+            <select id="sDay">
+                <option value=1>1</option>
+            </select> 日
+            <select id="sHour">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>   
+                <option value=13>13</option>  
+                <option value=14>14</option>  
+                <option value=15>15</option>  
+                <option value=16>16</option>  
+                <option value=17>17</option>  
+                <option value=18>18</option>  
+                <option value=19>19</option>  
+                <option value=20>20</option>  
+                <option value=21>21</option>  
+                <option value=22>22</option>  
+                <option value=23>23</option>  
+            </select> 时
+            <br><br>
+            起卦占事：<input type="text" id="tZhanShi" size="42"/><br><br>
+            卦主性别：<select id="sGender">
+                <option value="女"> 女 </option>
+                <option value="男" selected="selected"> 男 </option>       
+            </select>&emsp;
+            生肖：<select id="sShengXiao">
+                <option value="子"> 子鼠 </option>
+                <option value="丑"> 丑牛 </option>
+                <option value="寅"> 寅虎 </option>
+                <option value="卯"> 卯兔 </option>
+                <option value="辰"> 辰龙 </option>
+                <option value="巳"> 巳蛇 </option>
+                <option value="午"> 午马 </option>
+                <option value="未"> 未羊 </option>
+                <option value="申"> 申猴 </option>
+                <option value="酉"> 酉鸡 </option>
+                <option value="戌"> 戌狗 </option>
+                <option value="亥"> 亥猪 </option>
+            </select>&emsp;            
+            职业：<select id="sJob">
+                <option value="普通员工">普通员工</option>
+                <option value="管理阶层">管理阶层</option>
+                <option value="学生">学生</option>
+                <option value="政府官员">政府官员</option>
+                <option value="军队人员">军队人员</option>                
+                <option value="普通商人">普通商人</option>
+                <option value="白事商人">白事商人</option>
+                <option value="黑道人员">黑道人员</option>
+                 <option value="其他">其他</option>
+            </select> <br>
+            <br>
+            第一次&emsp;&emsp;<select id="gui1">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br><br>
+            第二次&emsp;&emsp;<select id="gui2">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第三次&emsp;&emsp;<select id="gui3">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第四次&emsp;&emsp;<select id="gui4">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br><br>
+            第五次&emsp;&emsp;<select id="gui5">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第六次&emsp;&emsp;<select id="gui6">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第七次&emsp;&emsp;<select id="gui7">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br><br>
+            第八次&emsp;&emsp;<select id="gui8">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第九次&emsp;&emsp;<select id="gui9">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第十次&emsp;&emsp;<select id="gui10">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br><br>
+            第十一次&emsp;<select id="gui11">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第十二次&emsp;<select id="gui12">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br>
+            第十三次&emsp;<select id="gui13">
+                <option value=0>阴&emsp;▅▅&emsp;▅▅</option>
+                <option value=1>阳&emsp;▅▅▅▅▅</option>
+            </select><br><br>
+            <input type="button" id="btnPaiPan" onclick="CalcGuiCangPanPai();" 
+                   value="&emsp;龟藏排盘&emsp;"
+                   style="font-size: large;" ><br>
+            </form>
+        </div>
+        
+        <br>
+        
+        <div id="paipantext" style="line-height: 18pt;" align="left">
+        排盘说明：
+        <ul>
+        <li>取硬币一枚，字为阳，背为阴，在准备掷时，记下起卦时间和所占事情、自己性别、生肖、职业；然后将硬币掷十三次，按次序填到上面选项里，点击按钮排盘。
+        如无硬币，取圆饼模样的石头或纸板，一面画 0 （阴），另一面画 1（阳），掷十三次起卦也一样。
+        排好盘之后，将卦发到在线排盘求测即可。</li>
+        <li>如需测流年卦，请在“起卦占事”里填写有效年份（通常占本年或下一年）的 4 位数字，比如 2017，其他起卦步骤同上。</li>
+        <li><span style="color: blue; ">手机访问请使用UC浏览器、搜狗浏览器、绿茶浏览器或最新的Chrome浏览器访问本页面排盘，这几款浏览器默认使用等宽字体适合显示排盘。
+            手机上如果网页显示不完整请缩小页面。</span><br>
+            电脑访问建议在最新的 Chrome、Firefox、Safari 或 IE9 以上浏览器访问本页面进行排盘。</li>
+        </ul>
+        </div>  
+        <br>
+        
+        </div><!--//上面是HTML文本，下面是脚本-->
+         </td></tr></table>
+        </center>
+        
+        <!--js1S-->
+        <script src=tools.js></script><!--工具函数-->
+        <script src=eph0.js></script> <!--天文常数等-->
+        <script src=ephB.js></script> <!--恒星计算(如果不须要恒星,删除此行)-->
+        <script src=eph.js></script>  <!--星历模块-->
+        <script src=JW.js></script>   <!--全国城市经纬数据库及皇帝纪年数据库-->
+        <script src=lunar.js></script><!--日历物件-->        
+        <script src=guidata.js></script><!--龟藏数据-->
+        <script src=gui.js></script><!--龟藏脚本-->
+        <!--js1E-->
+        <script>
+             //初始化加载
+            InitYears();    //加载年份
+            InitDays();     //加载日子 
+            //填充当前时间
+            FillCurTime();
+            //计算八字
+            ML_calcBaZi();         
+        </script><!--加载脚本-->       
+    </body>
+</html>

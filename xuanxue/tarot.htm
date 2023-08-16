@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>塔罗牌排盘页面</title>
+        <meta content="塔罗牌;占卜;"  name=keywords>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            body {font-family: 宋体;}
+            a:link{text-decoration: none; color: dodgerblue;}
+            a:visited{text-decoration: none; color: dodgerblue; }
+            a:hover{text-decoration: none; color: Fuchsia; }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <table width="94%" style="min-width: 500px;"><tr><td align="center">                 
+            <h3>
+                ・ <a href="index.htm" target="_blank">排盘首页</a>
+                ・ <a href="tarot.htm" style="color: red;">手工排版</a>
+                ・ <a href="tarotzx.htm">在线排版</a></h3>
+            </td></tr></table>
+
+        </div>
+        
+        <!-- 排盘页面整个是一张表格 -->
+        <center>      
+            <table width="94%" border="0px" style="min-width: 500px;"> 
+            <tr><!-- 头三张牌 -->
+                <td align="center" colspan="1">
+                    <img src="tarot/back.png" alt="第一张" id="pic0" width="138" height="220" /><br>
+                    过去：
+                    <select id="sLSJ0" onchange="OnCardSelectionChange(this, 0);">
+                      <option value="0">愚者</option>
+                    </select>
+                      <select id="tarot0Orientation" onchange="changeOrientation('tarot0', 'pic0')">
+                        <option value="正位">正位</option>
+                        <option value="逆位">逆位</option>
+                      </select>
+
+                  </td>
+              
+                <td align="center"><img src="tarot/back.png" alt="第二张" id="pic1" width="138" height="220" /><br>
+                    现在：<select id="sLSJ1" onchange="OnCardSelectionChange(this, 1);" >
+                        <option value=0> 愚者 </option>
+                    </select>
+                    <select id="tarot1Orientation" onchange="changeOrientation('tarot1', 'pic1')">
+                        <option value="正位">正位</option>
+                        <option value="逆位">逆位</option>
+                      </select>
+                </td>
+                <td align="center"><img src="tarot/back.png" alt="第三张" id="pic2" width="138" height="220" /><br>
+                    未来：<select id="sLSJ2" onchange="OnCardSelectionChange(this, 2);" >
+                        <option value=0> 愚者 </option>
+                    </select>
+                    <select id="tarot2Orientation" onchange="changeOrientation('tarot2', 'pic2')">
+                        <option value="正位">正位</option>
+                        <option value="逆位">逆位</option>
+                      </select>
+                </td>
+            </tr>
+        
+            <tr> <!-- 排盘按钮和说明 -->
+                <td align="center"  colspan="3">                   
+        
+        
+        <div id="AllText">
+    
+        <div id="selectparas"><br>
+           
+            起决占事：<input type="text" id="tZhanShi" size="42" value="一件事情"/><br><br>
+            <input type="button" id="btnPaiPan" onclick="CalcLongShenPanPai();" 
+                   value="&emsp;塔罗牌排盘&emsp;"
+                   style="font-size: large;" ><br>
+            </form>
+        </div>
+        <br>
+        <br>
+        
+        </div><!--//上面是排盘说明-->       
+        
+        </td><!--//最后一行表格-->
+            </tr>
+        </table>
+    </center>
+        <!--js1S-->
+        <script src=tarot.js></script>
+        <!--js1E-->
+        <script>
+      
+            //初始化卡牌
+            InitSels();
+            
+        </script><!--加载脚本-->
+    </body>
+    <script>
+    
+    </script>
+</html>
